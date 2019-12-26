@@ -1,14 +1,16 @@
-import React, { Fragment } from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { AppContainer as ReactHotAppContainer } from 'react-hot-loader'
-import { configureStore, history } from './store/configureStore'
-import Firebase, { FirebaseContext } from './components/Firebase'
-import App from './App'
+require('dotenv').config();
 
-const store = configureStore()
+import React, { Fragment } from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { AppContainer as ReactHotAppContainer } from 'react-hot-loader';
+import { configureStore } from './store/configureStore';
+import Firebase, { FirebaseContext } from './components/Firebase';
+import App from './App';
 
-const AppContainer = process.env.PLAIN_HMR ? Fragment : ReactHotAppContainer
+const store = configureStore();
+
+const AppContainer = process.env.PLAIN_HMR ? Fragment : ReactHotAppContainer;
 
 render(
   <AppContainer>
@@ -19,4 +21,5 @@ render(
     </Provider>
   </AppContainer>,
   document.getElementById('root')
-)
+);
+

@@ -1,7 +1,7 @@
 /**
  * Base webpack config used across other specific configs
  */
-
+import dotenv from 'dotenv';
 import path from 'path';
 import webpack from 'webpack';
 import { dependencies as externals } from '../app/package.json';
@@ -40,7 +40,8 @@ export default {
 
   plugins: [
     new webpack.EnvironmentPlugin({
-      NODE_ENV: 'production'
+      NODE_ENV: 'production',
+      ...dotenv.config().parsed // <-- this line brings in .env environment variables
     }),
 
     new webpack.NamedModulesPlugin()

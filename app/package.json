@@ -14,5 +14,9 @@
     "postinstall": "yarn electron-rebuild"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "firebase": "^7.6.1",
+    "react-animations": "^1.0.0"
+  }
 }

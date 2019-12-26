@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import { withFirebase } from '../../components/Firebase';
-import SignUpLink from '../../components/SignUpLink'
+import { SignUpLink, PasswordForgetLink, Input, FunkyTitle, Button, withPage } from '../../components';
 import * as ROUTES from '../../constants/routes';
+import withLayout from '../../components/Layout';
 
 const SignInPage = () => (
-  <div>
-    <h1>SignIn</h1>
+  <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+    <FunkyTitle text="Sign In" />
     <SignInForm />
   </div>
 );
@@ -51,28 +52,35 @@ class SignInFormBase extends Component {
     const isInvalid = password === '' || email === '';
 
     return (
-      <div>
-        <form onSubmit={this.onSubmit}>
-          <input
+      <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
+        <form onSubmit={this.onSubmit} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+
+          <Input
             name="email"
             value={email}
-            onChange={this.onChange}
+            handleChange={this.onChange}
             type="text"
-            placeholder="Email Address"
+            placeholder="email"
           />
-          <input
+
+          <Input
             name="password"
             value={password}
-            onChange={this.onChange}
+            handleChange={this.onChange}
             type="password"
             placeholder="Password"
           />
+
+          <Button text="Sign In" type="submit" disabled={isInvalid} />
           <button disabled={isInvalid} type="submit">
             Sign In
           </button>
-          {error && <p>{error.message}</p>}
+          {error && <p style={{ color: 'orange', fontFamily: 'Arial', fontSize: 20, textAlign: 'center', width: '60%' }}>{error.message}</p>}
         </form>
+
         <SignUpLink />
+
+        <PasswordForgetLink />
       </div>
     );
   }
@@ -82,6 +90,6 @@ const SignInForm = compose(
   withFirebase,
 )(SignInFormBase);
 
-export default SignInPage;
+export default withPage(SignInPage);
 
 export { SignInForm };

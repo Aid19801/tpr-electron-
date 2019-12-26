@@ -32,5 +32,5 @@
     "test/**/__snapshots__": true,
     "yarn.lock": true
   },
-  "eslint.enable": false
+  "eslint.enable": true
 }

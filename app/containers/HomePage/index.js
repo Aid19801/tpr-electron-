@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
+import useStyles from './styles';
+import FunkyTitle from '../../components/FunkyTitle';
+import { withPage } from '../../components'
 
-class HomePage extends Component {
-  render() {
-    return <div>I am The HOME PAGE</div>
-  }
+function HomePage() {
+
+  const classes = useStyles();
+
+  return (
+    <div className={classes.container}>
+      <FunkyTitle text="Home" />
+    </div>
+  )
 }
 
-export default HomePage;
+export default withPage(HomePage);
