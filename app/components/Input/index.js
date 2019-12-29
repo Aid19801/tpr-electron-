@@ -11,7 +11,8 @@ const Input = ({
   placeholder,
   descr,
   selectOptions,
-  icon
+  icon,
+  disabled
   }) => {
 console.log('input has icon ', icon)
   const classes = useStyles();
@@ -38,7 +39,7 @@ console.log('input has icon ', icon)
           </select>
         )}
         {
-          (type === 'text' || type=== 'password') && (
+          ( type === 'text' || type=== 'password') && (
           <input
             name={name}
             value={value}
@@ -46,6 +47,7 @@ console.log('input has icon ', icon)
             type={type}
             placeholder={placeholder}
             className={classes.input}
+            disabled={disabled ? disabled : null}
           />
           )
         }
