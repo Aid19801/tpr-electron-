@@ -1,5 +1,6 @@
 import Button from './Button';
 import FunkyTitle from './FunkyTitle';
+import Icon from './Icons';
 import Input from './Input';
 import Modal from './Modal';
 import Navigation from './Navigation';
@@ -12,6 +13,7 @@ import withPage from './WithPage';
 export {
   Button,
   FunkyTitle,
+  Icon,
   Input,
   Layout,
   Modal,

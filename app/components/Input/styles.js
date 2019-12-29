@@ -13,13 +13,17 @@ const useStyles = createUseStyles({
     transform: 'skewY(-1deg)',
     width: '65%',
   },
+  inputAndIconRow: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
   inputTitle: {
     color: 'white',
     margin: 2,
     textAlign: 'end',
     fontFamily: 'monospace',
     fontSize: 20,
-    position: 'absolute',
+    position: 'relative',
     top: 1,
     right: 1,
   },

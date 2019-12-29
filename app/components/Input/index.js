@@ -1,5 +1,7 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import useStyles from './styles';
+import Icon from '../Icons';
 
 const Input = ({
   name,
@@ -9,38 +11,52 @@ const Input = ({
   placeholder,
   descr,
   selectOptions,
+  icon
   }) => {
-
+console.log('input has icon ', icon)
   const classes = useStyles();
 
 
   return (
-    <div className={classes.inputContainer}>
-      {descr && <p className={classes.inputTitle}>{descr}</p> }
-      { type === 'select' && (
-        <select
-          name={name}
-          value={value}
-          onChange={(e) => handleChange(e)}
-          className={classes.input}
-        >
-         { selectOptions.map((each, i) => <option key={i}>{each}</option>) }
-        </select>
-      )}
-      {
-        (type === 'text' || type=== 'password') && (
-        <input
-          name={name}
-          value={value}
-          onChange={(e) => handleChange(e)}
-          type={type}
-          placeholder={placeholder}
-          className={classes.input}
-        />
-        )
-      }
+    <React.Fragment>
+    <Fade left>
 
-    </div>
+      <div className={classes.inputContainer}>
+
+        {descr && <p className={classes.inputTitle}>{descr}</p> }
+
+        <div className={classes.inputAndIconRow}>
+
+        { type === 'select' && (
+          <select
+            name={name}
+            value={value}
+            onChange={(e) => handleChange(e)}
+            className={classes.input}
+          >
+          { selectOptions.map((each, i) => <option key={i}>{each}</option>) }
+          </select>
+        )}
+        {
+          (type === 'text' || type=== 'password') && (
+          <input
+            name={name}
+            value={value}
+            onChange={(e) => handleChange(e)}
+            type={type}
+            placeholder={placeholder}
+            className={classes.input}
+          />
+          )
+        }
+        { icon && <Icon icon={icon} /> }
+        </div>
+
+
+      </div>
+    </Fade>
+    </React.Fragment>
+
   )
 }
 

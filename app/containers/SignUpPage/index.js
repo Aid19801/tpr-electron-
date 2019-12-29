@@ -67,8 +67,8 @@ class SignUpFormBase extends Component {
       facebook,
       twitter,
       website,
-      // youtube,
-      // youtubeChannelURL,
+      youtube,
+      youtubeChannelURL,
     } = this.state;
 
     // create user auth entry
@@ -93,8 +93,8 @@ class SignUpFormBase extends Component {
           facebook,
           twitter,
           website,
-          // youtube,
-          // youtubeChannelURL,
+          youtube,
+          youtubeChannelURL,
         });
 
         console.log('created user in DB with ', this.state);
@@ -150,6 +150,8 @@ class SignUpFormBase extends Component {
       facebook,
       twitter,
       website,
+      youtube,
+      youtubeChannelURL,
     } = this.state;
 
 
@@ -215,7 +217,8 @@ class SignUpFormBase extends Component {
             handleChange={this.onChange}
             type="text"
             placeholder="http://my-pic.jpg"
-            descr="Link to your .jpg image file"
+            descr="link to profile pic img"
+            icon="avatar"
           />
           <Input
             name="tagline"
@@ -224,6 +227,7 @@ class SignUpFormBase extends Component {
             type="text"
             placeholder="Always funny, never fun!"
             descr="Your Tag Line"
+            icon="speechBubble"
           />
           <Input
             name="genre"
@@ -231,20 +235,22 @@ class SignUpFormBase extends Component {
             handleChange={this.onChange}
             type="select"
             placeholder="style"
+            descr="style"
             selectOptions={[
               'N/A',
               'Observational',
-              'Pun Merchant',
-              'One Liner',
-              'Storytelling',
-              'Musical Comedy',
-              'MC',
-              'Promoter',
-              'Just a fan',
+              'Abstract',
               'Adult',
               'Burlesque',
-              'Abstract',
-              'Political'
+              'Character',
+              'Just a fan',
+              'MC',
+              'Musical Comedy',
+              'One Liner',
+              'Political',
+              'Promoter',
+              'Pun Merchant',
+              'Storytelling',
             ]}
           />
           <Input
@@ -254,6 +260,7 @@ class SignUpFormBase extends Component {
             type="text"
             placeholder="eg King Gong"
             descr="Favourite Open Mic"
+            icon="mic"
           />
           <Button text="next =>" disabled={profilePicture === '' || faveGig === ''} type="text" onClick={this.moveForward} />
           {error && <p>{error.message}</p>}
@@ -307,6 +314,7 @@ class SignUpFormBase extends Component {
             type="text"
             placeholder="facebook.com/johnsmith"
             descr="Link to your facebook"
+            icon="facebook"
           />
           <Input
             name="twitter"
@@ -315,6 +323,25 @@ class SignUpFormBase extends Component {
             type="text"
             placeholder="twitter.com/johnsmith"
             descr="your twitter name"
+            icon="twitter"
+          />
+          <Input
+            name="youtube"
+            value={youtube}
+            handleChange={this.onChange}
+            type="text"
+            placeholder="youtube video"
+            descr="YouTube Video"
+            icon="youtube"
+          />
+          <Input
+            name="youtubeChannelURL"
+            value={youtubeChannelURL}
+            handleChange={this.onChange}
+            type="text"
+            placeholder="youtube channel"
+            descr="YouTube Channel URL"
+            icon="youtube"
           />
           <Input
             name="website"
@@ -323,6 +350,7 @@ class SignUpFormBase extends Component {
             type="text"
             placeholder="www.myPage.com"
             descr="Your own website"
+            icon="website"
           />
           <Button text="Submit!" type="submit" disabled={error !== null} />
         </React.Fragment>
