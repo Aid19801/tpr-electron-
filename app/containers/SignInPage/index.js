@@ -72,9 +72,6 @@ class SignInFormBase extends Component {
           />
 
           <Button text="Sign In" type="submit" disabled={isInvalid} />
-          <button disabled={isInvalid} type="submit">
-            Sign In
-          </button>
           {error && <p style={{ color: 'orange', fontFamily: 'Arial', fontSize: 20, textAlign: 'center', width: '60%' }}>{error.message}</p>}
         </form>
 

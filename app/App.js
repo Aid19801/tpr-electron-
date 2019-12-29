@@ -15,7 +15,7 @@ import * as ROUTES from './constants/routes';
 
 const App = () => (
     <Router>
-      <div>
+      <div style={{ height: '120vh'}}>
         <Navigation />
         <hr />
 

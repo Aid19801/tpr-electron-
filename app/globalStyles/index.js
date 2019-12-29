@@ -22,5 +22,6 @@ export const bounceInKeyframes = {
 
 export const bounceInAnim = {
   animationName: '$bounceIn',
-  animationDuration: 400,
+  animationDuration: 600,
+  animationTimingFunction: 'ease-out',
 }

@@ -1,6 +1,7 @@
 import Button from './Button';
 import FunkyTitle from './FunkyTitle';
 import Input from './Input';
+import Modal from './Modal';
 import Navigation from './Navigation';
 import Layout from './Layout';
 import SignUpLink from './SignUpLink';
@@ -13,6 +14,7 @@ export {
   FunkyTitle,
   Input,
   Layout,
+  Modal,
   Navigation,
   PasswordForgetLink,
   SignOutButton,
