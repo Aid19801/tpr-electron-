@@ -14,7 +14,7 @@ const Input = ({
   icon,
   disabled
   }) => {
-console.log('input has icon ', icon)
+// console.log('input has icon ', icon)
   const classes = useStyles();
 
 

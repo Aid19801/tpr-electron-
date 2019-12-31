@@ -1,0 +1,4 @@
+export const SAVE_UID = 'SAVE_UID';
+export const SAVE_USER_PROFILE = 'SAVE_USER_PROFILE';
+export const INET_CONNECTED = 'INET_CONNECTED';
+export const INET_DISCONNECTED = 'INET_DISCONNECTED';

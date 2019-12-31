@@ -38,6 +38,19 @@ const useStyles = createUseStyles({
     fontWeight: 700,
     fontFamily: 'Arial',
     fontSize: 17
+  },
+  offlineModeBanner: {
+    display: 'flex',
+    alignItems: 'center',
+    color: 'white',
+    background: 'black',
+    width: '100%',
+    marginBottom: 0,
+    position: 'fixed',
+    bottom: '0px',
+    padding: 10,
+    height: 45,
+    fontFamily: 'Arial',
   }
 });
 
