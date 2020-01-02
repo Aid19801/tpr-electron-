@@ -1,11 +1,16 @@
 import React from 'react';
+
 import Avatar from './avatar';
-import SpeechBubble from './speechBubble';
-import Mic from './microphone';
+import Camera from './camera';
 import Facebook from './facebook';
+import Gigs from './gigs';
+import List from './list';
+import Masks from './masks';
+import Mic from './microphone';
+import SpeechBubble from './speechBubble';
 import Twitter from './twitter';
-import YouTube from './YouTube';
 import Website from './website';
+import YouTube from './YouTube';
 
 import useStyles from './styles.js';
 
@@ -16,12 +21,16 @@ function Icon({ icon }) {
   return (
     <div className={classes.iconContainer}>
         { icon === 'avatar' && <Avatar /> }
-        { icon === 'speechBubble' && <SpeechBubble /> }
-        { icon === 'mic' && <Mic /> }
+        { icon === 'camera' && <Camera /> }
         { icon === 'facebook' && <Facebook /> }
+        { icon === 'gigs' && <Gigs /> }
+        { icon === 'list' && <List /> }
+        { icon === 'masks' && <Masks /> }
+        { icon === 'mic' && <Mic /> }
+        { icon === 'speechBubble' && <SpeechBubble /> }
         { icon === 'twitter' && <Twitter /> }
-        { icon === 'youtube' && <YouTube /> }
         { icon === 'website' && <Website /> }
+        { icon === 'youtube' && <YouTube /> }
     </div>
   )
 }

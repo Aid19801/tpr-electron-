@@ -1,0 +1,1502 @@
+[
+  {
+     "id":1,
+     "name":"Comedy Virgins!",
+     "attended":[
+
+     ],
+     "venue":"Cavendish Arms",
+     "img":"https://pbs.twimg.com/media/DSoMdf2XUAMFzJ5.jpg",
+     "blurb":"Possibly the best of the bringers. But also (unless its changed recently?) the most militant. It is in a delightful mini theatre at the back of the pub, about ten minutes from Stockwell tube. ",
+     "lat":51.4766,
+     "lng":-0.1276,
+     "nights":[
+        "Mon",
+        "Tue",
+        "Wed"
+     ],
+     "walkins":true,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"https://www.facebook.com/groups/comedyvirgins/",
+     "bringer":true,
+     "nearestTubes":[
+        "Stockwell"
+     ],
+     "twitterHandle":"ComedyVirgins",
+     "website":"https://www.facebook.com/groups/comedyvirgins/",
+     "howToBook":"https://www.facebook.com/groups/comedyvirgins/about/"
+  },
+  {
+     "id":2,
+     "isSelected":false,
+     "name":"Jester Jesters!",
+     "attended":[
+        {
+           "uid":"fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+           "profilePicture":"/static/no_prof_pic.png",
+           "username":"Owen Clark"
+        }
+     ],
+     "venue":"The Betsey Trotwood",
+     "img":"http://jesterjesters.com/image/jesterjesters-logo.jpeg",
+     "imgs":[
+        "http://www.jamesquintin.co.uk/wp-content/uploads/2015/02/jesters.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/0f/65/b2/89/got-to-see-fern-brady.jpg",
+        "https://www.shepherdneame.co.uk/sites/default/files/The%20Betsey%20Trotwood%20Clerkenwell%20Exterior.jpg"
+     ],
+     "blurb":"Jester Jesters is an open mic Comedy Night - organised jointly by: Jonathan Hearn and Chris Timoney - running every Monday at The Betsey Trotwood, 56 Farringdon Road. The nearest tube is Farringdon. N.B- This is a traditional Open Mic gig; SIGN UP ON THE NIGHT from 6:45pm or REQUEST A SPOT WITH THIS: https://spotlz.com or SEND AN EMAIL TO mondays@jesterjesters.com TO PRE-BOOK A SLOT. Acts get 5 minutes to do their thing and the best part about the night is that it's all FREE! Except the drinks.",
+     "lat":51.5233,
+     "lng":-0.108,
+     "nights":[
+        "Mon"
+     ],
+     "walkins":true,
+     "walkinSignUp":"18:45",
+     "prebook":true,
+     "prebookSignUp":"Request an available Monday or Wednesday using SPOTlz (https://spotlz.com) or email info@jesterjesters.com",
+     "bringer":false,
+     "nearestTubes":[
+        "Farringdon"
+     ],
+     "twitterHandle":"JesterJesters",
+     "website":"http://www.jesterjesters.com/"
+  },
+  {
+     "id":3,
+     "isSelected":false,
+     "name":"Jester Jesters",
+     "attended":[
+
+     ],
+     "venue":"Oak & Pastor",
+     "img":"http://jesterjesters.com/image/jesterjesters-logo.jpeg",
+     "imgs":[
+        "http://www.jamesquintin.co.uk/wp-content/uploads/2015/02/jesters.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/0f/65/b2/89/got-to-see-fern-brady.jpg",
+        "https://www.shepherdneame.co.uk/sites/default/files/The%20Betsey%20Trotwood%20Clerkenwell%20Exterior.jpg"
+     ],
+     "blurb":"Jester-Jesters' new material night every Weds at The Oak & Pastor. 4 weeks waiting / booking period. If you walk-up on the night, we'll add you to a reserve list to replace any acts who don't show...",
+     "lat":51.5625,
+     "lng":-0.1365,
+     "nights":[
+        "Wed"
+     ],
+     "walkins":true,
+     "walkinSignUp":"18:45",
+     "prebook":true,
+     "prebookSignUp":"Req an available Weds using SPOTlz app (https://spotlz.com) / email info@jesterjesters.com",
+     "bringer":false,
+     "nearestTubes":[
+        "Archway",
+        "Tufnell Park"
+     ],
+     "twitterHandle":"JesterJesters",
+     "website":"http://www.jesterjesters.com/"
+  },
+  {
+     "id":4,
+     "isSelected":false,
+     "name":"Angel Comedy RAW",
+     "attended":[
+        {
+           "uid":"sx8ZX5fSCYf4lZ2PjiQDlyzkHf63",
+           "profilePicture":"https://scontent.fstn1-1.fna.fbcdn.net/v/t1.0-1/p100x100/56173227_308787999769647_4349554977417461760_n.png?_nc_cat=111&_nc_oc=AQm_MXxPcn_FUjylUgtH-zaauvyYo09QfdgEPsfzyFgUvfYhzj7d-zR5uHeoE3z0VVE&_nc_ht=scontent.fstn1-1.fna&oh=911faa01d35ea414ae6811418b822b29&oe=5E2689F5",
+           "username":"Simon Owen"
+        }
+     ],
+     "venue":"The Camden Head",
+     "img":"https://media.timeout.com/images/103343547/image.jpg",
+     "imgs":[
+        "https://www.angelcomedy.co.uk/wp-content/uploads/2016/04/Angel_Comedy_audience-e1519062430787.jpg",
+        "https://www.thinkingbob.co.uk/wp-content/uploads/2015/04/ARTS-Barry-Ferns-Angel-Comedy.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/0d/90/65/8c/getlstd-property-photo.jpg"
+     ],
+     "blurb":"Angel Comedy has grown from a once a week gig into a 7 nights-a-week. Wed, Thu & Sun are nights full of potential & variety. Stars & experienced acts trying new material & some acts trying stand up for the first time.",
+     "lat":51.5357,
+     "lng":-0.1029,
+     "nights":[
+        "Wed",
+        "Thu",
+        "Sun"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"email raw@angelcomedy.co.uk",
+     "bringer":true,
+     "nearestTubes":[
+        "Angel",
+        "Highbury & Islington"
+     ],
+     "twitterHandle":"angelcomedy",
+     "website":"https://www.angelcomedy.co.uk/event-detail/54454/",
+     "howToBook":"https://www.angelcomedy.co.uk/event-detail/54454/"
+  },
+  {
+     "id":5,
+     "isSelected":false,
+     "name":"Big Nose Comedy",
+     "attended":[
+
+     ],
+     "venue":"The Boogaloo",
+     "img":"https://pbs.twimg.com/profile_images/739835411233673216/SvghrKWg.jpg",
+     "imgs":[
+        "https://i.ytimg.com/vi/UlnUgkq4Mzo/maxresdefault.jpg",
+        "https://theboogaloo.co.uk/wp-content/uploads/2017/09/bignose2.jpg"
+     ],
+     "blurb":"BNC @ The Boogaloo is a weekly open-mic / new material comedy night near Highgate tube station. It's run by David Lewis. And it's on Thursday nights...",
+     "lat":51.5763,
+     "lng":-0.1434,
+     "nights":[
+        "Thu"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"email bignosecomedy@gmail.com",
+     "bringer":false,
+     "nearestTubes":[
+        "Highgate"
+     ],
+     "twitterHandle":"bignosecomedy",
+     "website":"https://www.facebook.com/bignosecomedy/"
+  },
+  {
+     "id":6,
+     "isSelected":false,
+     "name":"Big Nose Comedy",
+     "attended":[
+
+     ],
+     "venue":"The Old Dairy",
+     "img":"https://pbs.twimg.com/profile_images/739835411233673216/SvghrKWg.jpg",
+     "imgs":[
+        "https://i.ytimg.com/vi/UlnUgkq4Mzo/maxresdefault.jpg",
+        "https://theboogaloo.co.uk/wp-content/uploads/2017/09/bignose2.jpg"
+     ],
+     "blurb":"BNC @ The Old Dairy is a weekly open mic / new material comedy night run by David Lewis. It is on Sunday nights...",
+     "lat":51.5711,
+     "lng":-0.1169,
+     "nights":[
+        "Sun"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"email bignosecomedy@gmail.com",
+     "bringer":false,
+     "nearestTubes":[
+        "Crouch Hill",
+        "Finsbury Park"
+     ],
+     "twitterHandle":"bignosecomedy",
+     "website":"https://www.facebook.com/bignosecomedy/"
+  },
+  {
+     "id":7,
+     "isSelected":false,
+     "name":"KMock ing Gong",
+     "venue":"The Comedy Store",
+     "img":"https://headbox-media.imgix.net/uploads/space_photo/filename/9855/detail_Venue_Photo_2.jpg?auto=compress,format",
+     "imgs":[
+        "https://thecomedystore.co.uk/london/wp-content/uploads/sites/4/2013/11/king-gong-banner-560x359.jpg",
+        "https://i.ytimg.com/vi/xxzpxXshlcU/hqdefault.jpg",
+        "https://d1wx4w35ubmdix.cloudfront.net/media/event/3ZU9/king-gong-triplet-one-dG1h.jpg?versionId=hoR.xKvbGL0rq4GYPuHP2lhcsdKgLzub"
+     ],
+     "blurb":"Possibly the greatest comedy club of them all, The Comedy Store, hosts a monthly event where newbies can try out. The catch? Theres 3 audience judges & if they all get bored of your shit & hold-up their cards at the same time, they gong a massive cymbal and youre OFF the stage. Brutal but fun.",
+     "lat":51.5101,
+     "lng":-0.1323,
+     "nights":[
+        "Mon"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"e-mail london@thecomedystore.co.uk",
+     "bringer":false,
+     "nearestTubes":[
+        "Leics Square",
+        "Picadilly Circus"
+     ],
+     "twitterHandle":"comedystoreuk",
+     "website":"https://thecomedystore.co.uk/london/regular-shows/",
+     "howToBook":"https://thecomedystore.co.uk/london/regular-shows/"
+  },
+  {
+     "id":8,
+     "isSelected":false,
+     "name":"Colindale Comedy",
+     "attended":[
+
+     ],
+     "venue":"The Chandos Arms",
+     "img":"http://www.times-series.co.uk/resources/images/4390291.jpg?display=1&htype=0&type=responsive-gallery",
+     "imgs":[
+        "https://media-cdn.tripadvisor.com/media/photo-s/09/95/6e/a5/the-chandos-arms.jpg",
+        "https://static1.squarespace.com/static/575c2598c2ea51b70d40d0f5/59872fa9d482e9f06c7c5470/5a66091c085229f6b1f0de08/1548503393033/26685299_2127847750779959_8455135345491965087_o.jpg",
+        "https://pbs.twimg.com/media/DfuEe9CX0AAmnLO.jpg"
+     ],
+     "blurb":"Monthly - Last Thursday of the month - open mic comedy night, hosted by Polly - with 5 minute spots and headliners booked also. Takes place in Colindale NW5. Join the Facebook group for more information.",
+     "lat":51.5931,
+     "lng":-0.256,
+     "nights":[
+        "Thu"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"join FB group: https://www.facebook.com/pg/colindalecomedy",
+     "bringer":false,
+     "nearestTubes":[
+        "Colindale"
+     ],
+     "twitterHandle":"ChandosArmsPub",
+     "website":"https://www.facebook.com/pg/colindalecomedy/about/?ref=page_internal",
+     "howToBook":"https://www.facebook.com/pg/colindalecomedy/about/?ref=page_internal"
+  },
+  {
+     "id":9,
+     "isSelected":false,
+     "name":"Comedy by Bow",
+     "attended":[
+
+     ],
+     "venue":"The Galvanisers Union",
+     "img":"https://galvanisersunion.com/wp-content/gallery/home/Galvanisers12.jpg",
+     "imgs":[
+        "https://galvanisersunion.com/wp-content/uploads/MG_0217.jpg",
+        "https://galvanisersunion.com/wp-content/uploads/comedy-galva.jpg",
+        "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F59076785%2F50083380638%2F1%2Foriginal.20190325-163035?h=230&w=460&auto=compress&rect=0%2C24%2C2000%2C1000&s=1de0f2769a9db367a6d396446373fe0f"
+     ],
+     "blurb":"Comedy-by-Bow is the lazily named open mic and new material night at the Galvanisers Union in Bromley-by-Bow.",
+     "lat":51.5231,
+     "lng":-0.0123,
+     "nights":[
+        "Mon"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"email: comedybybow@gmail.com",
+     "bringer":false,
+     "nearestTubes":[
+        "Bromley-by-Bow"
+     ],
+     "twitterHandle":"comedybybow",
+     "website":"https://www.facebook.com/comedybybow/",
+     "howToBook":"https://www.facebook.com/comedybybow/"
+  },
+  {
+     "id":10,
+     "isSelected":false,
+     "name":"Comedy Cabin",
+     "attended":[
+
+     ],
+     "venue":"Hoxton Cabin",
+     "img":"https://media-cdn.tripadvisor.com/media/photo-s/15/fd/5d/d6/every-wednesday-night.jpg",
+     "imgs":[
+        "https://media-cdn.tripadvisor.com/media/photo-s/13/99/d2/26/a-great-evening.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/13/99/d1/c0/a-funny-evening.jpg"
+     ],
+     "blurb":"Every Weds, it's the RAW new act/new material night. Sat is the semi pro option. Wed is a bringer, but there are non-bringer spots for more seasoned acts. If you're a brand new comedian or looking to try some brand new stuff out, this is the night for you. Hosted by Will Preston, Stephen Trumble, and Adrian Tauss.",
+     "lat":51.5297,
+     "lng":-0.077,
+     "nights":[
+        "Wed",
+        "Sat"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"email: willprestoncomedian@gmail.com",
+     "bringer":true,
+     "nearestTubes":[
+        "Haggerston"
+     ],
+     "twitterHandle":"ComedyCabin",
+     "website":"http://hoxtoncabin.com/comedy-cabin/",
+     "howToBook":"https://www.facebook.com/groups/2021128858133675"
+  },
+  {
+     "id":11,
+     "isSelected":false,
+     "name":"TNT Comedy",
+     "attended":[
+
+     ],
+     "venue":"The Vine NW5",
+     "img":"http://foodnoise.co.uk/wp-content/uploads/2018/03/Vine-exterior-copy.jpg",
+     "imgs":[
+        "https://i.ytimg.com/vi/rUw6tb4wGTg/hqdefault.jpg",
+        "https://scontent-atl3-1.cdninstagram.com/vp/3f49dc31629d26821ff4230e74e9189a/5D42111D/t51.2885-15/e35/56249806_410685376193286_2708287825261618844_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com"
+     ],
+     "blurb":"TNT has been running every Tuesday for years. It is one of London's favourite Bringers.  15-17 pre-booked acts. Entry is FREE but audience members will be asked to make a voluntary contribution via a raffle & will have a chance to win prizes to be drawn during each show. Anyone wishing to perform can email or FB Msg Sarma Woolf directly. Pref given to those that have attended before as audience. The spots are 5 - 10 minutes long depending on experience and time allowance.",
+     "lat":51.5551,
+     "lng":-0.1449,
+     "nights":[
+        "Tue"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"email: tntgigs@gmail.com",
+     "bringer":true,
+     "nearestTubes":[
+        "Kentish Town"
+     ],
+     "twitterHandle":"TNTComedy",
+     "website":"https://www.facebook.com/groups/341746814250/about/",
+     "howToBook":"https://www.facebook.com/groups/341746814250/about/"
+  },
+  {
+     "id":12,
+     "isSelected":false,
+     "name":"Comedy East",
+     "attended":[
+        {
+           "uid":"rRGwAHtQBvUEvbmnSRKddkc3Rm22",
+           "profilePicture":"https://pbs.twimg.com/profile_images/959468898344042496/Ye6qLNJF_400x400.jpg",
+           "username":"Shitty Pete"
+        },
+        {
+           "uid":"BjXbpuR4XleEzojEXjIA28liOIC3",
+           "profilePicture":"https://www.comedycv.co.uk/aidthompsin/aid-thompsin-2013-july.jpg",
+           "username":"Aid Thompsin"
+        }
+     ],
+     "venue":"The White Hart Brew Pub",
+     "img":"https://static.wixstatic.com/media/b2dfba_6569610491b14ca1a153d27fe858262a~mv2_d_2000_1500_s_2.jpg",
+     "imgs":[
+        "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F59126565%2F142923865471%2F1%2Foriginal.20190326-102809?w=1000&auto=compress&rect=0%2C62%2C1162%2C581&s=92ff12c90a0023801c80814415721c1a",
+        "https://static1.squarespace.com/static/57e90e18e6f2e191cbf2ff5f/t/58bd3d35db29d66bb3bd6569/1488797004846/DSC_9087.JPG?format=1500w"
+     ],
+     "blurb":"A mix of new acts and experienced comedians trying out new material, based at The White Hart Brew Pub in East London.",
+     "lat":51.5204,
+     "lng":-0.0545,
+     "nights":[
+        "Mon",
+        "Tue",
+        "Wed"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"join their group on Facebook and fill out the form...",
+     "bringer":false,
+     "nearestTubes":[
+        "Whitechapel",
+        "Stepney Green"
+     ],
+     "twitterHandle":"",
+     "website":"https://www.comedyeast.london",
+     "howToBook":"https://www.facebook.com/ComedyEastLondon/"
+  },
+  {
+     "id":13,
+     "isSelected":false,
+     "name":"The Comedy Tavern",
+     "attended":[
+
+     ],
+     "venue":"North London Tavern",
+     "img":"https://d31fr2pwly4c4s.cloudfront.net/b/b/3/1156130_0_the-comedy-tavern_400.jpg",
+     "imgs":[
+        "https://d31fr2pwly4c4s.cloudfront.net/b/b/3/1156130_0_the-comedy-tavern_400.jpg",
+        "https://assets.londonist.com/uploads/2013/08/i640/nlondontavern.png"
+     ],
+     "blurb":"Every Tuesday - a 'more experienced act's stand-up comedy night (100 gigs+); at the North London Tavern in Kilburn. Show starts at 8pm. Show promises the best up-and-coming acts, with preference for ten spots to more experienced comedians.",
+     "lat":51.5451,
+     "lng":-0.2022,
+     "nights":[
+        "Tue"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"email: kilburncomedytavern@gmail.com",
+     "bringer":false,
+     "nearestTubes":[
+        "Brondesbury",
+        "Kilburn"
+     ],
+     "twitterHandle":"taverncomedy",
+     "website":"https://www.comedyeast.london",
+     "howToBook":"https://www.facebook.com/ComedyEastLondon/"
+  },
+  {
+     "id":14,
+     "isSelected":false,
+     "name":"G&B Comedy",
+     "attended":[
+
+     ],
+     "venue":"Arch 1",
+     "img":"https://i.ytimg.com/vi/00xrXWCeUls/maxresdefault.jpg",
+     "imgs":[
+        "https://i.ytimg.com/vi/00xrXWCeUls/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/00xrXWCeUls/maxresdefault.jpg"
+     ],
+     "blurb":"Great open mic nights every Wednesday out in E16. MC'd by resident magician-comedian, Kyle Wallace, the night is a Bringer BUT you can Be-Your-Own-Bringer by attending the previous week's show.",
+     "lat":51.5226,
+     "lng":-0.004,
+     "nights":[
+        "Wed"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"",
+     "bringer":true,
+     "nearestTubes":[
+        "West Ham"
+     ],
+     "twitterHandle":"GABcomedy",
+     "website":"https://www.facebook.com/00000000",
+     "howToBook":"https://www.facebook.com/groups/226354827562684/"
+  },
+  {
+     "id":15,
+     "isSelected":false,
+     "name":"Nice N' Spiky Comedy",
+     "attended":[
+
+     ],
+     "venue":"The Regent Islington",
+     "img":"https://pbs.twimg.com/profile_images/991412911091408898/a_6QKyPw_400x400.jpg",
+     "imgs":[
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw9PwWkn5_69aRS_ULvPtiQZQ1rcZ3K6IYqebQI2zi_qFEG8wZ",
+        "https://pbs.twimg.com/media/DdwGMLJU8AA7iIf.jpg"
+     ],
+     "blurb":"Nice & Spiky began with gigs at The Paradise By Way Of Kensal Green and The Garage, Highbury but now run a Monday night open mic at The Regent Islington. Previous acts include: Stewart Lee, Reginald D Hunter, Jack Whitehall. Hosted by Nathan Cassidy & run by Richard Dellow, the night is a non-bringer and serves as a deliciously dark, beautiful basement with a few faces looking to try some new ideas.",
+     "lat":51.54,
+     "lng":-0.1068,
+     "nights":[
+        "Mon"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"email: richarddellow@hotmail.com",
+     "bringer":false,
+     "nearestTubes":[
+        "Angel",
+        "Highbury & Islington"
+     ],
+     "twitterHandle":"NiceNSpiky",
+     "website":"https://www.facebook.com/nicenspikycomedy",
+     "howToBook":"https://www.facebook.com/pg/nicenspikycomedy/about/?ref=page_internal"
+  },
+  {
+     "id":16,
+     "isSelected":false,
+     "name":"ZAM Comedy | Riffin at The Griffin",
+     "attended":[
+
+     ],
+     "venue":"The Vauxhall Griffin",
+     "img":"https://pbs.twimg.com/media/D374A9FUIAAluRD.jpg",
+     "imgs":[
+        "https://d3ph2ovtiyj37.cloudfront.net/wp-content/uploads/2017/12/05173839/crowd-laughing.jpg",
+        "https://media.timeout.com/images/102962379/630/472/image.jpg"
+     ],
+     "blurb":"This is a bringer open mic show every Friday from 6-8pm at The Griffin Belle, SW8. The first hour is open-mic. The second is semi-pro / more professional.",
+     "lat":51.4817,
+     "lng":-0.1258,
+     "nights":[
+        "Fri"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"email: zsdills@yahoo.com",
+     "bringer":true,
+     "nearestTubes":[
+        "Vauxhall"
+     ],
+     "twitterHandle":"Vauxhallgriffin",
+     "website":"https://www.facebook.com/ZAM-Comedy-present-Riffin-at-The-Griffin-293560734646494/?eid=ARB3AY0Tk5S809PAD-LRk1gcXk_K8UoRCjrvU_eUDiTf-lL5CY4FjJCNs0s85WnCJWOgXWtups8lOA4_",
+     "howToBook":"https://www.facebook.com/pg/ZAM-Comedy-present-Riffin-at-The-Griffin-293560734646494/about/?ref=page_internal"
+  },
+  {
+     "id":17,
+     "isSelected":false,
+     "name":"Downstairs @ The Kings Head",
+     "attended":[
+
+     ],
+     "venue":"The Kings Head",
+     "img":"https://i.ytimg.com/vi/Em6FsKMspEE/maxresdefault.jpg",
+     "imgs":[
+        "http://www.crouchenders.co.uk/wp-content/uploads/2016/02/kings-head-festival-300x169.png",
+        "http://dantamblingcomedy.com/wp-content/uploads/2014/03/Kings-Head-image.jpg"
+     ],
+     "blurb":"Perhaps best known as one of the oldest Comedy Clubs in Britain specialising in presenting great entertainment in a friendly and intimate environment. Founded in 1981 by Peter Grahame & Huw Thomas. Champion the Best of the New. A favourite of Audiences and Performers. Capacity of 100 people. Excellent PA system, fully stocked bar, air con... and comfortable seating on stools and benches around tables.",
+     "lat":51.578,
+     "lng":-0.1246,
+     "nights":[
+        "Thu"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"phone: 01920 823265 between 9am-11am weekdays",
+     "bringer":false,
+     "nearestTubes":[
+        "Crouch End"
+     ],
+     "twitterHandle":"downstairskhead",
+     "website":"http://www.downstairsatthekingshead.com",
+     "howToBook":"http://www.downstairsatthekingshead.com/Performers.aspx"
+  },
+  {
+     "id":18,
+     "isSelected":false,
+     "name":"Lions Den Comedy Club",
+     "attended":[
+
+     ],
+     "venue":"Bar Rumba",
+     "img":"https://www.chortle.co.uk/images/photos/small/lionsden_logo.jpg",
+     "imgs":[
+        "https://i.ytimg.com/vi/snpDam9DOgY/maxresdefault.jpg",
+        "https://www.lionsdencomedy.co.uk/images/logocarcrash_on_black_295x295px.jpg"
+     ],
+     "blurb":"At 12 years, Lions Den is one of London's longest running open mics. Started by the late Tim Rendle in Kings Cross's now defunct The Cross Keys, Lions Den's Comedy Car Crash moved to Bar Rumba and continues to serve as a friendly hub of raw stand-up try-outs. It is NOT a bringer but has operated a very modest pay-to-play approach in the past...",
+     "lat":51.5112,
+     "lng":-0.1334,
+     "nights":[
+        "Tue"
+     ],
+     "walkins":true,
+     "walkinSignUp":"18:30",
+     "prebook":false,
+     "prebookSignUp":"",
+     "bringer":false,
+     "nearestTubes":[
+        "Leics Square",
+        "Picadilly Circus"
+     ],
+     "twitterHandle":"lionsdencomedy",
+     "website":"https://www.lionsdencomedy.co.uk/",
+     "howToBook":""
+  },
+  {
+     "id":19,
+     "isSelected":false,
+     "name":"Battersea Power Comedy",
+     "attended":[
+
+     ],
+     "venue":"The Duchess Pub",
+     "img":"https://i.opencomedy.com/uploads/1yw98qnvdofgqh28_n.jpg",
+     "imgs":[
+        "https://i2.wp.com/basic-comedy.com/wp-content/uploads/2018/09/lance-at-battersea-power-comedy-e1536355310855-300x212.jpg?resize=300%2C212",
+        "https://media.timeout.com/images/103967665/630/472/image.jpg"
+     ],
+     "blurb":"Battersea Power Comedy is a Bringer comedy night near Battersea Power Station. Hosts include Vlad Ilich and the bill is about 12 acts. To book, you need to email the organiser. He also runs Earls Vegas Comedy on Tuesdays.",
+     "lat":51.4793,
+     "lng":-0.1432,
+     "nights":[
+        "Thu"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"FB Msg: https://www.facebook.com/batterseapowercomedy",
+     "bringer":true,
+     "nearestTubes":[
+        "Battersea Park",
+        "Queenstown Road"
+     ],
+     "twitterHandle":"Duchesspub",
+     "website":"https://www.facebook.com/batterseapowercomedy",
+     "howToBook":"https://www.facebook.com/batterseapowercomedy"
+  },
+  {
+     "id":20,
+     "isSelected":false,
+     "name":"Lost Comedy Club",
+     "attended":[
+
+     ],
+     "venue":"Lost Society",
+     "img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Lost_main_title.svg/1200px-Lost_main_title.svg.png",
+     "imgs":[
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Lost_main_title.svg/1200px-Lost_main_title.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Lost_main_title.svg/1200px-Lost_main_title.svg.png"
+     ],
+     "blurb":"Comedy club held every Wednesday at Lost & Co / Lost Society in the beautiful surroundings of Battersea. Strictly a bringer",
+     "lat":51.4741,
+     "lng":-0.1566,
+     "nights":[
+        "Wed"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"Email: lostcomedyclub@gmail.com",
+     "bringer":true,
+     "nearestTubes":[
+        "Battersea Park",
+        "Queenstown Road"
+     ],
+     "twitterHandle":"lostSocietyBar",
+     "website":"https://www.facebook.com/lostcomedy/",
+     "howToBook":"https://www.facebook.com/pg/lostcomedy/about/?ref=page_internal"
+  },
+  {
+     "id":21,
+     "isSelected":false,
+     "name":"Freedom Fridge",
+     "attended":[
+
+     ],
+     "venue":"The Rose & Crown",
+     "img":"https://pbs.twimg.com/profile_images/2550189831/4je7rgbi81324xl52sqq_400x400.jpeg",
+     "imgs":[
+        "https://i.ytimg.com/vi/HOL_lerRHfk/maxresdefault.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvuCIvG8ub23uMzHn_GIgzE_9F-WwxN8timseQPuU3j7W5ZcjR"
+     ],
+     "blurb":"Long-standing open mic comedy every Thursday from 8pm at The Rose & Crown in Kentish Town. Inquiries via website below or email thefreedomfridge@gmail.com",
+     "lat":51.5502,
+     "lng":-0.1331,
+     "nights":[
+        "Thu"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"Email: thefreedomfridge@gmail.com",
+     "bringer":true,
+     "nearestTubes":[
+        "Kentish Town"
+     ],
+     "twitterHandle":"Freedom_Fridge",
+     "website":"http://thefreedomfridge.weebly.com/",
+     "howToBook":"http://thefreedomfridge.weebly.com/booking-a-spot.html"
+  },
+  {
+     "id":22,
+     "isSelected":false,
+     "name":"Pegasus Comedy",
+     "attended":[
+
+     ],
+     "venue":"The Rose & Crown",
+     "img":"https://static.designmynight.com/uploads/2014/09/Rose-Crown-Lead-optimised.jpg",
+     "imgs":[
+        "https://static.designmynight.com/uploads/2014/09/Rose-Crown-Lead-optimised.jpg"
+     ],
+     "blurb":"The Pegusus WILL NEVER DIE! This night has been going for ages. Previously run by Luke Gretton, then handed to Richy Wright, before more recently being handed to Jacob Hatton. Performers must obey the Pegasus Charter: 1. Don't be a dickhead 2. Do something brand new and brave that has every chance of failing miserably.",
+     "lat":51.5503,
+     "lng":-0.1331,
+     "nights":[
+        "Mon"
+     ],
+     "walkins":true,
+     "walkinSignUp":"18:00",
+     "prebook":true,
+     "prebookSignUp":"Email: pegasuscomedyreborn@gmail.com",
+     "bringer":false,
+     "nearestTubes":[
+        "Kentish Town"
+     ],
+     "twitterHandle":"roseandcrownnw5",
+     "website":"https://www.facebook.com/pegasusreborn",
+     "howToBook":"https://www.facebook.com/pegasusreborn/about"
+  },
+  {
+     "id":23,
+     "isSelected":false,
+     "name":"Instant Laughs",
+     "attended":[
+
+     ],
+     "venue":"The Grove",
+     "img":"http://i0.wp.com/www.instant-laughs.com/wp-content/uploads/2017/12/instantlaughs-1-e1514263886117-300x265.jpeg?resize=432%2C381",
+     "imgs":[
+        "http://i2.wp.com/www.instant-laughs.com/wp-content/uploads/2017/12/14691992_697931937047765_4716562416321268379_o.jpg?resize=640%2C427",
+        "http://i0.wp.com/www.instant-laughs.com/wp-content/uploads/2016/05/Jakebaker-2.jpg?zoom=2&fit=513%2C385"
+     ],
+     "blurb":"Instant laughs is a comedy club set-up by comedians that have been gigging across the UK for a couple of years, going from the cramped, minuscule basements of the London circuit, to the freezing big foot of comedy, the Edinburgh Fringe. We have come across a wide range of audiences and acts, where we have amassed something close to two thousand gigs...",
+     "lat":51.4976,
+     "lng":-0.2278,
+     "nights":[
+        "Sun"
+     ],
+     "walkins":true,
+     "walkinSignUp":"19:00",
+     "prebook":true,
+     "prebookSignUp":"App: https://spotlz.com/",
+     "bringer":false,
+     "nearestTubes":[
+        "Hammersmith"
+     ],
+     "twitterHandle":"instantlaughshq",
+     "website":"http://www.instant-laughs.com/",
+     "howToBook":"http://www.instant-laughs.com/interested-in-performing/"
+  },
+  {
+     "id":24,
+     "isSelected":false,
+     "name":"Heavenly Comedy",
+     "attended":[
+
+     ],
+     "venue":"The Princess Victoria",
+     "img":"https://pbs.twimg.com/profile_images/926474145692553216/8917jbVo.jpg",
+     "imgs":[
+        "https://pbs.twimg.com/profile_images/926474145692553216/8917jbVo.jpg",
+        "https://princessvictoria.co.uk/assets/fullsizeoutput_47c7-1158x500.jpeg"
+     ],
+     "blurb":"Heavenly comedy is a supportive comedy club especially for new acts and more experienced comics trying new material. It's every Wednesday offering 5 min (or 10 min slots for those comics who bring a friend). Based in Shepherds Bush at The Princess Victoria, Uxbridge Rd. Apply for your spot by emailing! Booked in advance.",
+     "lat":51.5064,
+     "lng":-0.2404,
+     "nights":[
+        "Wed"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"contact email bigncomedy@yahoo.co.uk",
+     "bringer":false,
+     "nearestTubes":[
+        "Shepherds Bush",
+        "Shepherds Bush Market"
+     ],
+     "twitterHandle":"Heavenlycomedy",
+     "website":"https://www.facebook.com/groups/107019676090831/",
+     "howToBook":"https://www.facebook.com/groups/107019676090831/"
+  },
+  {
+     "id":25,
+     "isSelected":false,
+     "name":"Vauxhall Comedy Club",
+     "attended":[
+
+     ],
+     "venue":"Vauxhall Comedy Club",
+     "img":"https://media-cdn.tripadvisor.com/media/photo-s/16/98/8a/67/vauxhall-comedy-club.jpg",
+     "imgs":[
+        "https://ents24.imgix.net/image/000/184/376/db05bb62d0e91868ee9274c44d5d8cee753d4504.jpg?w=358&h=268&auto=format",
+        "https://static1.squarespace.com/static/5b8963597c93278fbdbe0e91/t/5c7be8d0104c7b336a2c869b/1551624538116/WEEL%3AY+EVENTS",
+        "https://pbs.twimg.com/media/D2M8icxX4AAf_K9.jpg"
+     ],
+     "blurb":"4-nights a week & a bringer. Possibly the most exciting of open mic nights to emerge is The Vauxhall Comedy Club. North London's rein of open mic comes to an end with Vauxhall Comedy Club's Monday-Thursday take-over! Pop in, grab a wrap & enjoy some amazing comics - NOTE: Pay-What-You-Like dontations at the end of the show",
+     "lat":51.4855,
+     "lng":-0.1235,
+     "nights":[
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"hit up website!",
+     "bringer":true,
+     "nearestTubes":[
+        "Vauxhall"
+     ],
+     "twitterHandle":"vauxhallcomedy",
+     "website":"https://vauxhallcomedyclub.com",
+     "howToBook":"https://vauxhallcomedyclub.com/apply-to-perform-2"
+  },
+  {
+     "id":26,
+     "isSelected":false,
+     "name":"HYPER MIC NIGHT",
+     "attended":[
+
+     ],
+     "venue":"The FAs Comedy Room",
+     "img":"https://static1.squarespace.com/static/567a7e094bf118f6295a3af5/t/5c2e1e664ae2374f420ff506/1557928261841/",
+     "blurb":"Don't blink or you'll miss it! This is London's fastest and funnest open mic. We have one hour to get 10 acts up. If you want to perform, just sign-up, show up, and throw your name in the bucket. ",
+     "lat":51.5471,
+     "lng":-0.1298,
+     "nights":[
+        "Sat"
+     ],
+     "walkins":true,
+     "walkinSignUp":"",
+     "prebook":null,
+     "prebookSignUp":"n/a",
+     "bringer":null,
+     "nearestTubes":[
+        "Camden Road",
+        "Kentish Town"
+     ],
+     "twitterHandle":"FAImprov",
+     "website":"https://thefreeassociation.co.uk/comedy-room-shows-list/",
+     "howToBook":"turn-up, sign-up, name in a bucket"
+  },
+  {
+     "id":27,
+     "isSelected":false,
+     "name":"Lolipops Comedy Night",
+     "attended":[
+
+     ],
+     "venue":"Horse & Stables",
+     "img":"https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/49161338_1949052712070491_8175575981440892928_o.jpg?_nc_cat=102&_nc_ht=scontent-lht6-1.xx&oh=7d0de56f4f6627fe561b725494d144a3&oe=5D69004D",
+     "blurb":"Open Mic standup comedy night featuring a mix of comedians doing booked spots and walk-ins. If you are a comedian interested in performing just message the page with details of how long you have been going, what sort of gigs you do and a video link if you have one. Starts 7:30pm until 10pm.",
+     "lat":51.4998,
+     "lng":-0.114,
+     "nights":[
+        "Tue"
+     ],
+     "walkins":true,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"follow instructions @  https://m.facebook.com/lolipopscomedy/",
+     "bringer":false,
+     "nearestTubes":[
+        "Lambeth North"
+     ],
+     "twitterHandle":"",
+     "website":"https://m.facebook.com/lolipopscomedy/",
+     "howToBook":"instructions here https://m.facebook.com/lolipopscomedy/"
+  },
+  {
+     "id":28,
+     "isSelected":false,
+     "name":"Strange Brew Comedy!",
+     "attended":[
+        {
+           "uid":"pEsUszGqireNzx8kuG0laPwkrLf1",
+           "profilePicture":"/static/no_prof_pic.png",
+           "username":"adam kirby"
+        },
+        {
+           "uid":"BjXbpuR4XleEzojEXjIA28liOIC3",
+           "profilePicture":"https://www.comedycv.co.uk/aidthompsin/aid-thompsin-2013-july.jpg",
+           "username":"Aid Thompsin"
+        },
+        {
+           "uid":"FHARLIW8Z9XABdbtPQitipsXBJn2",
+           "profilePicture":"https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/59763656_10156427102563262_9129698267553071104_n.jpg?_nc_cat=108&_nc_oc=AQlzkNLYmPjyKKjjSPvIN9ozLAWR41pLXIYMjJkKsj3NukEAxJANg4ybDRjZK3_MplU&_nc_ht=scontent-lhr3-1.xx&oh=0c6e9656d82616f50b76d005f00b8a1a&oe=5DCCF008",
+           "username":"Leslie Gold"
+        }
+     ],
+     "venue":"Little Faith Tap Room",
+     "img":"https://i.opencomedy.com/uploads/yh5v124r6w371vqf_n.jpg",
+     "blurb":"London's freshest comedy open mic at Little Faith Taproom, Deptford. Run by the hilarious, Adam Kirby.",
+     "lat":51.4767,
+     "lng":-0.0218,
+     "nights":[
+        "Wed"
+     ],
+     "walkins":false,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"Fill out form @ website",
+     "bringer":true,
+     "nearestTubes":[
+        "Deptford Bridge"
+     ],
+     "twitterHandle":"littleFaithBeer",
+     "website":"https://www.facebook.com/strangebrewcomedynight/",
+     "howToBook":"https://docs.google.com/forms/d/e/1FAIpQLSeTkfI5oSpj5KxX77BOZm3-LSrzOtKrF5kjvIerCoy1z8xAtg/viewform"
+  },
+  {
+     "id":29,
+     "isSelected":false,
+     "name":"Coffee & Cocktails",
+     "attended":[
+        {
+           "uid":"6AVwz3usR9Sp5eZ5jVOQUaXi8SR2",
+           "profilePicture":"/static/no_prof_pic.png",
+           "username":"Gary Shaw"
+        }
+     ],
+     "venue":"The King & Queen Pub",
+     "img":"https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/18057039_281764645604638_5886466651620129579_n.jpg?_nc_cat=102&_nc_ht=scontent-lht6-1.xx&oh=f6ed931c1c0d46b6dccfe7349601c358&oe=5D8B5BCD",
+     "blurb":"The ethos: Coffee & Cocktails Jokes is a friendly, supportive environment for people who are new to standup or who want to try new stuff. 1st Saturday of the month (there are a couple of exceptions). Not a bringer. The only thing we ask is a couple of pound for the pubs charity (McMillan Cancer Support). And remember Share the Love!",
+     "lat":51.5202,
+     "lng":-0.139,
+     "nights":[
+        "Sat"
+     ],
+     "walkins":null,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"email requesting a spot",
+     "bringer":null,
+     "nearestTubes":[
+        "Great Portland St"
+     ],
+     "twitterHandle":"kingandqueenpub",
+     "website":"https://www.facebook.com/CCJStandup/",
+     "howToBook":"https://www.facebook.com/pg/CCJStandup/about/?ref=page_internal"
+  },
+  {
+     "id":30,
+     "isSelected":false,
+     "name":"Blackout!",
+     "attended":[
+        {
+           "uid":"ug6pmTTBnodNk77dhPHqRjkc8tF2",
+           "profilePicture":"/static/no_prof_pic.png",
+           "username":"Kevin lennon"
+        }
+     ],
+     "venue":"Up The Creek",
+     "img":"https://www.the-blackout.co.uk/wp-content/uploads/2018/10/JOHNNY-COCHRANE-300x200.png",
+     "blurb":"Having run a traditional open mic for many years, our waiting lists to perform were becoming longer… and longer. With The Blackout format we can get to acts quicker, speeding up the process of being seen and hopefully being developed at Up the Creek. The idea is for performers to have at least five minutes of comedy material…if not the stage is plunged into darkness as you hit The Blackout.",
+     "lat":51.4814,
+     "lng":-0.0108,
+     "nights":[
+        "Thu"
+     ],
+     "walkins":null,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"email Up The Creek!",
+     "bringer":null,
+     "nearestTubes":[
+        "Greenwich"
+     ],
+     "twitterHandle":"UTCComedyclub",
+     "website":"https://www.the-blackout.co.uk/",
+     "howToBook":"https://www.the-blackout.co.uk/#perform"
+  },
+  {
+     "id":31,
+     "name":"Mascara Mayhem Comedy Spectacular",
+     "attended":[
+
+     ],
+     "venue":"Mascara Bar",
+     "img":"https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/56966803_1277542202398838_6066906511240593408_n.png?_nc_cat=100&_nc_eui2=AeFrA30Rz2QenuO_ewx8zWUqc757-ECI8Abe83ajoH_Zu-ejEkaddm_afSW9Wl-k_5XVc5-MZcI2PpCbqVYycegV9-GPC4MEnbGOjm9rjFMQcg&_nc_ht=scontent-lht6-1.xx&oh=fda29aed2f459195276adbaa78db5ebf&oe=5D931525",
+     "blurb":"Bill Egans twice monthly night in Stoke Newington is NOT a bringer! yay! The first and third Thursday of the month is a comedy spectacular like no other at the bar like nowhere else! Londons funniest spitting zingers, full buffet, games, prizes.",
+     "lat":51.567,
+     "lng":-0.0727,
+     "nights":[
+        "Thu"
+     ],
+     "walkins":null,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"Add Bill on Facebook and message him.",
+     "bringer":null,
+     "nearestTubes":[
+        "Stoke Newington"
+     ],
+     "twitterHandle":"mascaraBar",
+     "website":"https://www.facebook.com/Mascara-Mayhem-Comedy-Spectacular-1277537785732613/",
+     "howToBook":"https://www.facebook.com/Mascara-Mayhem-Comedy-Spectacular-1277537785732613/"
+  },
+  {
+     "id":32,
+     "isSelected":false,
+     "name":"Mates Rates Comedy",
+     "attended":[
+
+     ],
+     "venue":"Bluegrass BBQ",
+     "img":"https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/60731337_673022869817950_2917183220992704512_n.jpg?_nc_cat=101&_nc_eui2=AeEkZb10G1YMsF2r6WArSMRkQq8ZOpShC3E1WQ4pRzVRacHDc56ZR1BW3qABaANm3fcxBfNRO0qNTpivjjZ1b7DtMtd52CGqip-JajdDnUtikA&_nc_ht=scontent-lht6-1.xx&oh=41e7121f6324f9c89b64a258a8f19017&oe=5D93A7D8",
+     "blurb":"Sunday afternoon comedy show every *first Sunday of the month*. Non-bringer non-stayer. Free drink for acts. 10 spots but not a new material night and generally well attended. Details for signing up are on the \"about\" of their Facebook page.",
+     "lat":51.454,
+     "lng":-0.9729,
+     "nights":[
+        "Sun"
+     ],
+     "walkins":null,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"join Facebook group & message Nick",
+     "bringer":null,
+     "nearestTubes":[
+        "Reading Overground"
+     ],
+     "twitterHandle":"nickbyard93",
+     "website":"https://matesratescomedy970019129.wordpress.com",
+     "howToBook":"https://matesratescomedy970019129.wordpress.com/i-want-to-perform-at-mates-rates-comedy/"
+  },
+  {
+     "id":33,
+     "isSelected":false,
+     "name":"Comedy Explosion",
+     "attended":[
+
+     ],
+     "venue":"The Rocksteady",
+     "img":"https://www.theculturediary.com/sites/default/files/styles/event_full/public/images/events/comedy_crop.jpg?itok=hvf2UZ0Q",
+     "blurb":"Sam Rhodes is a Musician and Comedian who runs and MCs numerous stand up nights in and around London. He preforms as often as humanly possible, and is not interested in awards (Unless hes winning them). This one is a bringer and resides in the effortlessly cool capital of Londinium, Dalston.",
+     "lat":51.5455,
+     "lng":-0.0759,
+     "nights":[
+        "Wed"
+     ],
+     "walkins":false,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"message Sam https://m.me/SamRhodesCE",
+     "bringer":true,
+     "nearestTubes":[
+        "Dalston Junction"
+     ],
+     "twitterHandle":"Sammus_the_Hutt",
+     "website":"https://www.facebook.com/pg/SamRhodesCE/",
+     "howToBook":"https://www.facebook.com/pg/SamRhodesCE/about"
+  },
+  {
+     "id":34,
+     "isSelected":false,
+     "name":"42 Comedy Club!",
+     "attended":[
+
+     ],
+     "venue":"Fannys Bar",
+     "img":"https://media-cdn.tripadvisor.com/media/photo-s/16/6e/7b/9f/getlstd-property-photo.jpg",
+     "blurb":"The 42 Comedy Club is a weekly comedy night in Stoke Newington that run 2 shows in one night (7.30pm and 9.30pm). Most spots are Bringers (except headliners they've seen before). There’s a possibility to progress to headline spots.",
+     "lat":51.5599,
+     "lng":-0.0738,
+     "nights":[
+        "Wed"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"Webform => https://docs.google.com/forms/d/e/1FAIpQLSfSJwqMRgFpiUsnyEDsAEUdwupKJWsWRcoo0NHKc9AX9sJWvA/viewform",
+     "bringer":true,
+     "nearestTubes":[
+        "Rectory Road"
+     ],
+     "twitterHandle":"",
+     "website":"https://www.facebook.com/groups/269362500659694/",
+     "howToBook":"https://www.facebook.com/groups/269362500659694/"
+  },
+  {
+     "id":35,
+     "isSelected":false,
+     "name":"Sunday Shtick",
+     "attended":[
+
+     ],
+     "venue":"Rose & Crown",
+     "img":"https://pbs.twimg.com/profile_images/641184585758412804/0lhS61Er_400x400.png",
+     "blurb":"A night of mirth & merriment hosted every Sunday at the Rose & Crown in god damn Kentish Town.  What better way to spend the Lords day than seeing the best comedians on the open mic circuit blow your bloody mind?",
+     "lat":51.5502,
+     "lng":-0.133,
+     "nights":[
+        "Sun"
+     ],
+     "walkins":null,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":" email sundayshtick@gmail.com",
+     "bringer":true,
+     "nearestTubes":[
+        "Kentish Town"
+     ],
+     "twitterHandle":"SundayShtick",
+     "website":"https://www.facebook.com/groups/SundayShtick/",
+     "howToBook":"https://docs.google.com/forms/d/1GD-il6qi_89i0inl8RopfstMEdf3NMWSkQOmcwfYWs4/viewform?fbclid=IwAR0LoF_M_L9C8zH9XiAN5IvBR2fLif_j14uxKKXmAmDjLG-fe6diAUyuB8k&edit_requested=true"
+  },
+  {
+     "id":36,
+     "isSelected":false,
+     "name":"Famous First Words",
+     "attended":[
+
+     ],
+     "venue":"The Gunners",
+     "img":"https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/22405753_890957994386711_1636419236412827089_n.jpg?_nc_cat=103&_nc_eui2=AeGxGq-AwTTV69jlTmkMv29i9xbxDjOgEVJlZCWtmYCZfJSxKAr1EiOrHHLToCLZUZahQb9UV2iV4hCDWJM4ZJ8zN537HhVBUCLgV2wTuMjB3w&_nc_ht=scontent-lht6-1.xx&oh=a4bbd7701157f4017266326752b099d7&oe=5D8A6197",
+     "blurb":"Every Monday (except for Arsenal match days), Famous First Words is a Bringer open mic with a passion for variety. Comedy, Music, Poets and others are all welcome for 5 minutes / 3 songs stage time.  Pre-book your slot by messaging the page or Ana-Maria Dewey with your preferred date/s. Alternatively, walk up on the night if youre feeling frisky. The blurb on their facebook page says \"Staying is heavily encouraged (barring family emergencies, we're not complete monsters). If you really can't stand it: we're stuck there every week so think how we feel\". Lolz.",
+     "lat":51.5591,
+     "lng":-0.099,
+     "nights":[
+        "Mon"
+     ],
+     "walkins":true,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"email the facebook page",
+     "bringer":true,
+     "nearestTubes":[
+        "Finsbury Park"
+     ],
+     "twitterHandle":"ruskinruskin",
+     "website":"https://www.facebook.com/pg/FFWcomedy/",
+     "howToBook":"https://www.facebook.com/pg/FFWcomedy/about"
+  },
+  {
+     "id":37,
+     "isSelected":false,
+     "name":"Funny Feckers",
+     "attended":[
+        {
+           "uid":"rRGwAHtQBvUEvbmnSRKddkc3Rm22",
+           "profilePicture":"https://pbs.twimg.com/profile_images/959468898344042496/Ye6qLNJF_400x400.jpg",
+           "username":"Shitty Pete"
+        }
+     ],
+     "venue":"The Constitution",
+     "img":"https://media-cdn.tripadvisor.com/media/photo-s/11/dc/b9/0d/funny-feckers-mc-wes.jpg",
+     "blurb":"Funny Feckers is a long time favourite Bringer on the Open Mic, new act / new material scene. MC'd by Wes Dalton, it's a night of about 10-14 acts and a headliner.",
+     "lat":51.5403,
+     "lng":-0.1355,
+     "nights":[
+        "Thu"
+     ],
+     "walkins":false,
+     "walkinSignUp":"00:00",
+     "prebook":true,
+     "prebookSignUp":"join: https://www.facebook.com/groups/582408618478799/",
+     "bringer":true,
+     "nearestTubes":[
+        "Camden Road",
+        "Camden"
+     ],
+     "twitterHandle":"FunnyFeckers",
+     "website":"http://www.funnyfeckers.co.uk",
+     "howToBook":"http://www.funnyfeckers.co.uk/performers/"
+  },
+  {
+     "id":38,
+     "name":"Funny Feckers",
+     "attended":[
+
+     ],
+     "venue":"The Dean Swift",
+     "img":"https://i.ytimg.com/vi/5kOzeYp8RgU/hqdefault.jpg",
+     "blurb":"Funny Feckers is a weekly FREE comedy night founded & compered by Irish MC, Wes Dalton. Branching out from their Camden roots with a brand new Monday show @ The Dean Swift in Tower Bridge. Each week they bring you a craic-ing bill of up-and-coming acts and special guest to headline. Fun and friendly night which brings people together through laughter and silliness. Doors 19.30!",
+     "lat":51.5024,
+     "lng":-0.0734,
+     "nights":[
+        "Mon",
+        "Sat"
+     ],
+     "walkins":null,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"monthly booking via email",
+     "bringer":true,
+     "nearestTubes":[
+        "Bermondsey"
+     ],
+     "twitterHandle":"FunnyFeckers",
+     "website":"http://www.funnyfeckers.co.uk",
+     "howToBook":"http://www.funnyfeckers.co.uk/performers/"
+  },
+  {
+     "id":39,
+     "isSelected":false,
+     "name":"Monkey Business",
+     "attended":[
+
+     ],
+     "venue":"Pembroke Castle",
+     "img":"https://pbs.twimg.com/profile_images/1049034029725564928/_MqSP_Nc_400x400.jpg",
+     "blurb":"Martin Bessermans long-running new material night is a mixed bag. A fab night in a fab area for seasoned acts to try new ideas. But also a confusingly £6-ticketed new act spot. That said hes had some great names passing through and the night has been running longer than a stack of others so he must be doing something right. Not a bringer. ",
+     "lat": 51.54223,
+     "lng": -0.154907,
+     "nights":[
+        "Thu"
+     ],
+     "walkins": false,
+     "walkinSignUp":"",
+     "prebook": true,
+     "prebookSignUp":"email martin_besserman@yahoo.co.uk",
+     "bringer": false,
+     "nearestTubes":[
+        "Chalk Farm"
+     ],
+     "twitterHandle":"ComedyCamden1",
+     "website":"http://www.monkeybusinesscomedyclub.co.uk",
+     "howToBook":"https://www.facebook.com/groups/31918811444/about/"
+  },
+  {
+     "id":40,
+     "isSelected":false,
+     "name":"Love Comedy Club",
+     "attended":[
+
+     ],
+     "venue":"Loves Company",
+     "img":"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F60105308%2F185060150138%2F1%2Foriginal.20190410-013148?w=1000&auto=compress&rect=0%2C7%2C770%2C385&s=4793e4312b0fa38b699426975ce507e4",
+     "blurb":"New comedy club in Old Street. Its NOT a bringer, 10 acts, tuesday nights, at Loves Company in old street or Shoreditch <-- depending on how trendy youre trying to sound.",
+     "lat":51.5262,
+     "lng":-0.0884,
+     "nights":[
+        "Tue"
+     ],
+     "walkins":null,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"join group, send message.",
+     "bringer":null,
+     "nearestTubes":[
+        "Old Street"
+     ],
+     "twitterHandle":"_LovesCo",
+     "website":"https://www.facebook.com/Love-Comedy-Club-280404106131428/",
+     "howToBook":"https://www.opencomedy.com/UK/gigs/london/love-comedy-club/?fbclid=IwAR0GHiXVpSikqRTU2s2Fu6LXEOLXeAGpdIqAGVAd4u_UPgw7NMFe6ABWh8Y"
+  },
+  {
+     "id":41,
+     "isSelected":false,
+     "name":"Lighthouse Comedy",
+     "attended":[
+
+     ],
+     "venue":"Lighthouse Bar",
+     "img":"https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/65042974_10161949626795125_7470024901814910976_n.jpg?_nc_cat=105&_nc_ht=scontent-lht6-1.xx&oh=26679c8ed1108682e2a70f43f50d9cc7&oe=5D903C57",
+     "blurb":"Marcus Tisson brings us this fresh and new East London open mic. Its NOT a bringer (rejoice!) and youre only obligation is to maybe help promote it by sharing the gig around on Social Media. Easier said than done as we cant find a twitter for either Marcus or the gig or the venue! agh! That said, looks like some cracking photos on the Facebook page and the fact its new and NOT a bringer is something to celebrate & support. Get on it.",
+     "lat":51.5261,
+     "lng":-0.079,
+     "nights":[
+        "Wed"
+     ],
+     "walkins":null,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"email marcusscomedian1979@gmail.com",
+     "bringer":null,
+     "nearestTubes":[
+        "Shoreditch High St"
+     ],
+     "twitterHandle":"",
+     "website":"https://www.facebook.com/lighthousecomedyclub/",
+     "howToBook":"https://www.facebook.com/pg/lighthousecomedyclub/about/"
+  },
+  {
+     "id":42,
+     "name":"The Cutty Bang Cabaret Show",
+     "attended":[
+
+     ],
+     "venue":"The New Cross House",
+     "img":"https://66.media.tumblr.com/8d580e00e6b211131e1ade97d0b9ed7d/tumblr_p9jnhqxW5R1wxfnm6o1_1280.jpg",
+     "blurb":"Every Last Thursday of the month it's the Cutty Bang Cabaret Show! Run by John McQue, this is a variety open mic so possibly one for the ukelele, poet and magician types amongst you. To Book? Hit the website below and message them.",
+     "lat":51.47581,
+     "lng":-0.0345,
+     "nights":[
+        "Thu"
+     ],
+     "walkins":null,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"hit up the Facebook page",
+     "bringer":null,
+     "nearestTubes":[
+        "New Cross Gate"
+     ],
+     "twitterHandle":"thecuttybang",
+     "website":"https://www.facebook.com/thecuttybang/",
+     "howToBook":"https://www.facebook.com/thecuttybang/about"
+  },
+  {
+     "id":43,
+     "name":"Convenient Comedy",
+     "attended":[
+
+     ],
+     "venue":"The Worlds End",
+     "img":"http://www.worldsendfinsburypark.com/sites/default/files/events/images/comedy-mic_0.jpg",
+     "blurb":"Tuesday night gig in Finsbury Park. Joke books at the ready. Get in touch if you want to take one of their slots for the evening, or if you would just like a table to view the stage. 12 acts each week. Everything is usually wrapped up by 10. ",
+     "lat":51.5674,
+     "lng":-0.109,
+     "nights":[
+        "Tue"
+     ],
+     "walkins":true,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"email convenientcomedy@gmail.com",
+     "bringer":null,
+     "nearestTubes":[
+        "Finsbury Park"
+     ],
+     "twitterHandle":"convenientCMDY",
+     "website":"http://www.worldsendfinsburypark.com/events/04-06-2019/convenient-comedy-4",
+     "howToBook":"https://www.facebook.com/pg/Convenient-Comedy-2294213997520596/about/?ref=page_internal"
+  },
+  {
+     "id":44,
+     "name":"Montys",
+     "attended":[
+
+     ],
+     "venue":"Montys Bar",
+     "img":"https://s3-media3.fl.yelpcdn.com/bphoto/2NLWL6zKbcSuJ2adX_DHBg/348s.jpg",
+     "blurb":"A new bringer to the East London stables. Firmly in Brick Lane, Monty's is E1, a bringer and boasts a lovely atmosphere. ",
+     "lat":51.5244,
+     "lng":-0.0716,
+     "nights":[
+        "Mon",
+        "Tue"
+     ],
+     "walkins":null,
+     "walkinSignUp":"",
+     "prebook":true,
+     "prebookSignUp":"Email standupmontys@gmail.com",
+     "bringer":true,
+     "nearestTubes":[
+        "Shoreditch High St"
+     ],
+     "twitterHandle":"",
+     "website":"https://www.instagram.com/standupnightslondon/?hl=en",
+     "howToBook":"https://www.instagram.com/standupnightslondon/?hl=en"
+  },
+  {
+     "id":45,
+     "name":"We Are Funny",
+     "attended":[
+        {
+           "uid":"fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+           "profilePicture":"/static/no_prof_pic.png",
+           "username":"Owen Clark"
+        },
+        {
+           "uid":"BjXbpuR4XleEzojEXjIA28liOIC3",
+           "profilePicture":"https://www.comedycv.co.uk/aidthompsin/aid-thompsin-2013-july.jpg",
+           "username":"Aid Thompsin"
+        }
+     ],
+     "venue":"The Jago",
+     "img":"data:image/png;base64,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",
+     "blurb":"We Are Funny have returned! Albeit with some new faces, The Next Generation, as it were. Spen Cockerall, Brandon Palmer & Rob Mayhem run what is arguably London's finest non-bringer",
+     "lat":51.5421,
+     "lng":-0.0758,
+     "nights":[
+        "Mon"
+     ],
+     "walkins":true,
+     "walkinSignUp":"18:30",
+     "prebook":true,
+     "prebookSignUp":"Email info@wearefunnyproject.com",
+     "bringer":false,
+     "nearestTubes":[
+        "Dalston Junction"
+     ],
+     "twitterHandle":"weRfunnyProject",
+     "website":"https://www.wearefunnyproject.com",
+     "howToBook":"https://www.facebook.com/groups/wearefunnyproject/about/"
+  },
+  {
+     "id":46,
+     "name":"Living Room Comedy",
+     "attended":[],
+     "venue":"91 - Living Room",
+     "img":"https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/75252900_10211735785868767_9169562204079390720_o.jpg?_nc_cat=104&_nc_oc=AQly6G5mfYdnIrfrJ68XMX6dGXwIvmotTB9QjbZTb0rQNmcOTgcEqfg0f6ZFNjMBofQ&_nc_ht=scontent-lht6-1.xx&oh=2f8bc65f16b162701a10336d6c14aebc&oe=5E83B16F",
+     "blurb":"Brand new Bringer to East London. The first one had an amazing 50-person audience. Takes place in a Jazz Bar in Londons vibrant Brick Lane district. One for the newbies and seasoned acts who *may* still have actual friends to bring.",
+     "lat": 51.5204,
+     "lng": -0.0721,
+     "nights":[
+        "Mon"
+     ],
+     "walkins": false,
+     "walkinSignUp":"18:30",
+     "prebook": true,
+     "prebookSignUp":"Message https://www.facebook.com/messages/t/vasco.elvas.9",
+     "bringer": true,
+     "nearestTubes":[
+        "Shoreditch High St"
+     ],
+     "twitterHandle":"91livingroom",
+     "website":"https://91livingroom.com",
+     "howToBook":"https://www.facebook.com/messages/t/vasco.elvas.9"
+  },
+  {
+    "id":47,
+    "name":"FFC Open Mic Comedy",
+    "attended":[],
+    "venue":"The Watermans Arms",
+    "img":"https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/p720x720/76192601_2226592144112899_2524918446190231552_o.png?_nc_cat=102&_nc_oc=AQkfsCKl3KcSSleGSDjJKyBUsDgl5vOdYQMTgIStKRVUyw5FAloLzRWMcIbqqm_2Uak&_nc_ht=scontent-lht6-1.xx&oh=404c00332c1d4bc872980c33b72642ac&oe=5E89949A",
+    "blurb":"Open Mic bleeds out into The Home Counties! The first night for TPR that hails from Eton, Berkshire. Walkins, Not a Bringer, and free entry for all. This night is run by Matt Early and acts can pre-book or rock-up (within reason).",
+    "lat": 51.4862,
+    "lng": -0.6096,
+    "nights":[
+       "Wed"
+    ],
+    "walkins": true,
+    "walkinSignUp":"18:30",
+    "prebook": true,
+    "prebookSignUp":"Message https://www.facebook.com/messages/t/FullFrontalComedyLive",
+    "bringer": false,
+    "nearestTubes":[
+       "Winds & Eton Riverside"
+    ],
+    "twitterHandle":"WatermansEton",
+    "website":"https://www.facebook.com/FullFrontalComedyLive/",
+    "howToBook":"https://www.facebook.com/messages/t/FullFrontalComedyLive"
+  },
+  {
+    "id":48,
+    "name":"Dead Leg Comedy",
+    "attended":[],
+    "venue":"The Unicorn",
+    "img":"https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/77394085_153627659369034_4017452768762527744_o.jpg?_nc_cat=103&_nc_oc=AQnHQ0LLLrOJFS_UVuc0q4_NlKSXxaaw-HEaJ_LriG3YbI_u_euuN7qgSMXLg-HHsXM&_nc_ht=scontent-lht6-1.xx&oh=13204cce5f636835d3dfbf5297a60d5a&oe=5E3EC31D",
+    "blurb":"Uncurated standup for curious people. Occult Comedian, Andrew O'Neill, brings his weekly Open Mic to North London, with a nice refreshing slew of Tuesday night spots for those of us that adore Camden's punk rock & metal aesthetic.",
+    "lat": 51.5485,
+    "lng": -0.1300,
+    "nights":[
+       "Tue"
+    ],
+    "walkins": true,
+    "walkinSignUp":"18:30",
+    "prebook": true,
+    "prebookSignUp":"Message https://www.facebook.com/messages/t/FullFrontalComedyLive",
+    "bringer": false,
+    "nearestTubes":[
+       "Camden Road"
+    ],
+    "twitterHandle":"destructo9000",
+    "website":"https://www.facebook.com/Deadlegcomedy",
+    "howToBook":"mailto:deadlegcomedy@gmail.com"
+  },
+  {
+    "id":49,
+    "name":"Jest Another Comedy Club",
+    "attended":[],
+    "venue":"The Crown",
+    "img":"data:image/jpeg;base64,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",
+    "blurb":"Are you near St Albans? Don't like commuting into London to try out your set? Well here's your answer: A new, NON-bringer for the Home Counties! Get your arse down to Jest Another comedy club (nearly) every Tuesday.",
+    "lat": 51.7514,
+    "lng": -0.3229,
+    "nights":[
+       "Tue"
+    ],
+    "walkins": true,
+    "walkinSignUp":"18:30",
+    "prebook": true,
+    "prebookSignUp":"Message info@xpgevents.com",
+    "bringer": false,
+    "nearestTubes":[
+       "St Albans City"
+    ],
+    "twitterHandle":"",
+    "website":"https://www.facebook.com/pages/category/Comedy-Club/JEST-Another-Comedy-Club-695945047406944/",
+    "howToBook":"https://m.me/695945047406944?fbclid=IwAR1URtaTg0vdAGE-iyz8kX-_CvQVXqU59bK-s449gvHey-KefY3WF8QXCog"
+  },
+  {
+    "id":50,
+    "name":"Comedy Supernova",
+    "attended":[],
+    "venue":"The Palmerston",
+    "img":"https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/75474115_100400581427484_5921467859057246208_o.jpg?_nc_cat=110&_nc_oc=AQmydxfADLNDRU-sT3cv4uaS8JXJ8OxLqNwWtPZXP4Jd8F3RjC5SSwXFzVij2Sj0nV8&_nc_ht=scontent-lht6-1.xx&oh=86f7cbff69008ff94743c2846a2c327b&oe=5E83A8B3",
+    "blurb":"New to South London it's Comedy Supernova, who have brought a fortnightly open mic night to the people of East Dulwich. Based at The Palmerston. Precious little is known about this night. So just message the C/S Facebook page & go from there!",
+    "lat": 51.4586,
+    "lng": -0.0748,
+    "nights":[
+       "Sun"
+    ],
+    "walkins": false,
+    "walkinSignUp": "18:30",
+    "prebook": true,
+    "prebookSignUp":"",
+    "bringer": false,
+    "nearestTubes":[
+       "East Dulwich"
+    ],
+    "twitterHandle":"",
+    "website":"https://www.facebook.com/ComedySupernova",
+    "howToBook":"https://m.me/ComedySupernova?fbclid=IwAR1MYASaZDuPyUl0iNWFmHdX4udnfEFYFWWzWXvL9EwTr4ysyJ-zN_Ki3co"
+  }
+]

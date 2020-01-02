@@ -17,7 +17,7 @@ const useStyles = createUseStyles({
   offlineBanner: {
     position: 'fixed',
     bottom: 0,
-    width: '100%',
+    width: '102%',
     padding: 20,
     margin: 0,
     display: 'flex',

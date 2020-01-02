@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
-import useStyles from './styles';
 import { getFromCache } from '../Cache';
 import { saveUid, saveUserProfile } from '../../actions/user';
 import { isConnected, isDisconnected } from '../../actions/connectivity';
+
+import useStyles from './styles';
 
 const withPage = MyComponent => {
 
@@ -29,12 +31,12 @@ const withPage = MyComponent => {
       setInterval(() => {
         navigator.onLine ? props.updateStateConnected() : props.updateStateDisconnected();
       }, 5000);
-    }, [])
+    }, []);
 
     return (
-      <div className={classes.withPageContainer}>
+      <div className="container">
         <MyComponent {...props} />
-        { !props.isConnected && <p className={classes.offlineBanner}>Offline Mode</p>}
+        { !props.isConnected && <p className="offline-banner">Offline Mode</p> }
       </div>
     )
   }
@@ -48,11 +50,9 @@ const withPage = MyComponent => {
 
   const mapStateToProps = (state) => ({
     isConnected: state.connectivity.isConnected,
-  })
+  });
 
   return connect(mapStateToProps, mapDispatchToProps)(HOC);
-
-
 }
 
 

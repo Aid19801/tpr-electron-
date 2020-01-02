@@ -87,6 +87,20 @@ export default merge.smart(baseConfig, {
           }
         ]
       },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     {
+      //       loader: 'style-loader'
+      //     },
+      //     {
+      //       loader: 'css-loader',
+      //       options: {
+      //         sourceMap: true
+      //       }
+      //     }
+      //   ]
+      // },
       {
         test: /^((?!\.global).)*\.css$/,
         use: [
@@ -96,9 +110,9 @@ export default merge.smart(baseConfig, {
           {
             loader: 'css-loader',
             options: {
-              modules: {
-                localIdentName: '[name]__[local]__[hash:base64:5]'
-              },
+              // modules: {
+              //   localIdentName: '[name]__[local]__[hash:base64:5]'
+              // },
               sourceMap: true,
               importLoaders: 1
             }
@@ -206,6 +220,10 @@ export default merge.smart(baseConfig, {
             },
           },
         ],
+      },
+      {
+        test: /\.mp4$/,
+        use: 'file-loader?name=videos/[name].[ext]',
       }
     ]
   },

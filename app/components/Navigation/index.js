@@ -6,9 +6,11 @@ import * as ROUTES from '../../constants/routes';
 import SignOutButton from '../SignOutButton';
 import { AuthUserContext } from '../Session';
 
-import useStyles from './styles';
+import useStyles from './styless';
 import { Button } from '..';
 import { saveToCache, clearFromCache } from '../Cache';
+
+import './styles.css';
 
 const Navigation = (props) => {
   const classes = useStyles();

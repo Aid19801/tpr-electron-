@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 import { compose } from 'redux';
 import { withFirebase } from '../../components/Firebase';
-import { Input, FunkyTitle, Button, withPage, Modal } from '../../components';
+import { Input, FunkyTitle, Button, withPage, Modal, Icon } from '../../components';
 import * as ROUTES from '../../constants/routes';
 
 const SignUpPage = () => (
@@ -24,7 +25,7 @@ class SignUpFormBase extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        stage: 2,
+        stage: 0,
         submitting: false,
         error: null,
 
@@ -268,45 +269,53 @@ class SignUpFormBase extends Component {
       )}
       { stage === 2 && (
         <React.Fragment>
-          <div style={{ border: '1px solid white', borderRadius: 12,  width: '65%', display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
-            <p style={{ color: 'white', fontFamily: 'monospace', textAlign: 'center', margin: 2 }}>Include me in acts section? </p>
 
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', width: '90%', margin: 10 }}>
-              <div
-                style={{
-                  backgroundColor: includeInActRater ? 'green' : 'grey',
-                  border: '5px solid black',
-                  borderRadius: 12,
-                  width: 100,
-                  height: 40,
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'white',
-                  fontFamily: 'Arial'
-                }}
-                onClick={() => this.handleIncludeInActsSection(true)}
-                >
-                Yes
-              </div>
-              <div
-                style={{
-                  backgroundColor: includeInActRater ? 'grey' : 'red',
-                  border: '5px solid black',
-                  borderRadius: 12,
-                  width: 100,
-                  height: 40,
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'white',
-                  fontFamily: 'Arial'
-                }}
-                onClick={() => this.handleIncludeInActsSection(false)}>No</div>
+        <Fade left>
+        <div style={{ border: 0, borderRadius: 12,  padding: 10, background: 'orange', width: '65%', display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
+          <p style={{ color: 'white', fontFamily: 'monospace', textAlign: 'end', margin: 2, fontSize: 20, }}>Include me in acts section? </p>
+
+          <div style={{ display: 'flex', flexDirection: 'row' }}>
+
+
+          <div style={{ borderRadius: 12,  padding: 10, background: 'grey', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', width: '90%', margin: 10 }}>
+            <div
+              style={{
+                backgroundColor: includeInActRater ? 'green' : 'grey',
+                border: '5px solid black',
+                borderRadius: 12,
+                width: 100,
+                height: 40,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                color: 'white',
+                fontFamily: 'Arial'
+              }}
+              onClick={() => this.handleIncludeInActsSection(true)}
+              >
+              Yes
             </div>
-
+            <div
+              style={{
+                backgroundColor: includeInActRater ? 'grey' : 'red',
+                border: '5px solid black',
+                borderRadius: 12,
+                width: 100,
+                height: 40,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                color: 'white',
+                fontFamily: 'Arial'
+              }}
+              onClick={() => this.handleIncludeInActsSection(false)}>No</div>
           </div>
 
+          <Icon icon="list" />
+          </div>
+
+        </div>
+      </Fade>
           <Input
             name="facebook"
             value={facebook}

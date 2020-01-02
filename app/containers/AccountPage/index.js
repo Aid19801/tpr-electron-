@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 import { compose } from 'redux';
 import { withFirebase } from '../../components/Firebase';
-import { Input, FunkyTitle, Button, withPage, Modal } from '../../components';
+import { Input, FunkyTitle, Button, withPage, Modal, Icon } from '../../components';
 import * as ROUTES from '../../constants/routes';
+import './styles.css';
 
 const AccountPage = () => (
   <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
@@ -22,7 +24,6 @@ class AccountFormBase extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        stage: 0,
         submitting: false,
         error: null,
 
@@ -91,21 +92,6 @@ class AccountFormBase extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  moveForward = () => {
-    const currentStage = this.state.stage;
-    // if (currentStage <= 3) {
-      this.setState({
-        stage: currentStage + 1
-      });
-    // }
-  };
-
-  moveBackward = () => {
-    const current = this.state.stage;
-    const prevStage = current - 1;
-    return this.setState({ stage: prevStage });
-  }
-
   handleIncludeInActsSection = (bool) => {
     return this.setState({ includeInActRater: bool })
   }
@@ -119,7 +105,6 @@ class AccountFormBase extends Component {
       username,
       email,
       error,
-      stage,
       profilePicture,
       tagline,
       genre,
@@ -138,14 +123,9 @@ class AccountFormBase extends Component {
 
  return (
    <React.Fragment>
-   { stage > 0 && (
-      <div style={{ position: "absolute", top: 75, left: 15 }}>
-        <Button small text="Back" onClick={this.moveBackward} disabled={false} color="darkgrey" />
-      </div>
-   )}
+
       <form onSubmit={this.onSubmit} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
-      { stage === 0 && (
-        <React.Fragment>
+
           <Input
             name="username"
             value={username}
@@ -163,14 +143,6 @@ class AccountFormBase extends Component {
             descr="email"
             disabled
           />
-
-          <Button text="next =>" type="text" onClick={this.moveForward} />
-          {error && <p>{error.message}</p>}
-        </React.Fragment>
-      )}
-
-      { stage === 1 && (
-        <React.Fragment>
           <Input
             name="profilePicture"
             value={profilePicture}
@@ -222,50 +194,53 @@ class AccountFormBase extends Component {
             descr="Favourite Open Mic"
             icon="mic"
           />
-          <Button text="next =>" type="text" onClick={this.moveForward} />
-          {error && <p>{error.message}</p>}
-        </React.Fragment>
-      )}
-      { stage === 2 && (
-        <React.Fragment>
-          <div style={{ border: '1px solid white', borderRadius: 12,  width: '65%', display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
-            <p style={{ color: 'white', fontFamily: 'monospace', textAlign: 'center', margin: 2 }}>Include me in acts section? </p>
 
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', width: '90%', margin: 10 }}>
-              <div
-                style={{
-                  backgroundColor: includeInActRater ? 'green' : 'grey',
-                  border: '5px solid black',
-                  borderRadius: 12,
-                  width: 100,
-                  height: 40,
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'white',
-                  fontFamily: 'Arial'
-                }}
-                onClick={() => this.handleIncludeInActsSection(true)}
-                >
-                Yes
+          <Fade left>
+            <div style={{ border: 0, borderRadius: 12,  padding: 10, background: 'orange', width: '65%', display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
+              <p style={{ color: 'white', fontFamily: 'monospace', textAlign: 'end', margin: 2, fontSize: 20, }}>Include me in acts section? </p>
+
+              <div style={{ display: 'flex', flexDirection: 'row' }}>
+
+
+              <div style={{ borderRadius: 12,  padding: 10, background: 'grey', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', width: '90%', margin: 10 }}>
+                <div
+                  style={{
+                    backgroundColor: includeInActRater ? 'green' : 'grey',
+                    border: '5px solid black',
+                    borderRadius: 12,
+                    width: 100,
+                    height: 40,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    color: 'white',
+                    fontFamily: 'Arial'
+                  }}
+                  onClick={() => this.handleIncludeInActsSection(true)}
+                  >
+                  Yes
+                </div>
+                <div
+                  style={{
+                    backgroundColor: includeInActRater ? 'grey' : 'red',
+                    border: '5px solid black',
+                    borderRadius: 12,
+                    width: 100,
+                    height: 40,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    color: 'white',
+                    fontFamily: 'Arial'
+                  }}
+                  onClick={() => this.handleIncludeInActsSection(false)}>No</div>
               </div>
-              <div
-                style={{
-                  backgroundColor: includeInActRater ? 'grey' : 'red',
-                  border: '5px solid black',
-                  borderRadius: 12,
-                  width: 100,
-                  height: 40,
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  color: 'white',
-                  fontFamily: 'Arial'
-                }}
-                onClick={() => this.handleIncludeInActsSection(false)}>No</div>
-            </div>
 
-          </div>
+              <Icon icon="list" />
+              </div>
+
+            </div>
+          </Fade>
 
           <Input
             name="facebook"
@@ -312,9 +287,8 @@ class AccountFormBase extends Component {
             descr="Your own website"
             icon="website"
           />
+
           <Button text="Update" type="submit" disabled={error !== null} />
-        </React.Fragment>
-      )}
 
       </form>
 

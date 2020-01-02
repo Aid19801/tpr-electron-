@@ -1,5 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+
 import useStyles from './styles';
 import Icon from '../Icons';
 
