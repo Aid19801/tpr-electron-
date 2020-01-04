@@ -2,13 +2,14 @@ import React from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import { Navigation } from './components';
 
-import LandingPage from './containers/LandingPage';
-import SignUpPage from './containers/SignUpPage';
-import SignInPage from './containers/SignInPage';
-import PasswordForgetPage from './containers/PasswordForgetPage';
-import HomePage from './containers/HomePage';
 import AccountPage from './containers/AccountPage';
 import AdminPage from './containers/AdminPage';
+import HomePage from './containers/HomePage';
+import LandingPage from './containers/LandingPage';
+import NewsStoryPage from './containers/NewsStory';
+import PasswordForgetPage from './containers/PasswordForgetPage';
+import SignUpPage from './containers/SignUpPage';
+import SignInPage from './containers/SignInPage';
 import { withAuthentication } from './components/Session';
 
 import * as ROUTES from './constants/routes';
@@ -24,6 +25,9 @@ const App = () => (
         <Route path={ROUTES.SIGN_IN} component={SignInPage} />
         <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
         <Route path={ROUTES.HOME} component={HomePage} />
+
+        <Route path={ROUTES.NEWS_STORY} component={NewsStoryPage} />
+
         <Route path={ROUTES.ACCOUNT} component={AccountPage} />
         <Route path={ROUTES.ADMIN} component={AdminPage} />
 

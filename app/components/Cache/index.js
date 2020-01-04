@@ -1,29 +1,28 @@
 export const saveToCache = (key, val) => {
+
   if (typeof val === 'object') {
-    return localStorage.setItem(key, JSON.stringify(val))
+    localStorage.setItem(key, JSON.stringify(val))
+  } else {
+    localStorage.setItem(key, val);
   }
-  return localStorage.setItem(key, val);
-};
+
+  setTimeout(() => {
+    const cache = localStorage.getItem(key);
+    return console.log(`${key} updated in cache`);
+  }, 1000);
+
+}
 
 export const getFromCache = key => {
   const val = localStorage.getItem(key);
-  return val;
+  return val; // may require JSON.parse if it's being used on an object/stringified json
 };
 
-export const clearFromCache = key => {
-    return localStorage.removeItem(key);
-};
+export const removeFromCache = (key) => {
+  localStorage.removeItem(key);
 
-// export const setAuthUser = authUser => {
-//   if (process.browser) {
-//     localStorage.setItem('authUser', authUser);
-//   }
-//   return;
-// };
-
-// export const getAuthUser = () => {
-//   if (process.browser) {
-//     const val = localStorage.getItem('authUser');
-//     return val;
-//   }
-// };
+  setTimeout(() => {
+    const cache = localStorage.getItem(key);
+    console.log(`removed ${key} from cache: `, cache);
+  }, 1000);
+}

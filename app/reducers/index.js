@@ -4,6 +4,7 @@ import { connectRouter } from 'connected-react-router';
 import type { HashHistory } from 'history';
 import connectivity from './connectivity';
 import counter from './counter';
+import news from './news';
 import user from './user';
 
 export default function createRootReducer(history: HashHistory) {
@@ -11,6 +12,7 @@ export default function createRootReducer(history: HashHistory) {
     router: connectRouter(history),
     connectivity,
     counter,
+    news,
     user,
   });
 }

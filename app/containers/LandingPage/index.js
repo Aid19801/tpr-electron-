@@ -3,14 +3,14 @@ import { Link, withRouter } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import { compose } from 'redux';
 import { withFirebase } from '../../components/Firebase';
-import { Input, FunkyTitle, Button, withPage, Modal, Icon, ProfilePic } from '../../components';
+import { Input, FunkyTitle, Button, withPage, Modal, Icon, ProfilePic, withFooter } from '../../components';
 import * as ROUTES from '../../constants/routes';
 import video from './loop.mp4';
 import mockGigs from '../../mocks/mockGigs.json';
 
 import './styles.css';
 
-const LandingPage = () => {
+const LandingPage = (props) => {
   const [ gigs, setGigs ] = useState([]);
 
   const handleGigsArray = () => {
@@ -33,10 +33,10 @@ const LandingPage = () => {
 
   useEffect(() => {
     handleGigsArray();
+    console.log('props ', props);
   }, [])
 
-
-return (
+  return (
     <div id="landingPage">
 
       <video className="w-100 h-100" autoPlay muted loop id="myVideo">
@@ -117,5 +117,9 @@ return (
   );
 }
 
-export default withPage(LandingPage);
+export default compose(
+  withPage,
+  withFooter,
+  withRouter,
+)(LandingPage);
 

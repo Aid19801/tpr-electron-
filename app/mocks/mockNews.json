@@ -1,0 +1,383 @@
+{
+  "articles":[
+     {
+        "_id":"TPR_1563381576626",
+        "headline":"MOCK MOCK Bye Bye, We Are Funny!",
+        "blurb":"Its over, done, gone. We wish them the best for the future and thank them for a job well done x",
+        "src":"TPR",
+        "img":"https://static1.squarespace.com/static/5a52e80549fc2bb7a59fd405/5a7b6cf39140b79bd6998090/5a9716b5e4966bfb36b23941/1519852545123/openmix.jpg?format=750w",
+        "content":"<h2 style=\"text-align:start;\"><span style=\"color: rgb(31,30,30);background-color: rgb(255,255,255);font-size: 2.93333rem;font-family: Arial;\">Bye Bye, We Are Funny Project.</h2>\n<p>Well, it's happened. it's over, guys. I would love to write some more shit but i'll be honest. I've already kinda done it"
+     },
+     {
+        "_id":"5d2f48a2515bfb0024e5f69c",
+        "headline":"MOCK News: Difficult Diners Shappi Khorsandi & Rosie Jones Put Young Restaurant Teams To The Test more",
+        "img":"https://www.beyondthejoke.co.uk/sites/beyondthejoke.co.uk/files/styles/thumbnail/public/shappi_khorsandi_hi_res_2016.jpg?itok=VENj8V4W",
+        "link":"https://www.beyondthejoke.co.uk/content/7453/shappi-khorsandi-restaurant",
+        "blurb":"Comedians Shappi Khorsandi, Rosie Jones and Ken Cheng are among the \"difficult diners\" putting teenage staff to the test in a new CBBC series Step Up To The Plate.Hosts Fred Sirieix and Allegra... more",
+        "src":"BeyondTheJoke",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6ab",
+        "headline":"MOCK People thought third Murray brother was real",
+        "img":"https://lifecharity.org.uk/wp-content/uploads/2019/02/bbc-logo.jpg",
+        "link":"https://www.bbc.co.uk/news/uk-scotland-48881421?intlink_from_url=&link_location=live-reporting-story",
+        "blurb":"Comedian Chris Forbes plays the \"black sheep\" of the family, the Murray brother who can't play tennis.",
+        "src":"BBC",
+        "__v":0
+     },
+     {
+        "_id":"8",
+        "headline":"MOCK How To Put An End To Bringer Gigs",
+        "blurb":"Ben Morgan: I myself am a below average/piss poor comedian... ",
+        "link":"https://www.huffingtonpost.co.uk/ben-morgan/bringer-gigs_b_7641390.html?utm_hp_ref=uk-stand-up",
+        "img":"https://o.aolcdn.com/images/dims?quality=80&thumbnail=250%2C140&image_uri=http%3A%2F%2Fi.huffpost.com%2Fgen%2F2436674%2Fimages%2Fn-PODCAST-MIC-628x314.jpg&client=cbc79c14efcebee57402&signature=2f0c36aea37af15d22ef1dcb50ccf60bc4d317cd",
+        "src":"HuffPost"
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6aa",
+        "headline":"MOCK Michael Sleggs: Unique This Country star dies aged 33",
+        "img":"https://kandl-genres.files.bbci.co.uk/kandl-genres/1231-1/images/meta-images/bbc_blocks.png",
+        "link":"https://www.bbc.co.uk/news/entertainment-arts-48935431?intlink_from_url=&link_location=live-reporting-story",
+        "blurb":"Tributes paid to the late comedy actor, who had been receiving palliative care for heart failure.",
+        "src":"BBC",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6ad",
+        "headline":"MOCK Palin to produce Python BBC radio specials",
+        "img":"https://kandl-genres.files.bbci.co.uk/kandl-genres/1231-1/images/meta-images/bbc_blocks.png",
+        "link":"https://www.bbc.co.uk/news/entertainment-arts-48769997?intlink_from_url=&link_location=live-reporting-story",
+        "blurb":"The shows, part of a series of events, will feature \"never-before-released material\" from the archives.",
+        "src":"BBC",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6b7",
+        "headline":"MOCK Big Australian awards for Tim Minchin and Hannah Gadsby",
+        "img":"https://www.chortle.co.uk/images/photos/small/hg-hannah-gadsby-19.jpg",
+        "link":"https://www.chortle.co.uk/news/2019/07/16/43594/big_australian_awards_for_tim_minchin%C2%A0and%C2%A0hannah_gadsby",
+        "blurb":"...but James Acaster misses out\n                                16/07/2019 … Tim Minchin and Hannah Gadsby have won two of the top accolades for live performance in Australia.",
+        "src":"Chortle",
+        "__v":0
+     },
+     {
+        "_id":"2",
+        "headline":"MOCK Be funny: Why we still love a crowd",
+        "blurb":"WHAT makes the live arts experience so compelling and important, even in this digital age? That’s one of the questions that will be asked when electronic pop star Be Charlotte, comedian Ashley Storrie, TRNSMT organiser",
+        "link":"https://www.heraldscotland.com/news/17619572.be-charlotte-be-live-be-funny-why-we-still-love-a-crowd/",
+        "img":"https://www.heraldscotland.com/resources/images/9809744/?type=responsive-gallery-fullscreen",
+        "src":"Herald"
+     },
+     {
+        "_id":"5d2f48a2515bfb0024e5f69d",
+        "headline":"MOCK News: Daniel Kitson Confirms Two Last Minute Edinburgh Showsmore",
+        "img":"https://www.beyondthejoke.co.uk/sites/beyondthejoke.co.uk/files/styles/thumbnail/public/img_4556_1.jpg?itok=Oqg30Im6",
+        "link":"https://www.beyondthejoke.co.uk/content/7452/daniel-kitson-edinburgh",
+        "blurb":"Daniel Kitson has confirmed that he will be performing two runs of two different shows at the Edinburgh Fringe this summer. Tickets go on sale today.They will be at The Stand and Paines Plough... more",
+        "src":"BeyondTheJoke",
+        "__v":0
+     },
+     {
+        "_id":"3",
+        "headline":"MOCK My One-Night Standup Hell",
+        "blurb":"Trying my hand at comedy sounded like a great idea. It wasnt.",
+        "link":"https://www.spectator.co.uk/2018/11/my-one-night-stand-up-hell/",
+        "img":"https://spectator.imgix.net/content/uploads/2018/11/iStock-901985210.jpg?auto=compress,enhance,format&crop=faces,entropy,edges&fit=crop&w=820&h=550",
+        "src":"Standard"
+     },
+     {
+        "_id":"5d2f48a2515bfb0024e5f69e",
+        "headline":"MOCK News. The Weight Is Over – Comedians Go On Mass Diet For Charitymore",
+        "img":"https://www.beyondthejoke.co.uk/sites/beyondthejoke.co.uk/files/styles/thumbnail/public/2019tomglov_brc.jpg?itok=MEar5juX",
+        "link":"https://www.beyondthejoke.co.uk/content/7451/comedians-diet",
+        "blurb":"A group of 14 comedians is going on a diet to raise money for the charities MIND and Comedy Support Act.They are aiming to lose a combined weight of 23 stone in 12 weeks.The team consists of... more",
+        "src":"BeyondTheJoke",
+        "__v":0
+     },
+     {
+        "_id":"9",
+        "headline":"MOCK 8 Eccentrics Youll Meet At Open Mic Comedy",
+        "blurb":"Jay Islaam has graced the stage across the ",
+        "link":"https://www.huffingtonpost.co.uk/jay-islaam/eight-eccentrics-youll-meet-at-open-mic-comedy_b_8518246.html",
+        "img":"https://o.aolcdn.com/images/dims?quality=80&thumbnail=250%2C140&image_uri=http%3A%2F%2Fi.huffpost.com%2Fgen%2F3648528%2Fimages%2Fn-VINTAGE-MICROPHONE-628x314.jpg&client=cbc79c14efcebee57402&signature=025bc38d03ecce901eb322696880192dd06ccf71",
+        "src":"HuffPost"
+     },
+     {
+        "_id":"5d2f48a2515bfb0024e5f69f",
+        "headline":"MOCK News: Danny Baker To Return Sooner Than Expectedmore",
+        "img":"https://www.beyondthejoke.co.uk/sites/beyondthejoke.co.uk/files/styles/thumbnail/public/danny_baker_tour_image.jpg?itok=ZxIkqU1C",
+        "link":"https://www.beyondthejoke.co.uk/content/7450/news-danny-baker-return-sooner-expected",
+        "blurb":"Broadcaster Danny Baker is to launch his new podcasts earlier than initially expected.Baker was sacked from his Radio 5 show over his controversial tweet in May and in July he tweeted that he would... more",
+        "src":"BeyondTheJoke",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a2515bfb0024e5f6a4",
+        "headline":"MOCK News: European Dates for Jen Kirkmanmore",
+        "img":"https://www.beyondthejoke.co.uk/sites/beyondthejoke.co.uk/files/styles/thumbnail/public/screen_shot_2019-07-15_at_20.21.42.png?itok=eBHa3Qhi",
+        "link":"https://www.beyondthejoke.co.uk/content/7445/news-european-dates-jen-kirkman",
+        "blurb":"Following five London runs, US comedian, author, and podcaster Jen Kirkman is returning to the UK with her latest stand-up show Jen-X at Soho Theatre from 30th September to... more",
+        "src":"BeyondTheJoke",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6b1",
+        "headline":"MOCK Comics to play difficult diners in new CBBC show",
+        "img":"https://www.chortle.co.uk/images/photos/small/sirex.jpg",
+        "link":"https://www.chortle.co.uk/news/2019/07/17/43611/comics_to_play_difficult_diners_in_new_cbbc_show",
+        "blurb":"Trying to find the chefs and restaurateurs of the future\n                                17/07/2019 … Comedians including Shappi Khorsandi, Ken Cheng, Rosie Jones are to play 'difficult diners’ in a new CBBC show.",
+        "src":"Chortle",
+        "__v":0
+     },
+     {
+        "_id":"12",
+        "headline":"MOCK Blog 26.06.19 | Fatherhood & Comedy",
+        "blurb":"I hath returned! Some knee-jerk thoughts on returning to stand-up after 3 years of changing nappies",
+        "link":"https://medium.com/@AidThompsin/fatherhood-mental-health-my-return-to-open-mic-comedy-677c5ea1dca4",
+        "img":"https://i.ytimg.com/vi/PoXKPBmv5kI/hqdefault.jpg",
+        "src":"@TPR"
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6b4",
+        "headline":"MOCK Alan Carr announces an intimate tour",
+        "img":"https://www.chortle.co.uk/images/photos/small/ac-alan-carr-19.jpg",
+        "link":"https://www.chortle.co.uk/news/2019/07/16/43607/alan_carr%C2%A0announces_an_intimate_tour",
+        "blurb":"Tiny work-in-progress gigs across Scotland\n                                16/07/2019 … Alan Carr has announced a tour of tiny Scottish venues this autumn.",
+        "src":"Chortle",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6b0",
+        "headline":"MOCK Joe Lycett turns political interviewer?",
+        "img":"https://www.chortle.co.uk/images/photos/small/jl-joe-lycetts-gt-your-back1.jpg",
+        "link":"https://www.chortle.co.uk/other-news/2019/07/17/43613/joe_lycett_turns_political_interviewer%3F",
+        "blurb":"Comic in conversation with his MP pal at Edinburgh TV festival\n                                17/07/2019 …  Joe Lycett is to interview his friend, the Labour MP Jess Phillips, at this year’s Edinburgh TV Festival, it was announced today.",
+        "src":"Chortle",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6b6",
+        "headline":"MOCK Some comedians celebrity status outweighs their comedy",
+        "img":"https://www.chortle.co.uk/images/photos/small/lm_lee_mack_wdytya.jpg",
+        "link":"https://www.chortle.co.uk/news/2019/07/16/43595/some_comedians_celebrity_status_outweighs_their_comedy",
+        "blurb":"Lee Mack speaks up about the trends in stand-up\n                                16/07/2019 … Lee Mack has spoken out about comedians ‘whose celebrity status outweighs their comedy’.",
+        "src":"Chortle",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6af",
+        "headline":"MOCK Danny Baker revives axed show as podcast",
+        "img":"https://media-assets-01.thedrum.com/cache/images/thedrum-prod/s3-news-tmp-116055-bbc--2x1--940.jpg",
+        "link":"https://www.bbc.co.uk/news/entertainment-arts-48718228?intlink_from_url=&link_location=live-reporting-story",
+        "blurb":"Sacked BBC broadcaster says he'll be back to \"rule the world\" in the New Year with twice-weekly show.",
+        "src":"BBC",
+        "__v":0
+     },
+     {
+        "_id":"TPR_1562859416077",
+        "headline":"MOCK VAULT: Gigs, Basements, Flyers, Online Releases... (Music? Pffff - No, It's the Life of an Open Mic Comedian)",
+        "blurb":"My names Adrian. Or it was when I was born. But since 2011, Ive gone by the stage-moniker Aid Thompsin, which was spawned from a desire to remain off-the-grid from my employers, should they ever",
+        "src":"TPR",
+        "img":"https://static1.squarespace.com/static/5a52e80549fc2bb7a59fd405/5a7b6cf39140b79bd6998090/5a9716b5e4966bfb36b23941/1519852545123/openmix.jpg?format=750w",
+        "content":"<h2 style=\"text-align:start;\"><span style=\"color: rgb(31,30,30);background-color: rgb(255,255,255);font-size: 2.93333rem;font-family: Arial;\">Gigs, Basements, Flyers, Online Releases... (Music? Pffff - No, It's the Life of an Open Mic Comedian)</h2>\n<p></p>\n<img src=\"https://www.soundandcommunications.com/wp-content/uploads/2017/11/mic-audience.jpg\" alt=\"undefined\" style=\"float:none;height: 400px;width: 600px\"/>\n<p></p>\n<p>My name's Adrian. Or it was when I was born. But since 2011, I've gone by the stage-moniker 'Aid Thompsin', which was spawned from a desire to remain off-the-grid from my employers, should they ever find out I was attempting something as ridiculous as comedy. I guess the logic was that if I was going to talk about my actual life, taking the piss out of my then-job, ridiculing the situations I'd found myself in - it would probably be best if \"Adrian Thompson Comedy\" returned no results on Google.</p>\n<p>So you can imagine my delight when after four years of hard work my name(s) still return depressingly few results on the world's largest search engine.</p>\n<p>That said, I had fun. And that's the key thing. That you can look back and say it was awesome. I was an 'Open Miker' in a city, at a time, when open mic comedy was at its electrifying best. Every night of the week there was a show to be found. From Comedy Virgins to TNT to We Are Funny Project to Funny Feckers... You could get more stage-time in London than anywhere else in the world, I was told. And I took that and ran with it. For every godless, boring-as-piss-holes wine-bar there was, with pin-stripe traders quaffing their pinot and vomiting 'City' into the city - there was a gloriously grungey basement/loft with a blank sheet of paper, begging acts to sign up. And it was all-engulfing.</p>\n<p>A lot of people get into comedy because their friends stopped going out. They were the single ones, they still went to the pub every week, maybe saw a sandwich-board out front and decided to give it a bash. 'Social club comedians\", I thought of them as. They sort of accidentally fell into it and now they meet up every week to 10 days, tell a funny story and go back to whatever the fuck it is they do when they're not being introduced as \"Chuckly Joe &amp; His HILARIOUS Ukulele!\".</p>\n<p>But for me it was more than that. I made friends along the way, absolutely. But the focus was always there. 'Professional comedian' - that was the end goal. But alas, it wasn't to be. I don't mean that in a \"I joined a band, we recorded a demo and nothing really ever came of it\" way. I mean I slogged the shit out of it. I bled the passion, I crafted my sets, I put in the work and actually even got to a point where, had I not been such an entitled £35k-a-year media prick, I could've probably quit my job and done comedy full-time - had I been willing to live on boil-in-a-bag rice and my housemate's bath-water, of course. I imagined friends bumping into me in the street:</p>\n<p>\"Hey Aid, i heard you quit your job and you're a professional comedian now! Congratulations man!?\"</p>\n<p>\"Yeah, thanks, my life is improving!\"</p>\n<p>The camera would pan out to reveal me smoking a rollie, waiting for the YMCA to open.</p>\n<p>I was determined to get at least near my existing salary through event sponsorships, ticket revenue, merchandise and the like - before I would consider ending my 'Linkedin-Life'. And that meant leading a bizarre double one. A contrasting tapestry of feeling wired then exhausted, of high-creativity and office minutiae, becoming totally relaxed in front of forty, staring strangers, yet a nervous wreck when sat in silence with two colleagues.</p>\n<p>With its rep for being lonely and badly-paid, I saw it as fertile ground for diverse businesses. Circles, plural, of friends to be made from all ages, backgrounds, professions, races; A 'punk rock' landscape, where you could build up a guerrilla events company, guest on local radio, you could write articles for The Guardian, tweet vids of yourself to strangers looking for new comedy recommendations; In my mind it was literally as simple as \"this is something you can't fake\". I mused that as long as people are telling you that you're funny, and you put in the work, build out your profile - slowly success will follow.</p>\n<p>I would be tubing it to NW5, then east to Hackney; the following night I'd be at Dirty Dicks in EC2 trying some new ideas. The weekend would bring the odd 15 minute set. Yes, I heard heckles of \"Don't give up your day-job, mate!\". No, it didn't bother me. The joke was on them. I didn't have to give up my day-job. Stand-up got me fired from about three of them.</p>\n<p>By proxy of course. You can't fire someone for being hilarious. However much the BBC and Russell Brand may disagree with me. But you can put them on a Performance Improvement Plan for being exhausted, making mistakes and, well, generally being more interested in running out the door 20 minutes early than making sure things are done correctly and on-time.</p>\n<p>For context, while I was first pursuing comedy, gigging every night, working every day - four hours sleep, coming into work hungover and incapable of constructing any worthwhile sentences - in the thick of all that I made a mistake at an investment bank that cost them twenty fucking thousand pounds. I did that. Twenty grand. So when aspiring comedians ask me if they're likely to earn money doing it, I ask them what sort of Lewis Carroll fantasy are they living in. You're going to lose entire employment contracts. You're going to lose so much money - other people are going to have to make really difficult budgeting decisions because of it.</p>\n<p>When I moved to a different role, and as comedy swallowed me whole, I became obsessed with jokes, punchlines, build-ups, turns of phrase, clever metaphors - my next manager called me in for a review, offering the following feedback:</p>\n<p>\"I just get the feeling that when someone asks you a question, you would rather reply with the thing that amuses you, personally, the most - rather than the thing that's actually going to be of any help to anybody.\"</p>\n<p>In my years as an Open Miker, I had plenty of ups and downs, I loved the laughs and would romanticise the 'dying' on-stage, the late nights and early mornings - I adored all of it. The good and the bad. The peaks and the troughs. The being-torn-from-left-to-right. The excitement of scribbling down something at 16:30 and knowing it works by half-eight, only to try it again the next night and have it stink out the room.</p>\n<p>I'd leave sold-out rooms in Shoreditch feeling like a fucking rock star then get booed off at The Comedy Store's King Gong three days later. I headlined at Dirty Dicks and had drinks bought for me, hands shaking mine, strangers telling me I was hilarious - then the following night I'd die on my arse trying to earn smirks from three tired-looking comedians. My material was praised by industry promoters but my crowd-work was atrocious. I booked, sold-out and filmed a one-hour show at Leicester Square Theatre. And came last in the first round of a competition the same fucking week. The highs were a high, the lows were just that. A momentary low, a blip, a day where things didn't go to plan - one that 24 hours later no one would even give a shit about. None of it mattered. Yet all of it was everything.</p>\n<p>I edited \"Open Mic\" as a sort of lasting, douchey love-letter to standup. For me, it captures the insanity of the circuit. The bipolar shifts in your mood. The crunch point of wanting, needing to be a successful... something... a thing that you think you're half decent at - versus the sunset of your youth, moving out of London, trying to start a family, being an adult. Ultimately it's about the hard work it takes to end up being another nobody.</p>\n<p>It's now January 2016. I'm happy with how things have relaxed. It might not be over forever. I'm sure I'll head back and try some ideas out at some point. But for me? As an 'Open Miker'? As \"Aid Thompsin - Stand-up\" - dragging my DCs on the stage, grunge-esque posters advertising The Panda Riot gigs, shaking Harry U Eldrich's hand as we swap places on the Dirty Dicks stage, slurping a London Stout as I try to read the smeared notes on my hand? That period is over now. Harry quit, Funny Feckers is no more, I wear shoes into work and my girlfriend is pregnant with our first kid.</p>\n<p>To quote someone that was quoted on something that I can't remember: I don't feel sad that it's over. I feel happy that it happened.</p>\n<p>Or maybe \"Don't think of it as over... think of it as complete.\"</p>\n<p>Okay that second one was me, just now, I said that. Go me.</p>\n<p>Anyway my point is this: it was fun, I made a film about it and now we're having a baby. Where's my fucking medal.</p>\n<p>Plus they turned Dirty Dicks into a wine bar, Christ...</p>\n<p>Open Mic is free to watch and available on YouTube.</p>\n"
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6ac",
+        "headline":"MOCK Gavin and Stacey cast reunite at rehearsal",
+        "img":"https://media-cdn.tripadvisor.com/media/photo-s/16/b3/de/99/laughing-faces.jpg",
+        "link":"https://www.bbc.co.uk/news/uk-wales-48779162?intlink_from_url=&link_location=live-reporting-story",
+        "blurb":"Writer and actor James Corden shares an image of the cast reading scripts around a table.",
+        "src":"BBC",
+        "__v":0
+     },
+     {
+        "_id":"10",
+        "headline":"MOCK We WERE Funny?",
+        "blurb":"Aid Thompsin muses over the soon to-be-retired Project",
+        "link":"https://medium.com/@AidThompsin/final-thoughts-on-we-are-funny-project-405be9819b8c?postPublishedType=repub",
+        "img":"https://cdn-images-1.medium.com/max/800/1*U4dwwHAeRqPsAHYT1lD7eA.png",
+        "src":"Medium"
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6b2",
+        "headline":"MOCK Fans anger over fraud of Tape Face stand-in",
+        "img":"https://www.chortle.co.uk/images/photos/small/tapeface_you.jpg",
+        "link":"https://www.chortle.co.uk/news/2019/07/17/43610/fans_anger_over_fraud_of_tape_face_stand-in",
+        "blurb":"...but creator says he's a character who others can play\n                                17/07/2019 … Tape Face fans have complained that he has been ‘duping’ them by having an ‘imposter’ perform in his place at his Las Vegas show.",
+        "src":"Chortle",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6ae",
+        "headline":"MOCK Watch: The refugees owning the comedy stage",
+        "img":"https://pbs.twimg.com/profile_images/1016231093425582080/lUZK3DzN_400x400.jpg",
+        "link":"https://www.bbc.co.ukundefined",
+        "blurb":"",
+        "src":"BBC"
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6a9",
+        "headline":"MOCK Father Ted actor Brendan Grace dies aged 68",
+        "img":"https://pbs.twimg.com/profile_images/1016231093425582080/lUZK3DzN_400x400.jpg",
+        "link":"https://www.bbc.co.uk/news/world-europe-48947352?intlink_from_url=&link_location=live-reporting-story",
+        "blurb":"Originally a singer, the Irish comedian was known to many as the character Fr Fintan Stack.",
+        "src":"BBC",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6b3",
+        "headline":"MOCK Daniel Kitson announces  Fringe shows",
+        "img":"https://www.chortle.co.uk/images/photos/small/dk_daniel_kitson_17.jpg",
+        "link":"https://www.chortle.co.uk/news/2019/07/17/43609/daniel_kitson_announces_fringe_shows",
+        "blurb":"But he thinks 'work in progress' would be overstating it\n                                17/07/2019 … Daniel Kitson has announced two last-minute shows at the Edinburgh Fringe.",
+        "src":"Chortle",
+        "__v":0
+     },
+     {
+        "_id":"4",
+        "headline":"MOCK Heard The One About Standups That Bring Their Own Audience?",
+        "blurb":"On the open mic scene, comedians are securing their time on stage by bulking out the crowd with paying friends. Is the rise of ‘bringer gigs’ bad for the artform?",
+        "link":"https://www.theguardian.com/stage/2015/jun/22/standups-who-bring-their-own-audience",
+        "img":"https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/6/22/1434971591335/0d5323f2-0d0f-45ae-93e2-0e0325484f78-2060x1236.jpeg?width=300&quality=85&auto=format&fit=max&s=745088cb6e568462000f69a0011c89ab",
+        "src":"Guardian"
+     },
+     {
+        "_id":"11",
+        "headline":"MOCK Why I Quit Comedy",
+        "blurb":"Martin Pilgrim reflects on his experiences",
+        "link":"http://moodycomedy.co.uk/martin-pilgrim-why-i-quit-comedy/",
+        "img":"https://i2.wp.com/moodycomedy.co.uk/wp-content/uploads/2016/02/Screen-Shot-2016-02-09-at-17.15.38.png",
+        "src":"Moody"
+     },
+     {
+        "_id":"6",
+        "headline":"MOCK Anthony Jeselnik on the thankless American open-mic circuit...",
+        "blurb":"Comedian, host, and sometime hardass, Anthony Jeselnik has made a career out of being a little bit sensational. He’s gleefully fought hard to push the boundaries of what’s okay to joke about, from cancer to obesity, earning both groans and laughs along the way.",
+        "link":"https://www.avclub.com/anthony-jeselnik-on-sharon-stone-thankless-open-mics-1798285518",
+        "img":"https://i.kinja-img.com/gawker-media/image/upload/s--qmYilFUo--/c_scale,f_auto,fl_progressive,q_80,w_800/ihjoexgc8saf5vdpyfbf.jpg",
+        "src":"AVclub"
+     },
+     {
+        "_id":"5d2f48a2515bfb0024e5f6a5",
+        "headline":"MOCK News: Just For Laughs Awards For Jim Jefferies, Hasan Minhaj, Kevin Hart...more",
+        "img":"https://www.beyondthejoke.co.uk/sites/beyondthejoke.co.uk/files/styles/thumbnail/public/jim_jefferies_photo.jpg?itok=0BWL1NJK",
+        "link":"https://www.beyondthejoke.co.uk/content/7444/award-jim-jefferies",
+        "blurb":"Just For Laughs, in association with Loto-Québec, has announced the 2019 recipients of the Just For Laughs Awards, putting the spotlight on some of today’s most influential comedic voices. The 12th... more",
+        "src":"BeyondTheJoke",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6a6",
+        "headline":"MOCK Gavin and Stacey writers buy ice creams for fans",
+        "img":"https://media-assets-01.thedrum.com/cache/images/thedrum-prod/s3-news-tmp-116055-bbc--2x1--940.jpg",
+        "link":"https://www.bbc.co.uk/news/uk-wales-48990599?intlink_from_url=&link_location=live-reporting-story",
+        "blurb":"As crowds watched filming, an ice cream van arrived with a note from James Corden and Ruth Jones.",
+        "src":"BBC",
+        "__v":0
+     },
+     {
+        "_id":"5",
+        "headline":"MOCK Stand Up & Be Laughed At - Mark Watson",
+        "blurb":"Performing at an open mic night is a free but sometimes painful experience, writes comedian Mark Watson.",
+        "link":"https://www.theguardian.com/lifeandstyle/2007/jan/06/freestuff.guardianspecial415",
+        "img":"https://www.varsity.co.uk/images/derived/article-objects/md5-c902395d39bd0cd4002f5c7341f18bdd/15852.jpeg",
+        "src":"Guardian"
+     },
+     {
+        "_id":"5d2f48a2515bfb0024e5f6a1",
+        "headline":"MOCK News: Tour For Elf Lyonsmore",
+        "img":"https://www.beyondthejoke.co.uk/sites/beyondthejoke.co.uk/files/styles/thumbnail/public/elf_lyons.jpg?itok=HrTzJ4na",
+        "link":"https://www.beyondthejoke.co.uk/content/7448/news-tour-elf-lyons",
+        "blurb":"Following her run at last year’s Edinburgh Festival Fringe, 2017’s Edinburgh Comedy Award Best Show Nominee Elf Lyons hits the road with her new show Love Songs to... more",
+        "src":"BeyondTheJoke",
+        "__v":0
+     },
+     {
+        "_id":"7",
+        "headline":"MOCK Whatever You Do Someone Will Call You A Dick",
+        "blurb":"Dave Attell talks to the AV Club",
+        "link":"https://tv.avclub.com/dave-attell-1798208252",
+        "img":"https://media.spokesman.com/photos/2018/10/25/53179177XX036_Comedy_Centra.JPG.jpg",
+        "src":"AVclub"
+     },
+     {
+        "_id":"TPR_1562700692943",
+        "headline":"MOCK VAULT: Is The Standard Of U.S. Standup Higher?",
+        "blurb":"The other day I was scanning down my Facebook feed and a highly regarded circuit-regular posted something about how US comics view their British counterparts.",
+        "src":"TPR",
+        "img":"https://static1.squarespace.com/static/5a52e80549fc2bb7a59fd405/5a7b6cf39140b79bd6998090/5a9716b5e4966bfb36b23941/1519852545123/openmix.jpg?format=750w",
+        "content":"<h2 style=\"text-align:start;\"><span style=\"color: rgb(31,30,30);background-color: rgb(255,255,255);font-size: 2.93333rem;font-family: Arial;\">VAULT: Is The Standard Of U.S. Standup Higher?</span></h2>\n<img src=\"https://hips.hearstapps.com/esq.h-cdn.co/assets/17/11/980x490/landscape-1489784244-chappelle-louis.jpg?resize=480:*\" alt=\"undefined\" style=\"float:none;height: 200px;width: 300px\"/>\n<p></p>\n<p>The other day, I was scanning down my Facebook feed and saw a status update from a highly-regarded circuit act. He suggested, from listening to various podcasts, that American comics didn't rate British ones too highly. Further down, were comments from London acts, some of whom had gone as far as saying they couldn't name a British comedian they would pay to see. Something felt weird about reading that. Not one they would pay to see. At first i was taken aback. I had one of those ridiculous 'Wait? You're-Attacking-Me, Personally?!' moments. I mean, how dare a nameless someone, somewhere, on some podcast i was never likely to hear or care about, suggest that British comedy had failed to meet expectations i had no part in setting. Ooh, I was offended. But then? Well, I kind of saw their point.</p>\n<p>Now, don't get me wrong. I don't genuinely believe that all British comedians are bad. This isn't the Daily Mail. There's some awesome talent out there. This is about exposure, taste and comparison. I mean, I've cried with laughter at acts across the capital, but clearly the stuff that hits the mainstream fails to capture the imagination of podcasters, who then weigh it up against counterparts across-the-pond.</p>\n<p>Are we all seen as cheeky-chappy, post-Vaudeville, panel-show acts maybe? Where a lot of the same faces are rolled out time and again, each one just a Post Office queue punchline away from a BBC2 travel show series; weighing that up against the US mainstream, where darker, exploratory content seems more readily accepted, with HBO specials and the like - it could start to get depressing. If you look at stand-up as in any way an arty, expressive, performance craft of spoken word (however ridiculous that sounds), it's easy to see why you might term the British TV stuff, err, different.</p>\n<p>And that's interesting, isn't it? Considering the popularity of the so-called \"British sense of humour\", that the industrial representation of that is less so; that our comics might be seen as not up to the US' level.</p>\n<p>Because in the US they have Open Mic nights like we have Open Mic nights. They have comedy clubs like we have comedy clubs. We both have a history of sitcoms, talk shows; But with the HBO special, a highly-regarded platform where the best of the industry film an hour of their best material, the US acts have a standard to uphold; a would-be career highlight. And failing that, there's Hollywood to exploit. There's something sad about us opting-out of the 'special', about career trajectory swerving an opportunity to create a Bring The Pain, Raw, Shameless or Elephant In The Room.</p>\n<p>Industrially, we resort to Christmas DVDs and saturated panels; pre-written answers to quiz show questions that don't matter, leaving you with a feeling that it's all staged, it's not real, it's faked; Which to me is the opposite of what comedy should be. I mean, not everything is or could be 'real' on a stage. Obviously a lot of it is made-up, written down and recited. But every time i see a comedian with perfect teeth answer a question with an auto-cue quip, I feel like I'm watching Kurt Cobain lip-syncing.</p>\n<p>As I said, there are outstanding acts out there. London has proven itself time and again for spawning internationally successful stand-ups. I remember seeing Jim Jefferies honing it here years ago and thinking he was immense. Then he flew off to New York to film for HBO. Simon Amstell's Do Nothing remains a favourite of the last decade yet with his subsequent US tours, appearances on The View and Letterman, he feels more Brit-in-America now than an exhibit of what's going on in British comedy. In watching an interview with Frankie Boyle and Jimmy Carr, it was interesting to see them answer \"so what comedians are you both into?\" with an almost immediate \"Doug Stanhope\" followed by a list of other US comics. I wonder how many US comedians would name Brits in the same scenario? I wonder why it is that when we stand around outside venues talking about who we're interested in, almost without exception, acts lean towards either the American mainstream (Louis CK, Bill Burr) or the British acts that appear to shirk ours (Stewart Lee, Daniel Kitson).</p>\n<p>It's too simplistic to say that it's hipsterdom in comedy; that we just don't like what's already popular. If it was just that, you'd have to assume that comics would hate what's popular in America also - which simply isn't the case. Equally, you could say i'm biased because the comics i chat to that cite Burr or CK as influences are the ones i'm drawn to talk to, because i enjoyed their set, and they have a similar style to the American acts i admire. But if it's just my taste, then the more 'British' ones, like those that appear on panel shows or Live At The Apollo, should then occasionally appeal to Americans on podcasts or become successful overseas. Yet neither of those things seem to happen.</p>\n<p>I guess what I'm saying is: the US don't do panel shows. And we don't do HBO specials. Mainstream America's acts are seen as credible influences for us but rarely is that reciprocated. Is that a symptom of those formats? I feel that it might be. I just hope that in this era of YouTube channels, free editing apps and On Demand, the freedom to create and provide content to the public without adhering to executives' tastes should provide exposure for comics, sufficiently, to appease the expectations of podcasters and vloggers; to provoke some backtracking.</p>\n<p>A vlog of them eating their words? I wonder who'd pay to see that.</p>\n<p><span style=\"color: rgb(33,37,41);background-color: rgb(255,255,255);font-size: 16px;\"><em>Originally Published by The Huffington Post May, 2014.</em></span></p>\n"
+     },
+     {
+        "_id":"5d2f48a2515bfb0024e5f6a0",
+        "headline":"MOCK News: Fleabag Bags 11 Emmy Awards Nominations more",
+        "img":"https://www.beyondthejoke.co.uk/sites/beyondthejoke.co.uk/files/styles/thumbnail/public/screen_shot_2019-07-17_at_10.07.23.png?itok=9j9R7qKl",
+        "link":"https://www.beyondthejoke.co.uk/content/7449/fleabag-emmy",
+        "blurb":"The second series of Fleabag, created and written by Phoebe Waller-Bridge, has picked up 11 Emmy TV Award nominations. Phoebe Waller-Bridge tweeted via the Dry Write account: \"Whhhaaat???!!... more",
+        "src":"BeyondTheJoke",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6a8",
+        "headline":"MOCK Gavin and Stacey Christmas special filming starts",
+        "img":"https://kandl-genres.files.bbci.co.uk/kandl-genres/1231-1/images/meta-images/bbc_blocks.png",
+        "link":"https://www.bbc.co.uk/news/uk-wales-48968822?intlink_from_url=&link_location=live-reporting-story",
+        "blurb":"The comedy starring James Corden and Ruth Jones returns to TV screens in December after a 10-year absence.",
+        "src":"BBC",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a2515bfb0024e5f6a2",
+        "headline":"MOCK News: Armando  Iannuccis David Copperfield Film To Open London Film Festivalmore",
+        "img":"https://www.beyondthejoke.co.uk/sites/beyondthejoke.co.uk/files/styles/thumbnail/public/david-copperfield.jpg?itok=dyggztTB",
+        "link":"https://www.beyondthejoke.co.uk/content/7447/armando-iannucci-copperfield",
+        "blurb":"The Personal History of David Copperfield, an adaptation of the Dickens classic directed by award winning filmmaker Armando Iannucci (The Death of Stalin) is to open the 63rd BFI London... more",
+        "src":"BeyondTheJoke",
+        "__v":0
+     },
+     {
+        "_id":"TPR_1562404132494",
+        "headline":"MOCK VAULT: The Inet Will Steal Your Jokes, Use It To Your Advantage",
+        "blurb":"From the vault: head honcho Aid Thompsins view on web-leaching meme and tabloid culture",
+        "src":"TPR",
+        "img":"https://static1.squarespace.com/static/5a52e80549fc2bb7a59fd405/5a7b6cf39140b79bd6998090/5a9716b5e4966bfb36b23941/1519852545123/openmix.jpg?format=750w",
+        "content":"<h2 style=\"text-align:start;\"><span style=\"color: rgb(31,30,30);background-color: rgb(255,255,255);font-size: 2.93333rem;font-family: Arial;\">VAULT: The internet will always steal your jokes. Use that to your advantage</span></h2>\n<img src=\"https://www.chortle.co.uk/images/photos/small/at_ade_thompsin.jpg\" alt=\"undefined\" style=\"float:none;height: auto;width: auto\"/>\n<p></p>\n<p>I read Dave Bussell's piece about <a href=/"https://www.chortle.co.uk/correspondents/2014/02/20/19642/your_jaw_will_literally_hit_the_floor_when_you_see_what_this_comedian_has_to_say_about_viral_content_websites_robbing_his_work%21" target=\"_self\">online leeching</a>: people stealing your work and re-publishing with no financial or creative credit afforded to the original author. And I found myself bemused. While I understand his frustration at seemingly a missed opportunity to make a fat wedge of cash, it would appear to be, at best, misguided, and at worst, baffling.</p>\n<p>'It’s a hell of a thing to wake up one morning and find out something you made has become an internet success,' he says. I can only imagine. I am one of the numbers of comedians, striving on my lunch-break, writing, tweeting, sharing; all in the hope that just one of my self-amusing, 140-character moans will end up being re-tweeted sufficiently that I amass a following and convert them all to ticket sales.</p>\n<p>There are thousands of us like me. Each hashtag a hope that another 10,000 might see it and RT. I guess in David Bussell's case, ticket sales become the number of books sold. But it’s the same story ultimately: put stuff online, try to get paid.</p>\n<p>I’ve recorded gigs, tagged them on YouTube, I’ve shared flyers, one-liners, hoping maybe someone somewhere will see it, share it, and I can be the latest happy passenger aboard this veritable New Media Express; It seems not a week goes by where I’m not reading about how some bright spark used the internet to find their success.</p>\n<p>Because via social networks, we can open up the doors for artists to share their work with the masses. No longer are they restricted by what suited producers want to see distributed. And though those doors have yet to truly open for me, acts like Dapper Laughs have proven that the internet, when used correctly, can catapult writers/performers to stardom in exactly that manner.</p>\n<p>What’s confusing is that you would trash a medium or the pages within it, that’s making success in that way so much easier? The net has truly liberated artistry. Bands can get their music heard by entire populations in every corner of the globe. They don’t need to spend three years touring Australia to build up a following. Now their music can be sent to Sydney in seconds.</p>\n<p>Equally, comedians can get their content uploaded and seen, they can exploit the opportunities that that can open up. And while it’s true that having your one-liner retweeted may exhaust a joke if you try and use it live, if your followers increase to 1,000 or 5,000 as a result, a percentage of those individuals will buy into your name. So it really just comes down to a mix of perseverance (doesn’t it always?) and care on where you leave your work lying around.</p>\n<p>It’s always interesting to me, how people adore the freedom of the internet when that means them being able to find pictures quickly, sharing and connecting with old friends, researching facts and figures off Wikipedia that were no doubt lifted from published articles and books from earlier decades. Yet we’re so quick to haul the internet into the headmaster’s office as soon as we think ‘progress’ is costing us money personally, or recognition in some way.</p>\n<p>A great example of avoiding that approach and responding to change was a bookshop in Richmond, I visited at Christmas. I wandered in, had a mooch about, bought a coffee from their resident barista, had a chat about a singer-songwriter they had playing on their speakers; I left the shop having bought a £3 latte, a £9 CD and a book that would’ve been £4.79 on Amazon for £12.99. And I’m glad that I did. They evolved with the challenges of the High Street and created a new experience. They deserve the extra money.</p>\n<p>At the end of the day, you put things on the internet at your own risk. It’s as famous for its illegal content and file-sharing as it is for its lawlessness.</p>\n<p>Technology is not going to stop progressing. Your next knock-knock joke, if good, will be re-tweeted, exhausted and die. When you next tell it to someone after that, they will accuse you of stealing jokes off the internet - and this will frustrate you. It’s not easy but I’m not sure there’s much we can do.</p>\n<p>But it’s worth truly considering that bookshops example. They’re in fierce competition with Amazon, so they create a new experience and adapt to the change. When I had a one-liner stolen two years ago I decided to move into storytelling and observational stand-up instead, figuring it was harder to pinch an entire routine like that. I run a comedy night (The Panda Riot) that isn’t going to make me rich because as soon as I start charging an optimum ticket price, there are 12 other nights in London that are immediately cheaper – so I adapted the format. I latte-and-CD’d the proposition. In the music industry, singers adapted to a loss in record sales by branching out to fragrances, clothing ranges and cinema concert movies.</p>\n<p>I would strongly advise anyone who’s looking to make money or get a name for themselves to consider what ways they can use the internet or other channels that are open to them, to make their mark. Because unfortunately the world we live in thrives on computers and that isn’t going to change any time soon. In fact, it’ll get worse.</p>\n<p>In the next two years, there’ll be wearable technology where you merely have to gesture like you’re pinching something and it’ll be displayed on your retinas, I’m sure. Reddit and Buzzfeed accounts are unlikely to be managed by middle-aged, conservative types that adhere to all the rules, so much as an 18 year old from Ohio with no disposable income and lots of free time to find ways to hack you.</p>\n<p>Bearing the aforementioned in mind, I’d suggest any writers, comedians, singers or whatever, to respond to change positively, exploit the new platforms, guard your images with watermarks and keep writing new jokes. Because although there is a time and a place for banging your fists and bitching about the internet, it’s probably at a Metallica concert…</p>\n<p>…in 2002.</p>\n<p>This article may absolutely not be copied, pasted, re-posted, shared or re-tweeted without express permission © Aid Thompsin&nbsp;</p>\n"
+     },
+     {
+        "_id":"5d2f48a2515bfb0024e5f6a3",
+        "headline":"MOCK News: Michael McIntyres Big Show Returns & You Can Be Part Of Itmore",
+        "img":"https://www.beyondthejoke.co.uk/sites/beyondthejoke.co.uk/files/styles/thumbnail/public/624_87.jpg?itok=Lmm8e9Cq",
+        "link":"https://www.beyondthejoke.co.uk/content/7446/news-michael-mcintyres-big-show-returns-you-can-be-part-it",
+        "blurb":"Michael McIntyre will bring his Big Show back to BBC One for a fifth series later this year from a new home. The six-part series will be filmed in front of a live audience at the London Palladium,... more",
+        "src":"BeyondTheJoke",
+        "__v":0
+     },
+     {
+        "_id":"1",
+        "headline":"MOCK The guru who’s changing stand-up comedy from the dog eat dog of open-mic nights to a culture of caring",
+        "blurb":"Comedy instructor Gerry Katzman aims to change the culture of the Los Angeles comedy scene into one of kindness and inclusiveness",
+        "link":"https://www.scmp.com/lifestyle/arts-culture/article/3006857/guru-whos-changing-stand-comedy-dog-eat-dog-open-mic-nights",
+        "img":"https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/d8/images/methode/2019/05/07/cb843b26-60df-11e9-b745-17e2afcf325c_image_hires_105242.jpeg?itok=UWHCHR1B",
+        "src":"SCMP"
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6b5",
+        "headline":"MOCK Fleabag notches up 11 Emmy nominations",
+        "img":"https://www.chortle.co.uk/images/photos/small/fleabag-and-sister.jpg",
+        "link":"https://www.chortle.co.uk/news/2019/07/16/43606/fleabag_notches_up_11_emmy_nominations",
+        "blurb":"Including two for Phoebe Waller-Bridge herself\n                                16/07/2019 … Fleabag has been nominated for 11 Emmy awards.",
+        "src":"Chortle",
+        "__v":0
+     },
+     {
+        "_id":"5d2f48a4515bfb0024e5f6a7",
+        "headline":"MOCK Oh! Look whos back for Gavin and Stacey filming",
+        "img":"https://lifecharity.org.uk/wp-content/uploads/2019/02/bbc-logo.jpg",
+        "link":"https://www.bbc.co.uk/news/uk-wales-48980321?intlink_from_url=&link_location=live-reporting-story",
+        "blurb":"Filming for the highly-anticipated Christmas special is under way, with the cast out in force.",
+        "src":"BBC",
+        "__v":0
+     }
+  ]
+}

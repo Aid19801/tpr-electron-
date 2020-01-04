@@ -1,5 +1,5 @@
-/* #landingPage {
-  border: 10px solid orange;
+#landingPage {
+  /* border: 10px solid orange; */
 }
 
 #landingPage video {
@@ -7,14 +7,10 @@
   background-attachment: fixed;
   background-position: left top;
   position: absolute;
-  margin-left: -47px;
-  top: 40px;
+  top: 50px;
   height: 610px;
   width: 100%;
   margin: 0;
-  border: 10px solid orange;
+  object-fit: cover;
+  left: 0;
 }
-
-form {
-  border: 10px solid purple;
-} */

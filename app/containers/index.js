@@ -3,6 +3,7 @@ import AdminDetailsPage from './AdminDetailsPage';
 import AdminPage from './AdminPage';
 import HomePage from './HomePage';
 import LandingPage from './LandingPage';
+import NewsStoryPage from './NewsStory';
 import PasswordForgetPage from './PasswordForgetPage';
 import SignInPage from './SignInPage';
 import SignOutPage from './SignOutPage';
@@ -14,6 +15,7 @@ export {
     AdminPage,
     HomePage,
     LandingPage,
+    NewsStoryPage,
     PasswordForgetPage,
     SignInPage,
     SignOutPage,
