@@ -6,6 +6,7 @@ import Icon from './Icons';
 import Input from './Input';
 import LargeBoxCard from './LargeBoxCard';
 import Layout from './Layout';
+import MapBox from './MapBox';
 import Modal from './Modal';
 import Navigation from './Navigation';
 import ProfilePic from './ProfilePic';
@@ -26,6 +27,7 @@ export {
   Input,
   LargeBoxCard,
   Layout,
+  MapBox,
   Modal,
   Navigation,
   PasswordForgetLink,

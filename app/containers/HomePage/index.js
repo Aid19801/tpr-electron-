@@ -13,6 +13,7 @@ function HomePage({
   newsStories,
   updateStateCacheExpiredFetchNews,
   updateStateLoadingCacheIntoStore,
+  updateStateCacheExpiredFetchingNews,
 }) {
 
   const [ arrayOfNewsStoriesToRender, setArrayOfNewsStoriesToRender ] = useState([]);
@@ -21,7 +22,7 @@ function HomePage({
   useEffect(() => {
     const cache = localStorage.getItem('news-stories'); // check cache for news
     const ts = getFromCache('news-ts');
-    console.log('ts is ', ts)
+    console.log('news timestamp: ', ts)
     const now = Date.now();
     const isExpired =  (Date.now() - ts) > 10000000; // check date of cache
 
@@ -260,7 +261,7 @@ function HomePage({
         key={newsStories[15]._id}
         /> )}
 
-      <div className="margin-bottom"></div>
+      <div className="col-sm-12" style={{ marginBottom: 65 }}></div>
     </div>
   )
 }

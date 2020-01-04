@@ -7,7 +7,10 @@ import webpack from 'webpack';
 import { dependencies as externals } from '../app/package.json';
 
 export default {
-  externals: [...Object.keys(externals || {})],
+  externals: [...Object.keys(externals || {}).filter(dep => ![
+    'react-mapbox-gl',
+    'mapbox-gl',
+  ].includes(dep))],
 
   module: {
     rules: [
@@ -34,7 +37,7 @@ export default {
    * Determine the array of extensions that should be used to resolve modules.
    */
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.jsx', '.json', '.css'],
     modules: [path.join(__dirname, '..', 'app'), 'node_modules']
   },
 

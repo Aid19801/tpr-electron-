@@ -30,6 +30,7 @@ node_modules
 
 # OSX
 .DS_Store
+notes
 
 # flow-typed
 flow-typed/npm/*
