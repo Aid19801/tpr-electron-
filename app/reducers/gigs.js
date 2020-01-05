@@ -27,7 +27,7 @@ function gigs(state = initialState, action) {
       return {
         ...state,
         id: action.id,
-        selectedGig: state.gigs.filter((each) => each.id === action.id),
+        selectedGig: state.gigs.filter((each) => each.id === action.id)[0],
       }
       break;
 

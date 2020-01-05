@@ -1,6 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
+import 'firebase/firestore';
 
 const config = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -16,8 +17,10 @@ class Firebase {
     !app.apps.length ? app.initializeApp(config) : app.app();
 
     // app.initializeApp(config);
+    this.fieldValue = app.firestore.FieldValue;
     this.auth = app.auth();
     this.db = app.database();
+    this.dbTwo = app.firestore();
   }
 
   // Firebase *Authentication*
@@ -51,9 +54,24 @@ class Firebase {
     });
   };
 
-  // Firebase *Database*
+  // Firebase *Realtime* db
   user = uid => this.db.ref(`users/${uid}`);
   users = () => this.db.ref(`users`);
+
+  // firestore db
+  gigs = () => this.dbTwo.collection("gigs")
+  .get()
+  .then((querySnapshot) => {
+    let arr = [];
+    querySnapshot.forEach((doc) => {
+      let eachGig = doc.data();
+      arr.push(eachGig);
+    });
+    return arr;
+  })
+  .catch(function(error) {
+      console.log("Error getting documents: ", error);
+  });
 }
 
 export default Firebase;

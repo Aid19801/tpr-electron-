@@ -1,6 +1,6 @@
-import Prismic from 'prismic-javascript';
+// import firebase from 'firebase';
 import { REQ_GIGS, RECEIVED_GIGS, SELECT_GIG, CACHE_EXPIRED_FETCHING_GIGS, LOADING_CACHE_GIGS_INTO_STORE } from './types';
-import { shuffle } from '../utils';
+
 
 // actions
 export function requestGigs() {
@@ -30,43 +30,3 @@ export function selectedGig(id) {
     id: id,
   }
 }
-
-// asynchronous thunks - ALL gigs
-export function fetchGigsFromGist() {
-
-  return async function(dispatch) {
-
-    dispatch(requestGigs());
-
-    let gistGigs = await fetchGigsFromGistAPI();
-
-    return dispatch(receivedGigs(gistGigs));
-  }
-
-}
-
-// git gist api fetch
-async function fetchGigsFromGistAPI() {
-  let arr = [];
-
-  try {
-    const res = await fetch(
-      `https://api.github.com/gists/${process.env.REACT_APP_GIG_GIST}`
-    );
-    const json = await res.json();
-    const rawUrl = json.files.gigs.raw_url;
-    const req = await fetch(rawUrl);
-    const reqJson = await req.json();
-
-    const sortedGigs = reqJson.sort((a, b) => {
-      var textA = a.name;
-      var textB = b.name;
-      return textA < textB ? -1 : textA > textB ? 1 : 0;
-    });
-
-    return sortedGigs;
-  } catch (error) {
-    console.log('fetchGigs gist error: ', error);
-  }
-}
-
