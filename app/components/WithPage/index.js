@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
 import { getFromCache } from '../Cache';
 import { saveUid, saveUserProfile } from '../../actions/user';
 import { isConnected, isDisconnected } from '../../actions/connectivity';
-
+import { BackgroundBanner } from '../../components';
 import useStyles from './styles';
 
 const withPage = MyComponent => {
@@ -35,6 +34,7 @@ const withPage = MyComponent => {
 
     return (
       <div className="container">
+        <BackgroundBanner />
         <MyComponent {...props} />
         { !props.isConnected && <p className="offline-banner">Offline Mode</p> }
       </div>

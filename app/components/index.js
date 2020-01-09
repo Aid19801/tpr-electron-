@@ -1,5 +1,7 @@
 import BoxCard from './BoxCard';
+import BackgroundBanner from './BackgroundBanner';
 import Button from './Button';
+import CircularImage from './CircularImage';
 import Footer from './Footer';
 import FunkyTitle from './FunkyTitle';
 import Icon from './Icons';
@@ -9,6 +11,7 @@ import Layout from './Layout';
 import MapBox from './MapBox';
 import Modal from './Modal';
 import Navigation from './Navigation';
+import PopOut from './PopOut';
 import ProfilePic from './ProfilePic';
 import SignUpLink from './SignUpLink';
 import SignOutButton from './SignOutButton';
@@ -19,8 +22,10 @@ import withFooter from './Footer';
 import withPage from './WithPage';
 
 export {
+  BackgroundBanner,
   BoxCard,
   Button,
+  CircularImage,
   Footer,
   FunkyTitle,
   Icon,
@@ -31,6 +36,7 @@ export {
   Modal,
   Navigation,
   PasswordForgetLink,
+  PopOut,
   ProfilePic,
   SignOutButton,
   SignUpLink,

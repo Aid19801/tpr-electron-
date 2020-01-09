@@ -5,7 +5,6 @@ import { compose } from 'redux';
 import { withFirebase } from '../../components/Firebase';
 import { Input, FunkyTitle, Button, withPage, Modal, Icon, ProfilePic, withFooter } from '../../components';
 import * as ROUTES from '../../constants/routes';
-import video from './loop.mp4';
 import mockGigs from '../../mocks/mockGigs.json';
 
 import './styles.css';
@@ -38,10 +37,6 @@ const LandingPage = (props) => {
 
   return (
     <div id="landingPage">
-
-      <video className="w-100 h-100" autoPlay muted loop id="myVideo">
-        <source src={video} type="video/mp4" />
-      </video>
 
       <div>
 

@@ -1,12 +1,10 @@
 import React from 'react';
-import useStyles from './styles.js';
+import './styles.css';
 
 function Twitter() {
 
-  const classes = useStyles();
-
   return (
-      <img className={classes.icon} src={require('./tw.png')} alt="twitter" />
+      <img className="icon" src={require('./tw.png')} alt="twitter" />
   )
 }
 

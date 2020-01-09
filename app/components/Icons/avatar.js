@@ -1,12 +1,9 @@
 import React from 'react';
-import useStyles from './styles.js';
+import './styles.css';
 
 function Avatar() {
-
-  const classes = useStyles();
-
   return (
-      <img className={classes.icon} src={require('./man.png')} alt="user avatar" />
+    <img className="icon" src={require('./man.png')} alt="user avatar" />
   )
 }
 

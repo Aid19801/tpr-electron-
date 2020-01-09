@@ -1,0 +1,11 @@
+.circ-img__container {
+  border: 5px solid orange;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+.circ-img__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}

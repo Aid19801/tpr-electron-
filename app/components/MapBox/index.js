@@ -61,28 +61,28 @@ class MapBox extends Component {
   };
 
   componentDidUpdate(prevProps) {
-    console.log(1);
+    // console.log(1);
     if (this.props.selectedGig && this.state.toggle === false) {
-      console.log(2);
+      // console.log(2);
       const newCenter = [ this.props.selectedGig.lng, this.props.selectedGig.lat ];
-      console.log(3);
+      // console.log(3);
       setTimeout(() => {
-        console.log(4);
+        // console.log(4);
         this.setState({ center: [ this.props.selectedGig.lng, this.props.selectedGig.lat ]})
       }, 500)
     }
     if (prevProps.selectedGig !== this.props.selectedGig) {
-      console.log('aaaaa: ', this.props.selectedGig);
+      // console.log('aaaaa: ', this.props.selectedGig);
       setTimeout(() => {
         this.setState({ center: [ this.props.selectedGig.lng, this.props.selectedGig.lat ]})
       }, 500)
     }
     if (prevProps.gigs !== this.props.gigs) {
-      console.log('bbbb?');
+      // console.log('bbbb?');
       this.setState({ gigs: this.props.gigs})
     }
     if (prevProps.center !== this.props.center) {
-      console.log('ccccc?');
+      // console.log('ccccc?');
       this.setState({ center: this.props.center})
     }
   }
@@ -134,7 +134,7 @@ class MapBox extends Component {
 
     if (!this.state.isLoading) {
       return (
-        <div className="map__container tpr__border">
+        <div className="map__container">
           <MapBoxMap
             style="mapbox://styles/mapbox/streets-v9"
             center={this.state.center}

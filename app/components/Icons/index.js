@@ -1,27 +1,35 @@
 import React from 'react';
 
 import Avatar from './avatar';
+import Bringer from './bringer';
+import Calendar from './calendar';
 import Camera from './camera';
+import Email from './email';
 import Facebook from './facebook';
 import Gigs from './gigs';
+import HowToBook from './howtobook';
 import List from './list';
 import Masks from './masks';
 import Mic from './microphone';
 import SpeechBubble from './speechBubble';
 import Twitter from './twitter';
+import Tube from './tube';
+import Walkins from './walkins';
 import Website from './website';
 import YouTube from './YouTube';
 
-import useStyles from './styles.js';
+import './styles.css';
 
 function Icon({ icon }) {
 
-  const classes = useStyles();
-
   return (
-    <div className={classes.iconContainer}>
+    <div className="iconContainer">
         { icon === 'avatar' && <Avatar /> }
+        { icon === 'bringer' && <Bringer /> }
+        { icon === 'book' && <HowToBook /> }
+        { icon === 'calendar' && <Calendar /> }
         { icon === 'camera' && <Camera /> }
+        { icon === 'email' && <Email /> }
         { icon === 'facebook' && <Facebook /> }
         { icon === 'gigs' && <Gigs /> }
         { icon === 'list' && <List /> }
@@ -29,6 +37,8 @@ function Icon({ icon }) {
         { icon === 'mic' && <Mic /> }
         { icon === 'speechBubble' && <SpeechBubble /> }
         { icon === 'twitter' && <Twitter /> }
+        { icon === 'tube' && <Tube /> }
+        { icon === 'walkins' && <Walkins /> }
         { icon === 'website' && <Website /> }
         { icon === 'youtube' && <YouTube /> }
     </div>

@@ -2,13 +2,22 @@ import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
   navContainer: {
-    height: 40,
+    height: 52,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    position: 'fixed',
+    zIndex: 1,
+    top: 0,
+    width: '100%',
+    background: 'grey',
+    // boxShadow: '12px 7px 12px 4px grey',
+
   },
   navFlexRow: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    position: 'fixed',
+    zIndex: 1,
   },
   ulContainer: {
     listStyleType: 'none',

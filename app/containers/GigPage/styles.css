@@ -1,0 +1,46 @@
+.gig__page h2 {
+  margin-top: -3vh;
+}
+
+.gig__page .gig__blurb {
+  font-size: 20px;
+  transform: skewY(-2deg);
+  border: 12px solid white;
+  border-radius: 12px;
+}
+.bringer-and-tubes-etc__container {
+  background: rgba(0, 0, 0, 0.7);
+  width: 110px;
+  height: 110px;
+  margin-left: 5px;
+  border: 5px solid grey;
+  border-radius: 50%;
+}
+
+.bringer-and-tubes-etc__container p {
+  color: black;
+  font-size: 20px;
+  background: orange;
+  position: relative;
+  transform: skewY(-2deg);
+  width: 105%;
+  top: -2px;
+}
+
+.contact__container {
+  width: 100%;
+  padding: 10px;
+  /* border: 1px solid red; */
+}
+
+.contact__container p {
+  z-index: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+}
+
+.contact__container .col-sm-12 {
+  background: rgba(0, 0, 0, 0.8);
+  transform: skewY(-1deg);
+}

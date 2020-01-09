@@ -1,12 +1,12 @@
 import React from 'react';
-import useStyles from './styles.js';
+import './styles.css';
 
 function SpeechBubble() {
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-      <img className={classes.icon} src={require('./speech-bubble.png')} alt="status tagline" />
+    <img className="icon"  src={require('./speech-bubble.png')} alt="status tagline" />
   )
 }
 

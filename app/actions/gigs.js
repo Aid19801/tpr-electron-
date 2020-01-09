@@ -1,5 +1,5 @@
 // import firebase from 'firebase';
-import { REQ_GIGS, RECEIVED_GIGS, SELECT_GIG, CACHE_EXPIRED_FETCHING_GIGS, LOADING_CACHE_GIGS_INTO_STORE } from './types';
+import { REQ_GIGS, RECEIVED_GIGS, SELECT_GIG, REMOVE_SELECT_GIG, CACHE_EXPIRED_FETCHING_GIGS, LOADING_CACHE_GIGS_INTO_STORE } from './types';
 
 
 // actions
@@ -28,5 +28,11 @@ export function selectedGig(id) {
   return {
     type: SELECT_GIG,
     id: id,
+  }
+}
+
+export function removeSelectedGig() {
+  return {
+    type: REMOVE_SELECT_GIG,
   }
 }

@@ -443,7 +443,13 @@ ul li a {
 }
 
 .border-on {
-  border: 1px solid red;
+  border: 1px solid orange;
+}
+ .nuke-grey {
+   background: #d1d1cc;
+ }
+.border-radius {
+  border-radius: 50%;
 }
 
 .tpr__border {
@@ -495,7 +501,7 @@ ul li a {
 }
 
 .box-shadow {
-  box-shadow: -38px 19px 96px 106px black;
+  box-shadow: -8px 19px 96px 56px black;
 }
 
 .tpr__container h3,
@@ -581,9 +587,16 @@ ul li a {
 .space-evenly {
   justify-content: space-evenly;
 }
+.space-between {
+  justify-content: space-between;
+}
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.start {
+  text-align: start;
 }
 
 .flex-row {

@@ -1,15 +1,12 @@
 import React from 'react';
-import useStyles from './styles.js';
+import './styles.css';
 
 function Masks() {
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-      <img
-        className={classes.icon}
-        src={require('./masks.png')} alt="thespian masks"
-      />
+    <img className="icon" src={require('./masks.png')} alt="thespian masks" />
   )
 }
 

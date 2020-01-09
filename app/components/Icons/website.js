@@ -1,12 +1,9 @@
 import React from 'react';
-import useStyles from './styles.js';
+import './styles.css';
 
 function Website() {
-
-  const classes = useStyles();
-
   return (
-      <img className={classes.icon} src={require('./ws.png')} alt="website" />
+    <img className="icon" src={require('./ws.png')} alt="website" />
   )
 }
 

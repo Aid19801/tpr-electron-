@@ -31,6 +31,13 @@ function gigs(state = initialState, action) {
       }
       break;
 
+    case types.REMOVE_SELECT_GIG:
+      return {
+        ...state,
+        selectedGig: null,
+      }
+      break;
+
       default:
         return {
           ...state,

@@ -1,12 +1,12 @@
 import React from 'react';
-import useStyles from './styles.js';
+import './styles.css';
 
 function Camera() {
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-      <img className={classes.icon} src={require('./camera.png')} alt="watch acts" />
+    <img className="icon" src={require('./camera.png')} alt="watch acts" />
   )
 }
 

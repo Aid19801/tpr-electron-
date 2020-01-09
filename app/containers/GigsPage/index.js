@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import FunkyTitle from '../../components/FunkyTitle';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 
-import { withPage, withFooter, BoxCard, LargeBoxCard, MapBox } from '../../components'
+import { withPage, withFooter, MapBox, PopOut} from '../../components'
 import { withFirebase } from '../../components/Firebase';
 import { requestGigs, cacheExpiredFetchingGigs, loadingCacheIntoStore, receivedGigs } from '../../actions/gigs';
 import { getFromCache, saveToCache } from '../../components/Cache';
@@ -15,6 +14,7 @@ import './styles.css';
 function GigsPage({
   gigs,
   firebase,
+  selectedGig,
   updateStateCacheExpiredFetchingGigs,
   updateStateLoadingCacheIntoStore,
   updateStateReceivedGigs,
@@ -22,6 +22,7 @@ function GigsPage({
 }) {
 
   const [center, setCenter] = useState([-0.1255, 51.5090]);
+  const [popoutBool, setPopoutBool] = useState(false);
 
   useEffect(() => {
     const cache = localStorage.getItem('gigs'); // check cache for news
@@ -73,11 +74,12 @@ function GigsPage({
       }
   }
 
+  // const updateThePopOutBool = () => setPopoutBool(!popoutBool);
 
     return (
       <div className="row margin-bottom">
 
-        <div className="col-sm-12">
+        <div className="col-sm-12 margin-top">
           <ButtonToolbar>
             <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
               <ToggleButton onClick={() => handleCity('London')} variant="outline-warning" value={1} size="lg">London</ToggleButton>
@@ -89,14 +91,17 @@ function GigsPage({
         </div>
 
         <MapBox gigs={gigs} center={center} />
+        { selectedGig && <PopOut selectedGig={selectedGig} killPopout={() => null} /> }
 
         <div className="col-sm-12" style={{ marginBottom: 65 }} />
+
       </div>
     )
   }
 
   const mapStateToProps = state => ({
     gigs: state.gigs.gigs,
+    selectedGig: state.gigs.selectedGig,
   })
 
   const mapDispatchToProps = dispatch => ({

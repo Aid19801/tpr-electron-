@@ -1,12 +1,12 @@
 import React from 'react';
-import useStyles from './styles.js';
+import './styles.css';
 
 function Facebook() {
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-      <img className={classes.icon} src={require('./fb.png')} alt="facebook" />
+    <img className="icon" src={require('./fb.png')} alt="facebook" />
   )
 }
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import useStyles from './styles.js';
+import './styles.css';
 
 function Mic() {
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-      <img className={classes.icon} src={require('./mic.png')} alt="microphone open mic" />
+    <img className="icon" src={require('./mic.png')} alt="microphone open mic" />
   )
 }
 

@@ -1,0 +1,46 @@
+.buttonContainer {
+  height: 45;
+  width: 100;
+  margin: 10;
+  background: orange;
+  border: 0;
+  border-radius: 12;
+  padding: 10;
+  display: flex;
+  justify-content: center;
+  transform: skewY(1deg);
+}
+
+.disabledContainer {
+  height: 45;
+  width: 100;
+  margin: 10;
+  background: grey;
+  border: 0;
+  border-radius: 12;
+  padding: 10;
+  display: flex;
+  justify-content: center;
+  transform: skewY(1deg);
+}
+
+
+.buttonContainer > .button {
+  background: green;
+  color: white;
+  border: 0;
+  font-family: Arial;
+  font-size: 20px;
+  margin: 2px;
+  width: 100%;
+}
+
+.disabledContainer > .disabledButton {
+  color: grey;
+  background: #500505;
+  border: 0;
+  font-family: Arial;
+  font-size: 20px;
+  margin: 2;
+  width: 100%;
+}

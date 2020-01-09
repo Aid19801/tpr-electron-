@@ -1,12 +1,12 @@
 import React from 'react';
-import useStyles from './styles.js';
+import './styles.css';
 
 function List() {
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-      <img className={classes.icon} src={require('./list.png')} alt="list of acts" />
+    <img className="icon" src={require('./list.png')} alt="list of acts" />
   )
 }
 

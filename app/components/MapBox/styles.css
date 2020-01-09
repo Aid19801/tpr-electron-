@@ -10,6 +10,8 @@
 
 .mapboxgl-map {
   width: 100% !important;
+  border: 12px solid orange;
+  border-radius: 12px;
 }
 
 .mapMeMarkerStyle {

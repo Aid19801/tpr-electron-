@@ -1,12 +1,12 @@
 import React from 'react';
-import useStyles from './styles.js';
+import './styles.css';
 
 function Gigs() {
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-      <img className={classes.icon} src={require('./map.png')} alt="map of gigs" />
+    <img className="icon" src={require('./map.png')} alt="map of gigs" />
   )
 }
 

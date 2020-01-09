@@ -1,5 +1,5 @@
 import React from 'react';
-import useStyles from './styles';
+import './styles.css';
 
 const Button = ({
   text,
@@ -9,16 +9,16 @@ const Button = ({
   color,
   small
 }) => {
-  const classes = useStyles();
+
   return (
     <div
-      className={disabled ? classes.disabledContainer : classes.buttonContainer}
+      className={disabled ? "disabledContainer" : "buttonContainer" }
       style={ color ? { padding: 0, border: `1px solid ${color}` } : null }
       >
       <button
         type={type ? type : null}
         onClick={onClick}
-        className={disabled ? classes.disabledButton : classes.button}
+        className={disabled ? "disabledButton" : "button" }
         disabled={disabled}
         style={ color ? { background: color, borderRadius: 12, } : null }
       >
