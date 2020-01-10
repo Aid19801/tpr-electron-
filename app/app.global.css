@@ -38,7 +38,6 @@ a:hover {
   background: black;
   color: white;
   margin-left: -49px !important;
-
   animation-name: fadeIn;
   animation-duration: 0.3s;
 }
@@ -58,17 +57,19 @@ a:hover {
 
 .app__page-wrapper {
   background: linear-gradient(45deg, black, grey);
+
   /* height: 150vh !important; */
+
   /* padding-bottom: 40px; */
 }
 .page-main-content {
   height: auto;
+
   /* border: 5px solid yellow; */
   position: absolute;
   top: 15%;
   z-index: 12;
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,6 +101,7 @@ a:hover {
 
 .signup__page .funky-title {
   margin-top: 60px !important;
+
   /* border: 1px solid red; */
 }
 
@@ -167,6 +169,7 @@ a:hover {
 
 .page__chatpage {
   height: 100vh !important;
+
   /* border: 7px solid red !important; */
 }
 
@@ -183,6 +186,7 @@ a:hover {
   padding: 20px;
   transform: skewY(-2deg);
   text-align: center;
+
   /* width: 50%; */
 }
 
@@ -210,6 +214,7 @@ a:hover {
 }
 .landing__promo-box {
   width: 100% !important;
+
   /* border: 1px solid red !important; */
 }
 .landing__promo-box-icon {
@@ -297,11 +302,13 @@ a:hover {
 }
 #page-container a {
   text-decoration: none;
+
   /* color: white !important; */
 }
 
 .page__actpage {
   height: 150vh;
+
   /* border: 1px solid red; */
 }
 .orange {
@@ -360,6 +367,7 @@ h1 {
   padding: 20px;
   transform: skewY(-2deg);
   text-align: center;
+
   /* width: 50%; */
 }
 
@@ -379,6 +387,7 @@ ul {
   width: 100%;
   margin-top: 20px;
   min-width: 250px;
+
   /* border: 1px solid red; */
 }
 
@@ -410,7 +419,7 @@ ul li a {
 
 .rounded-corners {
   border-radius: 17px;
-  border: 0px solid;
+  border: 0 solid;
 }
 
 .fadeOut {
@@ -481,6 +490,7 @@ ul li a {
 
 .tpr__container img {
   max-width: 65%;
+
   /* box-shadow: 7px 12px 18px lightgrey; */
   padding: 20px;
   background: black;
@@ -490,6 +500,7 @@ ul li a {
 
 .tpr__container .tpr__image {
   max-width: 65%;
+
   /* box-shadow: 7px 12px 18px lightgrey; */
   padding: 20px;
   background: black;
@@ -522,6 +533,7 @@ ul li a {
 .tpr__container h1 {
   text-align: center;
   width: 100% !important;
+
   /* margin-left: 20px; */
 }
 
@@ -533,6 +545,7 @@ ul li a {
   list-style-type: none;
   display: flex;
   padding-left: 0;
+
   /* text-align: center; */
   margin-left: 20px;
   flex-direction: column;
@@ -578,6 +591,7 @@ ul li a {
 
 .flex-center {
   display: flex;
+
   /* width: 100%; */
   justify-content: center;
   align-items: center;
@@ -631,6 +645,7 @@ ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   /* border: 1px solid red; */
   animation: bounceIn 0.5s;
 }
@@ -677,6 +692,7 @@ ul li a {
   align-items: center;
   justify-content: flex-start;
   animation: fadeIn 0.5s;
+
   /* border: 1px solid red; */
 }
 
@@ -687,6 +703,7 @@ ul li a {
   text-decoration: none;
   text-align: start;
   color: white;
+
   /* border: 1px solid pink; */
 }
 
@@ -740,12 +757,14 @@ ul li a {
   text-align: start;
   background: black;
   transform: skewY(3deg);
+
   /* border: 1px solid red; */
 }
 
 @media screen and (min-width: 1000px) {
   .each-act-container {
     width: 70%;
+
     /* border: 1px solid red; */
   }
 }
@@ -939,15 +958,18 @@ ul li a {
 
   .page__actpage input {
     width: 101%;
+
     /* border: 1px solid red; */
   }
 
   .page__actpage select {
     width: 101%;
+
     /* border: 1px solid red; */
   }
   .page__actpage .title {
     width: 100% !important;
+
     /* border: 1px solid red; */
   }
 

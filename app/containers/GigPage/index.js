@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Jump from 'react-reveal/Jump';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { compose } from 'redux';
 import FunkyTitle from '../../components/FunkyTitle';
 import { withPage, withFooter, BoxCard, LargeBoxCard, Button, CircularImage, Icon } from '../../components'
@@ -30,7 +30,83 @@ let selectedGig = {
   facebook: 'https://www.facebook.com/wearefunnyproject',
   twitterHandle: 'funnyFeckers',
   email: 'hello@google.com',
-  attended: [],
+  attended: [
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+      username: "Owen Clark"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "Des Lynham"
+    },
+    {
+      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+      username: "Marcus Wallace"
+    },
+    {
+      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "Crazy James McAdams"
+    },
+    {
+      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "Funny Lolly Man!"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+      username: "Owen Clark"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "Des Lynham"
+    },
+    {
+      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+      username: "Marcus Wallace"
+    },
+    {
+      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "Crazy James McAdams"
+    },
+    {
+      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "Funny Lolly Man!"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+      username: "Owen Clark"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "Des Lynham"
+    },
+    {
+      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+      username: "Marcus Wallace"
+    },
+    {
+      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "Crazy James McAdams"
+    },
+    {
+      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "Funny Lolly Man!"
+    },
+  ]
 }
 
 function GigPage({
@@ -38,11 +114,6 @@ function GigPage({
   history,
   // selectedGig,
 }) {
-
-  // CDM
-  useEffect(() => {
-
-  }, []);
 
 
   return (
@@ -129,9 +200,9 @@ function GigPage({
 
       <React.Fragment>
         <Fade>
-          <div className="contact__container flex-center flex-col margin-top grey border-on rounded-corners">
+          <div className="contact__container flex-center flex-row margin-top margin-bottom grey border-on rounded-corners">
 
-            <p className="margin-off nuke-grey">Contact these bloody legends...</p>
+            <p className="margin-off nuke-grey">Contact:</p>
 
             <div className="flex-center flex-row black space-between box-shadow">
 
@@ -166,6 +237,33 @@ function GigPage({
 
         </Fade>
       </React.Fragment>
+
+
+    <React.Fragment>
+      <Fade>
+        <div className="col-sm-12 flex-center flex-row margin-top">
+          <h3 className="attended__circ__title white skew-left grey">Who has performed here?</h3>
+        </div>
+      </Fade>
+    </React.Fragment>
+
+    <React.Fragment>
+      <Fade>
+        <div className="col-sm-6 attended__container flex-center flex-row margin-top">
+              { selectedGig && selectedGig.attended && selectedGig.attended.length > 0 &&
+                selectedGig.attended.map((each, i) => (
+                  <Link key={i} to={`/acts/${each.uid}`}>
+                    <div className="attended__circ__container">
+                      <img className="attended__circ__img" src={each.profilePicture !== "/static/no_prof_pic.png" ? each.profilePicture : require('./panda_avatar.jpg') } />
+                      <p className="attended__circ__name">{each.username}</p>
+                    </div>
+                  </Link>
+                ))
+              }
+        </div>
+
+      </Fade>
+    </React.Fragment>
 
       <div className="col-sm-12 flex-center">
         <p></p>

@@ -4,7 +4,9 @@
 }
 .map__container {
   width: 100%;
+
   /* margin-top: 20px; */
+
   /* border: 1px solid red; */
 }
 
@@ -107,7 +109,7 @@
 
 @keyframes transitionYo {
   from {
-    border: 0px solid white;
+    border: 0 solid white;
     opacity: 0.7;
   }
   to {

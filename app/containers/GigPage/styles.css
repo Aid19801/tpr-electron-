@@ -30,7 +30,6 @@
 .contact__container {
   width: 100%;
   padding: 10px;
-  /* border: 1px solid red; */
 }
 
 .contact__container p {
@@ -40,7 +39,39 @@
   color: black;
 }
 
+.contact__container p:nth-child(1) {
+  /* position: absolute; */
+  /* z-index: 100000000000; */
+  color: black;
+  /* left: 5%; */
+  font-size: 33px;
+}
+
 .contact__container .col-sm-12 {
   background: rgba(0, 0, 0, 0.8);
   transform: skewY(-1deg);
+}
+
+.attended__circ__container {
+  border: 3px solid rgb(245, 178, 54);
+  background: grey;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+.attended__circ__title > {
+
+}
+
+.attended__circ__container > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.attended__circ__name {
+  color: white;
+  font-family: Arial;
+  font-size: 10px;
 }
