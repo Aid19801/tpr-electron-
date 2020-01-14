@@ -4,6 +4,7 @@ import Avatar from './avatar';
 import Bringer from './bringer';
 import Calendar from './calendar';
 import Camera from './camera';
+import Clap from './clap';
 import Email from './email';
 import Facebook from './facebook';
 import Gigs from './gigs';
@@ -29,6 +30,7 @@ function Icon({ icon }) {
         { icon === 'book' && <HowToBook /> }
         { icon === 'calendar' && <Calendar /> }
         { icon === 'camera' && <Camera /> }
+        { icon === 'clap' && <Clap /> }
         { icon === 'email' && <Email /> }
         { icon === 'facebook' && <Facebook /> }
         { icon === 'gigs' && <Gigs /> }

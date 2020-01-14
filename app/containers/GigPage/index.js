@@ -249,10 +249,20 @@ function GigPage({
 
     <React.Fragment>
       <Fade>
-        <div className="col-sm-6 attended__container flex-center flex-row margin-top">
-              { selectedGig && selectedGig.attended && selectedGig.attended.length > 0 &&
+        <div className="col-sm-12 attended__container flex-center flex-row margin-top">
+              { selectedGig && selectedGig.attended && selectedGig.attended.length > 0 && selectedGig.attended.length < 16 &&
                 selectedGig.attended.map((each, i) => (
-                  <Link key={i} to={`/acts/${each.uid}`}>
+                  <Link key={i} to={`/act/${each.uid}`}>
+                    <div className="attended__circ__container">
+                      <img className="attended__circ__img" src={each.profilePicture !== "/static/no_prof_pic.png" ? each.profilePicture : require('./panda_avatar.jpg') } />
+                      <p className="attended__circ__name">{each.username}</p>
+                    </div>
+                  </Link>
+                ))
+              }
+              { selectedGig && selectedGig.attended && selectedGig.attended.length > 0 && selectedGig.attended.length > 15 &&
+                selectedGig.attended.slice(0, 15).map((each, i) => (
+                  <Link key={i} to={`/act/${each.uid}`}>
                     <div className="attended__circ__container">
                       <img className="attended__circ__img" src={each.profilePicture !== "/static/no_prof_pic.png" ? each.profilePicture : require('./panda_avatar.jpg') } />
                       <p className="attended__circ__name">{each.username}</p>
@@ -265,10 +275,7 @@ function GigPage({
       </Fade>
     </React.Fragment>
 
-      <div className="col-sm-12 flex-center">
-        <p></p>
-      </div>
-      <div className="col-sm-12" style={{ marginBottom: 65 }} />
+    <div className="col-sm-12" style={{ marginBottom: 65 }} />
 
     </div>
   )

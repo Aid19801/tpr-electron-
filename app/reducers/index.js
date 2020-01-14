@@ -1,7 +1,8 @@
 // @flow
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
-import type { HashHistory } from 'history';
+import { HashHistory } from 'history';
+import acts from './acts';
 import connectivity from './connectivity';
 import counter from './counter';
 import gigs from './gigs';
@@ -11,6 +12,7 @@ import user from './user';
 export default function createRootReducer(history: HashHistory) {
   return combineReducers<{}, *>({
     router: connectRouter(history),
+    acts,
     connectivity,
     counter,
     gigs,

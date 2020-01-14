@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import useStyles from './styles';
 import Button from '../Button';
+import './styles.css';
 
 const Modal = ({
   heading,
@@ -8,18 +8,14 @@ const Modal = ({
   killModal,
   }) => {
 
-  const classes = useStyles();
-
   const handleClick = () => {
     return killModal();
   }
-
-
     return (
-      <div className={classes.modalContainer}>
-        <div className={classes.modalContentContainer}>
-          <h1 className={classes.modalHeading}>{heading} poo</h1>
-          <p className={classes.modalBody}>{body}</p>
+      <div className="modalContainer">
+        <div className="modalContentContainer">
+          <h1 className="modalHeading">{heading} poo</h1>
+          <p className="modalBody">{body}</p>
           <Button text="Ok" onClick={handleClick} disabled={false} color="grey" />
         </div>
       </div>

@@ -9,7 +9,7 @@ function CircularImage({ src, small, large }) {
 
   }, [])
   return (
-    <div className={`circ-img__container ${small && 'small'} ${large && 'large'}`}>
+    <div className={`circ-img__container${small && '__small'} ${large && 'large'}`}>
       <img className="circ-img__img" src={src} alt="open mic comedy profile"/>
     </div>
   );

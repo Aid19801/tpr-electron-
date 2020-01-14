@@ -38,6 +38,9 @@ const NavigationAuth = () => {
           <Link className={classes.navOption} to={ROUTES.GIGS}>Gigs</Link>
         </li>
         <li className={classes.li}>
+          <Link className={classes.navOption} to={ROUTES.ACTS}>Acts</Link>
+        </li>
+        <li className={classes.li}>
           <Link className={classes.navOption} to={ROUTES.ACCOUNT}>Account</Link>
         </li>
       </ul>

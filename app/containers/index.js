@@ -1,4 +1,6 @@
 import AccountPage from './AccountPage';
+import ActsPage from './ActsPage';
+import ActPage from './ActPage';
 import AdminDetailsPage from './AdminDetailsPage';
 import AdminPage from './AdminPage';
 import GigPage from './GigPage';
@@ -13,6 +15,8 @@ import SignUpPage from './SignUpPage';
 
 export {
     AccountPage,
+    ActsPage,
+    ActPage,
     AdminDetailsPage,
     AdminPage,
     GigPage,

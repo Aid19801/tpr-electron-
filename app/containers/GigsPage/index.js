@@ -22,7 +22,7 @@ function GigsPage({
 }) {
 
   const [center, setCenter] = useState([-0.1255, 51.5090]);
-  const [popoutBool, setPopoutBool] = useState(false);
+  const [ popoutBool, setPopoutBool ] = useState(false);
 
   useEffect(() => {
     const cache = localStorage.getItem('gigs'); // check cache for news
