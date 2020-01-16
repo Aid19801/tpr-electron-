@@ -10,109 +10,109 @@ import { fetchGigsFromGist, cacheExpiredFetchingGigs, loadingCacheIntoStore, rec
 import './styles.css';
 
 
-let selectedGig = {
-  id: 38,
-  name: 'Lol Factory Blahdy BLAH!',
-  venue: 'The Queens Head Arms',
-  img: "https://i.ytimg.com/vi/5kOzeYp8RgU/hqdefault.jpg",
-  lat: 51.5024,
-  lng: -0.0734,
-  blurb: "LOLLY POPS is a weekly FREE comedy night founded & compered by Irish MC, Wes Dalton. Branching out from their Camden roots with a brand new Monday show @ The Dean Swift in Tower Bridge. Each week they bring you a craic-ing bill of up-and-coming acts and special guest to headline. Fun and friendly night which brings people together through laughter and silliness. Doors 19.30!",
-  nearestTubes: ['Picadilly Circus', 'Leics Square'],
-  nights: ['Mon', 'Tue'],
-  bringer: true,
-  prebook: true,
-  walkins: true,
-  walkinSignUp: "",
-  prebookSignUp: "monthly booking via email",
-  howToBook: "http://www.funnyfeckers.co.uk/performers/",
-  website: 'http://wearefunnyproject.com/',
-  facebook: 'https://www.facebook.com/wearefunnyproject',
-  twitterHandle: 'funnyFeckers',
-  email: 'hello@google.com',
-  attended: [
-    {
-      profilePicture: "/static/no_prof_pic.png",
-      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-      username: "Owen Clark"
-    },
-    {
-      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-      username: "Des Lynham"
-    },
-    {
-      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-      username: "Marcus Wallace"
-    },
-    {
-      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-      username: "Crazy James McAdams"
-    },
-    {
-      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-      username: "Funny Lolly Man!"
-    },
-    {
-      profilePicture: "/static/no_prof_pic.png",
-      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-      username: "Owen Clark"
-    },
-    {
-      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-      username: "Des Lynham"
-    },
-    {
-      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-      username: "Marcus Wallace"
-    },
-    {
-      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-      username: "Crazy James McAdams"
-    },
-    {
-      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-      username: "Funny Lolly Man!"
-    },
-    {
-      profilePicture: "/static/no_prof_pic.png",
-      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-      username: "Owen Clark"
-    },
-    {
-      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-      username: "Des Lynham"
-    },
-    {
-      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-      username: "Marcus Wallace"
-    },
-    {
-      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-      username: "Crazy James McAdams"
-    },
-    {
-      profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-      username: "Funny Lolly Man!"
-    },
-  ]
-}
+// let selectedGig = {
+//   id: 38,
+//   name: 'Lol Factory Blahdy BLAH!',
+//   venue: 'The Queens Head Arms',
+//   img: "https://i.ytimg.com/vi/5kOzeYp8RgU/hqdefault.jpg",
+//   lat: 51.5024,
+//   lng: -0.0734,
+//   blurb: "LOLLY POPS is a weekly FREE comedy night founded & compered by Irish MC, Wes Dalton. Branching out from their Camden roots with a brand new Monday show @ The Dean Swift in Tower Bridge. Each week they bring you a craic-ing bill of up-and-coming acts and special guest to headline. Fun and friendly night which brings people together through laughter and silliness. Doors 19.30!",
+//   nearestTubes: ['Picadilly Circus', 'Leics Square'],
+//   nights: ['Mon', 'Tue'],
+//   bringer: true,
+//   prebook: true,
+//   walkins: true,
+//   walkinSignUp: "",
+//   prebookSignUp: "monthly booking via email",
+//   howToBook: "http://www.funnyfeckers.co.uk/performers/",
+//   website: 'http://wearefunnyproject.com/',
+//   facebook: 'https://www.facebook.com/wearefunnyproject',
+//   twitterHandle: 'funnyFeckers',
+//   email: 'hello@google.com',
+//   attended: [
+//     {
+//       profilePicture: "/static/no_prof_pic.png",
+//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+//       username: "Owen Clark"
+//     },
+//     {
+//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+//       username: "Des Lynham"
+//     },
+//     {
+//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+//       username: "Marcus Wallace"
+//     },
+//     {
+//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+//       username: "Crazy James McAdams"
+//     },
+//     {
+//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+//       username: "Funny Lolly Man!"
+//     },
+//     {
+//       profilePicture: "/static/no_prof_pic.png",
+//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+//       username: "Owen Clark"
+//     },
+//     {
+//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+//       username: "Des Lynham"
+//     },
+//     {
+//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+//       username: "Marcus Wallace"
+//     },
+//     {
+//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+//       username: "Crazy James McAdams"
+//     },
+//     {
+//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+//       username: "Funny Lolly Man!"
+//     },
+//     {
+//       profilePicture: "/static/no_prof_pic.png",
+//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+//       username: "Owen Clark"
+//     },
+//     {
+//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+//       username: "Des Lynham"
+//     },
+//     {
+//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
+//       username: "Marcus Wallace"
+//     },
+//     {
+//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+//       username: "Crazy James McAdams"
+//     },
+//     {
+//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+//       username: "Funny Lolly Man!"
+//     },
+//   ]
+// }
 
 function GigPage({
   gigs,
   history,
-  // selectedGig,
+  selectedGig,
 }) {
 
 

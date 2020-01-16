@@ -2,6 +2,7 @@ import BoxCard from './BoxCard';
 import BackgroundBanner from './BackgroundBanner';
 import Button from './Button';
 import CircularImage from './CircularImage';
+import DynamicImage from './DynamicImage';
 import Footer from './Footer';
 import FunkyTitle from './FunkyTitle';
 import Icon from './Icons';
@@ -26,6 +27,7 @@ export {
   BoxCard,
   Button,
   CircularImage,
+  DynamicImage,
   Footer,
   FunkyTitle,
   Icon,

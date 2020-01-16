@@ -28,6 +28,7 @@ a:hover {
 
 .offline-banner {
   position: fixed;
+  z-index: 100;
   bottom: 0;
   width: 102%;
   padding: 20px;
