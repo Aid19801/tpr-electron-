@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade';
 import { compose } from 'redux';
 import { withFirebase } from '../../components/Firebase';
 import { Input, FunkyTitle, Button, withPage, Modal, Icon } from '../../components';
+import { getFromCache, saveToCache } from '../../components/Cache';
 import * as ROUTES from '../../constants/routes';
 import './styles.css';
 
@@ -26,6 +27,7 @@ class AccountFormBase extends Component {
     this.state = {
         submitting: false,
         error: null,
+        uid: null,
 
         // // stage 0
         username: '',
@@ -51,6 +53,29 @@ class AccountFormBase extends Component {
       }
   }
 
+  componentDidMount() {
+    this.fetchUser();
+  }
+
+  retrieveUserFromCache = () => {
+    const cache = getFromCache('user-profile');
+    return cache;
+  }
+
+  fetchUser = () => {
+    const uid = getFromCache('uid');
+    console.log('AT | uid ', uid);
+    // get from firebase (b/c if you cache user-profile, rating would fuck up)
+    this.props.firebase.user(uid).on('value', snapshot => {
+      const user = snapshot.val();
+      this.setState({
+        ...user,
+        uid: uid,
+      })
+    })
+  };
+
+
   onSubmit = (event) => {
     const {
       uid,
@@ -59,6 +84,7 @@ class AccountFormBase extends Component {
       profilePicture,
       tagline,
       genre,
+      rating,
       faveGig,
       includeInActRater,
       facebook,
@@ -67,14 +93,14 @@ class AccountFormBase extends Component {
       youtube,
       youtubeChannelURL,
     } = this.state;
-
+    debugger;
     this.props.firebase.user(uid).set({
       username,
       email,
       tagline,
       profilePicture,
       includeInActRater,
-      rating: 0,
+      rating,
 
       faveGig,
       genre,

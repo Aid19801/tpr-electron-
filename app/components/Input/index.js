@@ -52,7 +52,7 @@ const Input = ({
           />
           )
         }
-        { icon && <Icon icon={icon} /> }
+        { icon && name !== "profilePicture" && <Icon icon={icon} /> }
         </div>
 
 
