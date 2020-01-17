@@ -406,7 +406,7 @@ function GigPage({
         </Fade>
       </React.Fragment>
 
-      {selectedGig.attended && (
+      {selectedGig.attended && selectedGig.attended.length && (
         <React.Fragment>
           <React.Fragment>
             <Fade>
@@ -422,10 +422,7 @@ function GigPage({
                 {selectedGig && selectedGig.attended && selectedGig.attended.length > 0 && selectedGig.attended.length < 16 &&
                   selectedGig.attended.filter(each => each.uid !== uid).map((each, i) => (
                     <Link key={i} to={`/act/${each.uid}`}>
-                      <div className="attended__circ__container">
-                        <img className="attended__circ__img" src={each.profilePicture !== "/static/no_prof_pic.png" ? each.profilePicture : require('./panda_avatar.jpg')} />
-                        <p className="attended__circ__name">{each.username}</p>
-                      </div>
+                      <DynamicImage small src={each.profilePicture} caption={each.username} />
                     </Link>
                   ))
                 }

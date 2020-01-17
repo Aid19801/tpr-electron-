@@ -38,6 +38,7 @@ class DynamicImage extends Component {
       src: _1,
       fallbackSrc: _2,
       greyBorder,
+      caption,
       ...props
     } = this.props;
 
@@ -49,6 +50,7 @@ class DynamicImage extends Component {
           onError={this.onError}
           {...props}
         />
+        <p className="dynamic-img__caption">{caption}</p>
       </div>
     );
   }
@@ -58,7 +60,7 @@ DynamicImage.propTypes = {
   src: PropTypes.string,
   small: PropTypes.bool,
   large: PropTypes.bool,
-  fallbackSrc: PropTypes.string,
+  caption: PropTypes.string,
 };
 
 export default DynamicImage;

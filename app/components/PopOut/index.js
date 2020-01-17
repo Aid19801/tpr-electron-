@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Button from 'react-bootstrap/Button';
+
 import { removeSelectedGig } from '../../actions/gigs';
-import Button from '../Button';
+import { trimStringSpecifically } from '../../utils';
 import './styles.css';
 
 const PopOut = ({
@@ -34,12 +37,13 @@ const PopOut = ({
             alt="selected gig"
           />
         </div>
-        <p className="popout__body">{selectedGig.blurb}</p>
+        <p className="popout__body">{trimStringSpecifically(selectedGig.blurb, 300)}</p>
 
-        <div className="flex-row space-between">
-          <Button text="close" small onClick={killPopout} disabled={false} color="grey" />
-          <Button text="More =>" onClick={handleClick} disabled={false} color="orange" />
-        </div>
+        <ButtonToolbar>
+          <Button onClick={killPopout} variant="secondary" size="sm">X</Button>
+          <Button onClick={handleClick} variant="success" size="sm">More Info...</Button>
+        </ButtonToolbar>
+
       </div>
     </div>
   );
