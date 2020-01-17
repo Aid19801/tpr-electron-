@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
@@ -8,6 +8,11 @@ import { trimStringSpecifically } from '../../utils';
 import './styles.css';
 
 const LargeBoxCard = ({ id, img, blurb, headline, link, src, updateStateSelectNewsStory, ...props }) => {
+
+  const [localSrc, setLocalSrc] = useState(img);
+  const [errored, setErrored] = useState('');
+  const [fallbackSrc, setFallbackSrc] = useState('https://ichef.bbci.co.uk/childrens-responsive-ichef-live/r/400/1.5x/cbbc/microphone2.jpg');
+
 
   const handleClick = () => {
 
@@ -22,58 +27,68 @@ const LargeBoxCard = ({ id, img, blurb, headline, link, src, updateStateSelectNe
       window.open(link, '_newtab')
     }
   }
-    if (src === 'TPR') {
-        // TPR news stories box cards
-        return (
-            <div className="col-sm-12 margin-top" onClick={handleClick}>
-                <Fade>
 
-                      <div className="box-card hvr-float-shadow">
-                          <h4 className="card-h4">
-                              {trimStringSpecifically(headline, 45)}
-                          </h4>
-                          <p className="card-p">{trimStringSpecifically(blurb, 110)}</p>
-                          <h3 className="card-h3">{src}</h3>
-
-                          <div className="card-img-container">
-                              <img
-                                  alt="open mic comedy news"
-                                  className="large-card-img"
-                                  src={img}
-                              />
-                          </div>
-                      </div>
-
-                </Fade>
-            </div>
-        );
+  const onError = () => {
+    if (!errored) {
+      setErrored(true);
+      setLocalSrc(fallbackSrc);
+      setErrored(false);
     }
-    if (src !== 'TPR') {
-        // every news story that ISNT TPR
-        return (
-            <div className="col-sm-12 margin-top" onClick={handleClick}>
-                <Fade>
-                    <div className="box-card hvr-float-shadow">
+  }
 
-                            <h4 className="card-h4">
-                                {trimStringSpecifically(headline, 45)}
-                            </h4>
-                            <p className="card-p">{trimStringSpecifically(blurb, 110)}</p>
-                            <h3 className="card-h3">{src}</h3>
+  if (src === 'TPR') {
+    // TPR news stories box cards
+    return (
+      <div className="col-sm-12 margin-top" onClick={handleClick}>
+        <Fade>
 
-                            <div className="card-img-container">
-                                <img
-                                    alt="open mic comedy news"
-                                    className="large-card-img"
-                                    src={img}
-                                />
-                            </div>
+          <div className="box-card hvr-float-shadow">
+            <h4 className="card-h4">
+              {trimStringSpecifically(headline, 45)}
+            </h4>
+            <p className="card-p">{trimStringSpecifically(blurb, 110)}</p>
+            <h3 className="card-h3">{src}</h3>
 
-                    </div>
-                </Fade>
+            <div className="card-img-container">
+              <img
+                alt="open mic comedy news"
+                className="large-card-img"
+                src={img}
+              />
             </div>
-        );
-    }
+          </div>
+
+        </Fade>
+      </div>
+    );
+  }
+  if (src !== 'TPR') {
+    // every news story that ISNT TPR
+    return (
+      <div className="col-sm-12 margin-top" onClick={handleClick}>
+        <Fade>
+          <div className="box-card hvr-float-shadow">
+
+            <h4 className="card-h4">
+              {trimStringSpecifically(headline, 45)}
+            </h4>
+            <p className="card-p">{trimStringSpecifically(blurb, 110)}</p>
+            <h3 className="card-h3">{src}</h3>
+
+            <div className="card-img-container">
+              <img
+                alt="open mic comedy news"
+                className="large-card-img"
+                src={localSrc}
+                onError={onError}
+              />
+            </div>
+
+          </div>
+        </Fade>
+      </div>
+    );
+  }
 };
 const mapStateToProps = state => ({
   selectedGig: state.news.selectedGig,

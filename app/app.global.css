@@ -42,6 +42,9 @@ a:hover {
   animation-name: fadeIn;
   animation-duration: 0.3s;
 }
+.greyBorder {
+  border: 3px solid grey;
+}
 
 .btns-container {
   display: flex;
@@ -482,11 +485,12 @@ ul li a {
 }
 
 .tpr__container {
-  /* position: absolute; */
+  position: absolute;
   margin-top: 25px;
   margin-bottom: 65px;
   top: 50px;
-  z-index: 1;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .tpr__container img {

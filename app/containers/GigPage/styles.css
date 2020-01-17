@@ -51,6 +51,32 @@
   background: rgba(0, 0, 0, 0.8);
   transform: skewY(-1deg);
 }
+.attended__container {
+  height: 80px;
+  contain: content;
+  margin-bottom: 20px;
+}
+
+.haveIPerformedHere {
+  width: 60%;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.haveIPerformedHere > p {
+  width: 30%;
+}
+
+.haveIPerformedHere > div {
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+
 
 .attended__circ__container {
   border: 3px solid rgb(245, 178, 54);

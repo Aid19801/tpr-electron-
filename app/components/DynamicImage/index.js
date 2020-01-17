@@ -13,9 +13,10 @@ class DynamicImage extends Component {
   }
 
   onError = () => {
+    console.log('AT | onerror fired...');
     if (!this.state.errored) {
       this.setState({
-        src: this.props.fallbackSrc,
+        src: require('../../media/panda_avatar.jpg'),
         errored: true,
       });
     }
@@ -36,11 +37,12 @@ class DynamicImage extends Component {
       large,
       src: _1,
       fallbackSrc: _2,
+      greyBorder,
       ...props
     } = this.props;
 
     return (
-      <div className={`circ-img__container${small && '__small'} ${large && 'large'}`}>
+      <div className={`circ-img__container${small && '__small'} ${large && 'large'} ${greyBorder && 'greyBorder'}`}>
         <img
           className="dynamic-img__img"
           src={src}
@@ -54,8 +56,8 @@ class DynamicImage extends Component {
 
 DynamicImage.propTypes = {
   src: PropTypes.string,
-  small: PropTypes.string,
-  large: PropTypes.string,
+  small: PropTypes.bool,
+  large: PropTypes.bool,
   fallbackSrc: PropTypes.string,
 };
 

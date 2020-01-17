@@ -7,13 +7,15 @@ const Button = ({
   onClick,
   disabled,
   color,
-  small
+  small,
+  medium
 }) => {
 
   return (
     <div
       className={disabled ? "disabledContainer" : "buttonContainer" }
       style={ color ? { padding: 0, border: `1px solid ${color}` } : null }
+      style={ medium ? { width: '120px', height: '50px' } : null }
       >
       <button
         type={type ? type : null}

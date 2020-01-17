@@ -3,6 +3,7 @@ import Fade from 'react-reveal/Fade';
 
 import useStyles from './styles';
 import Icon from '../Icons';
+import DynamicImage from '../DynamicImage';
 
 const Input = ({
   name,
@@ -53,6 +54,14 @@ const Input = ({
           )
         }
         { icon && name !== "profilePicture" && <Icon icon={icon} /> }
+        { icon && name === "profilePicture" && (
+          <DynamicImage
+            small
+            src={value}
+            fallbackSrc="https://image.shutterstock.com/image-vector/no-user-profile-picture-hand-260nw-99335579.jpg"
+            greyBorder
+          />
+        )}
         </div>
 
 

@@ -64,7 +64,6 @@ class AccountFormBase extends Component {
 
   fetchUser = () => {
     const uid = getFromCache('uid');
-    console.log('AT | uid ', uid);
     // get from firebase (b/c if you cache user-profile, rating would fuck up)
     this.props.firebase.user(uid).on('value', snapshot => {
       const user = snapshot.val();
@@ -77,6 +76,7 @@ class AccountFormBase extends Component {
 
 
   onSubmit = (event) => {
+
     const {
       uid,
       username,
@@ -93,7 +93,7 @@ class AccountFormBase extends Component {
       youtube,
       youtubeChannelURL,
     } = this.state;
-    debugger;
+
     this.props.firebase.user(uid).set({
       username,
       email,
@@ -112,6 +112,7 @@ class AccountFormBase extends Component {
     });
 
     event.preventDefault();
+    return this.props.history.push(ROUTES.HOME);
   };
 
   onChange = event => {

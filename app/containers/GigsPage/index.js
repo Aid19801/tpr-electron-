@@ -15,8 +15,6 @@ function GigsPage({
   gigs,
   firebase,
   selectedGig,
-  updateStateCacheExpiredFetchingGigs,
-  updateStateLoadingCacheIntoStore,
   updateStateReceivedGigs,
   updateStateRequestingGigs,
 }) {
@@ -25,30 +23,14 @@ function GigsPage({
   const [ popoutBool, setPopoutBool ] = useState(false);
 
   useEffect(() => {
-    const cache = localStorage.getItem('gigs'); // check cache for news
-    const ts = getFromCache('gigs-ts');
-    console.log('gigs timestamp: ', ts)
-    const isExpired =  (Date.now() - ts) > 10000000; // check date of cache
-
-    if(!cache || cache.length < 1 || isExpired) { // if there's no cache gigs
-      const store = gigs ;// check reduxStore
-      if(!store || store.length < 1 || isExpired) { // if no cache & no store news, fetch the news!
-        if (isExpired) { updateStateCacheExpiredFetchingGigs() }
-        fetchGigs();
-        const timestampToCache = Date.now();
-        saveToCache('gigs-ts', timestampToCache); // time that gigs was saved to cache
-      }
-    } else { // if there IS cache gigs,
-      const cachedGigs = JSON.parse(cache); // change it to a JS object
-      updateStateLoadingCacheIntoStore();
-      updateStateReceivedGigs(cachedGigs); // push it in the store (then it'll come thru props);
-    }
+   fetchGigs();
   }, []);
 
+
   const fetchGigs = async () => {
+    console.log('AT | fetching gigs again!!!!!');
     updateStateRequestingGigs();
     const gigs = await firebase.gigs();
-    saveToCache('gigs', JSON.stringify(gigs));
     updateStateReceivedGigs(gigs);
   }
 

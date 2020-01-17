@@ -5,117 +5,285 @@ import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
 import { compose } from 'redux';
 import FunkyTitle from '../../components/FunkyTitle';
-import { withPage, withFooter, BoxCard, LargeBoxCard, Button, CircularImage, Icon } from '../../components'
+import { withPage, withFooter, BoxCard, LargeBoxCard, Button, CircularImage, Icon, DynamicImage } from '../../components'
 import { fetchGigsFromGist, cacheExpiredFetchingGigs, loadingCacheIntoStore, receivedGigs } from '../../actions/gigs';
+import { withFirebase } from '../../components/Firebase';
+import { getFromCache, saveToCache } from '../../components/Cache';
 import './styles.css';
 
 
-// let selectedGig = {
-//   id: 38,
-//   name: 'Lol Factory Blahdy BLAH!',
-//   venue: 'The Queens Head Arms',
-//   img: "https://i.ytimg.com/vi/5kOzeYp8RgU/hqdefault.jpg",
-//   lat: 51.5024,
-//   lng: -0.0734,
-//   blurb: "LOLLY POPS is a weekly FREE comedy night founded & compered by Irish MC, Wes Dalton. Branching out from their Camden roots with a brand new Monday show @ The Dean Swift in Tower Bridge. Each week they bring you a craic-ing bill of up-and-coming acts and special guest to headline. Fun and friendly night which brings people together through laughter and silliness. Doors 19.30!",
-//   nearestTubes: ['Picadilly Circus', 'Leics Square'],
-//   nights: ['Mon', 'Tue'],
-//   bringer: true,
-//   prebook: true,
-//   walkins: true,
-//   walkinSignUp: "",
-//   prebookSignUp: "monthly booking via email",
-//   howToBook: "http://www.funnyfeckers.co.uk/performers/",
-//   website: 'http://wearefunnyproject.com/',
-//   facebook: 'https://www.facebook.com/wearefunnyproject',
-//   twitterHandle: 'funnyFeckers',
-//   email: 'hello@google.com',
-//   attended: [
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-//       username: "Owen Clark"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "Des Lynham"
-//     },
-//     {
-//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-//       username: "Marcus Wallace"
-//     },
-//     {
-//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "Crazy James McAdams"
-//     },
-//     {
-//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "Funny Lolly Man!"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-//       username: "Owen Clark"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "Des Lynham"
-//     },
-//     {
-//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-//       username: "Marcus Wallace"
-//     },
-//     {
-//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "Crazy James McAdams"
-//     },
-//     {
-//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "Funny Lolly Man!"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-//       username: "Owen Clark"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "Des Lynham"
-//     },
-//     {
-//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/John_Wallace_de_Beque_Farris.jpg/220px-John_Wallace_de_Beque_Farris.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99Ntjhiqu2",
-//       username: "Marcus Wallace"
-//     },
-//     {
-//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/James_Dyson_in_February_2013.jpg/170px-James_Dyson_in_February_2013.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "Crazy James McAdams"
-//     },
-//     {
-//       profilePicture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Steve_Martin%2C_2017-08-11.jpg/1200px-Steve_Martin%2C_2017-08-11.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "Funny Lolly Man!"
-//     },
-//   ]
-// }
+let selectedGig = {
+  id: 38,
+  name: 'Lol Factory Blahdy BLAH!',
+  venue: 'The Queens Head Arms',
+  img: "https://i.ytimg.com/vi/5kOzeYp8RgU/hqdefault.jpg",
+  lat: 51.5024,
+  lng: -0.0734,
+  blurb: "LOLLY POPS is a weekly FREE comedy night founded & compered by Irish MC, Wes Dalton. Branching out from their Camden roots with a brand new Monday show @ The Dean Swift in Tower Bridge. Each week they bring you a craic-ing bill of up-and-coming acts and special guest to headline. Fun and friendly night which brings people together through laughter and silliness. Doors 19.30!",
+  nearestTubes: ['Picadilly Circus', 'Leics Square'],
+  nights: ['Mon', 'Tue'],
+  bringer: true,
+  prebook: true,
+  walkins: true,
+  walkinSignUp: "",
+  prebookSignUp: "monthly booking via email",
+  howToBook: "http://www.funnyfeckers.co.uk/performers/",
+  website: 'http://wearefunnyproject.com/',
+  facebook: 'https://www.facebook.com/wearefunnyproject',
+  twitterHandle: 'funnyFeckers',
+  email: 'hello@google.com',
+  attended: [
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+  ]
+}
 
 function GigPage({
   gigs,
   history,
+  firebase,
   selectedGig,
 }) {
 
+  const [uid, setUid] = useState(localStorage.getItem('uid'));
+  const [userProfile, setUserProfile] = useState(JSON.parse(localStorage.getItem('user-profile')));
+  const [attended, setAttended] = useState(false);
 
+  useEffect(() => {
+    const arr = selectedGig && selectedGig.attended && selectedGig.attended.length && selectedGig.attended || [];
+    console.log('AT | arr  ', arr);
+    arr.map((each) => {
+      console.log('AT | each attendee  ', each);
+      if (each.uid === uid) {
+        console.log('AT | uid matched, i attended  ', uid);
+        setAttended(true)
+        console.log('AT | attended should be true :', attended);
+      }
+    })
+  }, []);
+
+  const handleAttendClick = (att) => {
+    switch (att) {
+      case 'Yes':
+        addToAttendedOnFirebase();
+        break;
+      case 'No':
+        killAttendedQuestion();
+        break;
+
+      default:
+        null;
+    }
+  }
+
+  const killAttendedQuestion = () => {
+    const updatedAttendedArray = selectedGig.attended.filter((each) => each.uid !== uid);
+    firebase.editGig(JSON.stringify(selectedGig.id), "attended", updatedAttendedArray);
+    setAttended(false);
+  }
+
+  const addToAttendedOnFirebase = () => {
+    const userProfile = JSON.parse(localStorage.getItem('user-profile'));
+    const updatedAttendedArray = [
+      ...selectedGig.attended,
+      {
+        profilePicture: userProfile.profilePicture,
+        uid: uid,
+        username: userProfile.username,
+      }
+    ];
+
+    firebase.editGig(JSON.stringify(selectedGig.id), "attended", updatedAttendedArray);
+    setAttended(true);
+  }
   return (
     <div className="gig__page row margin-bottom flex-center">
       <div className="margin-left margin-top">
@@ -134,7 +302,7 @@ function GigPage({
 
       <div className="col-sm-12 flex-center">
         <Fade left>
-          {selectedGig && selectedGig.img && <CircularImage src={selectedGig.img} small />}
+          {selectedGig && selectedGig.img && <DynamicImage src={selectedGig.img} large fallbackSrc={require('../../media/panda_avatar.jpg')} greyBorder small="" />}
         </Fade>
       </div>
 
@@ -238,44 +406,69 @@ function GigPage({
         </Fade>
       </React.Fragment>
 
+      {selectedGig.attended && (
+        <React.Fragment>
+          <React.Fragment>
+            <Fade>
+              <div className="col-sm-12 flex-center flex-row margin-top">
+                <h3 className="attended__circ__title white skew-left grey">Who has performed here?</h3>
+              </div>
+            </Fade>
+          </React.Fragment>
 
-    <React.Fragment>
-      <Fade>
-        <div className="col-sm-12 flex-center flex-row margin-top">
-          <h3 className="attended__circ__title white skew-left grey">Who has performed here?</h3>
+          <React.Fragment>
+            <Fade>
+              <div className="col-sm-12 attended__container flex-center flex-row">
+                {selectedGig && selectedGig.attended && selectedGig.attended.length > 0 && selectedGig.attended.length < 16 &&
+                  selectedGig.attended.filter(each => each.uid !== uid).map((each, i) => (
+                    <Link key={i} to={`/act/${each.uid}`}>
+                      <div className="attended__circ__container">
+                        <img className="attended__circ__img" src={each.profilePicture !== "/static/no_prof_pic.png" ? each.profilePicture : require('./panda_avatar.jpg')} />
+                        <p className="attended__circ__name">{each.username}</p>
+                      </div>
+                    </Link>
+                  ))
+                }
+                {attended && (
+                  <Jump>
+                    <Link to={`/act/${uid}`}>
+                      <div className="attended__circ__container">
+                        <img className="attended__circ__img" src={userProfile.profilePicture || require('./panda_avatar.jpg')} />
+                        <p className="attended__circ__name">{userProfile.username}</p>
+                      </div>
+                    </Link>
+                  </Jump>
+                )}
+                {selectedGig && selectedGig.attended && selectedGig.attended.length > 0 && selectedGig.attended.length > 15 &&
+                  selectedGig.attended.filter(each => each.uid !== uid).map((each, i) => (
+                    <Link key={i} to={`/act/${each.uid}`}>
+                      <div className="attended__circ__container">
+                        <img className="attended__circ__img" src={each.profilePicture !== "/static/no_prof_pic.png" ? each.profilePicture : require('./panda_avatar.jpg')} />
+                        <p className="attended__circ__name">{each.username}</p>
+                      </div>
+                    </Link>
+                  ))
+                }
+
+
+              </div>
+
+            </Fade>
+          </React.Fragment>
+        </React.Fragment>
+      )}
+
+      <div className="col-sm-12 flex-center margin-bottom flex-col">
+        <div className="haveIPerformedHere">
+          <p className="orange skew-right">Have <strong>You</strong> Performed Here?</p>
+          <div className="flex-row">
+            <Button text="Yes" onClick={() => handleAttendClick('Yes')} color={attended ? "green" : "grey"} medium />
+            <Button text="No" onClick={() => handleAttendClick('No')} color={attended ? "grey" : "darkred"} medium />
+          </div>
         </div>
-      </Fade>
-    </React.Fragment>
+      </div>
 
-    <React.Fragment>
-      <Fade>
-        <div className="col-sm-12 attended__container flex-center flex-row margin-top">
-              { selectedGig && selectedGig.attended && selectedGig.attended.length > 0 && selectedGig.attended.length < 16 &&
-                selectedGig.attended.map((each, i) => (
-                  <Link key={i} to={`/act/${each.uid}`}>
-                    <div className="attended__circ__container">
-                      <img className="attended__circ__img" src={each.profilePicture !== "/static/no_prof_pic.png" ? each.profilePicture : require('./panda_avatar.jpg') } />
-                      <p className="attended__circ__name">{each.username}</p>
-                    </div>
-                  </Link>
-                ))
-              }
-              { selectedGig && selectedGig.attended && selectedGig.attended.length > 0 && selectedGig.attended.length > 15 &&
-                selectedGig.attended.slice(0, 15).map((each, i) => (
-                  <Link key={i} to={`/act/${each.uid}`}>
-                    <div className="attended__circ__container">
-                      <img className="attended__circ__img" src={each.profilePicture !== "/static/no_prof_pic.png" ? each.profilePicture : require('./panda_avatar.jpg') } />
-                      <p className="attended__circ__name">{each.username}</p>
-                    </div>
-                  </Link>
-                ))
-              }
-        </div>
-
-      </Fade>
-    </React.Fragment>
-
-    <div className="col-sm-12" style={{ marginBottom: 65 }} />
+      <div className="col-sm-12" style={{ marginBottom: 65, marginTop: 65 }} />
 
     </div>
   )
@@ -294,5 +487,6 @@ export default compose(
   withRouter,
   withFooter,
   withPage,
+  withFirebase,
   connect(mapStateToProps, null),
 )(GigPage);

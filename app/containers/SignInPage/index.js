@@ -17,8 +17,8 @@ const SignInPage = () => (
 );
 
 const INITIAL_STATE = {
-  email: 'aidThompsin@gmail.com',
-  password: 'London01',
+  email: '',
+  password: '',
   error: null,
 };
 

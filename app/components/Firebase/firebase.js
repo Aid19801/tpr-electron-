@@ -60,18 +60,33 @@ class Firebase {
 
   // firestore db
   gigs = () => this.dbTwo.collection("gigs")
-  .get()
-  .then((querySnapshot) => {
-    let arr = [];
-    querySnapshot.forEach((doc) => {
-      let eachGig = doc.data();
-      arr.push(eachGig);
-    });
-    return arr;
-  })
-  .catch(function(error) {
+    .get()
+    .then((querySnapshot) => {
+      let arr = [];
+      console.log('AT | QUERY SNAPSHOT ', querySnapshot);
+      querySnapshot.forEach((doc) => {
+        let eachGig = doc.data();
+        arr.push(eachGig);
+      });
+      return arr;
+    })
+    .catch(function (error) {
       console.log("Error getting documents: ", error);
-  });
+    });
+
+  editGig = (id, key, value) => {
+    const ref = this.dbTwo.collection("gigs")
+      .doc(id);
+    ref.update({
+      [key]: value,
+    })
+      .then(function () {
+        console.log("Document successfully updated!");
+      })
+      .catch(function (error) {
+        console.error("Error updating document: ", error);
+      });
+  }
 }
 
 export default Firebase;
