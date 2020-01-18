@@ -4,6 +4,7 @@ import Button from './Button';
 import CircularImage from './CircularImage';
 import DynamicImage from './DynamicImage';
 import Footer from './Footer';
+import Filters from './Filters';
 import FunkyTitle from './FunkyTitle';
 import Icon from './Icons';
 import Input from './Input';
@@ -29,6 +30,7 @@ export {
   CircularImage,
   DynamicImage,
   Footer,
+  Filters,
   FunkyTitle,
   Icon,
   Input,

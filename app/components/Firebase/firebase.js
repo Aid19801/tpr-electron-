@@ -63,7 +63,6 @@ class Firebase {
     .get()
     .then((querySnapshot) => {
       let arr = [];
-      console.log('AT | QUERY SNAPSHOT ', querySnapshot);
       querySnapshot.forEach((doc) => {
         let eachGig = doc.data();
         arr.push(eachGig);

@@ -30,6 +30,12 @@ function gigs(state = initialState, action) {
         selectedGig: state.gigs.filter((each) => each.id === action.id)[0],
       }
       break;
+    case types.FILTERED_GIGS:
+      return {
+        ...state,
+        gigs: action.gigs,
+      }
+      break;
 
     case types.REMOVE_SELECT_GIG:
       return {

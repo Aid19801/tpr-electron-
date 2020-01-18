@@ -60,3 +60,17 @@ export const shuffle = (a) => {
   }
   return a;
 }
+
+export const days = [
+  'Mon',
+  'Tue',
+  'Wed',
+  'Thu',
+  'Fri',
+  'Sat',
+  'Sun'
+]
+
+export const isDay = (str) => {
+  return days.includes(str) === true;
+}
