@@ -12,17 +12,13 @@ import './styles.css';
 
 
 function Filters({ gigs, filters, updateStateLoadInFilters, updateStateFiltersChanged }) {
-
-  const [localStateGigs, setLocalStateGigs] = useState(gigs);
+  // debugger;
   const [nukeInactive, setNukeInactive] = useState(false);
 
   useEffect(() => {
     updateStateLoadInFilters();
+    setNukeInactive(false);
   }, []);
-
-  useEffect(() => {
-    // updateStateLoadInFilters();
-  }, [gigs]);
 
   const handleClick = id => {
     const optionToChange = filters.filter(each => each.id === id)[0];
@@ -34,6 +30,7 @@ function Filters({ gigs, filters, updateStateLoadInFilters, updateStateFiltersCh
     };
 
     updatedFilters.push(updatedOption);
+
 
     let sortedFilters = updatedFilters.sort((a, b) => {
       var textA = a.id;
@@ -50,12 +47,15 @@ function Filters({ gigs, filters, updateStateLoadInFilters, updateStateFiltersCh
     );
     if (activeFilters.length > 1) {
       setNukeInactive(true);
+    } else {
+      setNukeInactive(false);
     }
   }, [filters]);
 
+
   return (
     <div className="filters__container">
-      {filters && !nukeInactive && filters.map((each, i) => (
+      { gigs && gigs.length && filters && !nukeInactive && filters.map((each, i) => (
         <button
           disabled={each.active}
           onClick={() => handleClick(each.id)}
@@ -66,7 +66,8 @@ function Filters({ gigs, filters, updateStateLoadInFilters, updateStateFiltersCh
         </button>
       )
       )}
-      {filters && nukeInactive && filters.filter(each => each.active !== false)
+
+      { filters && nukeInactive && filters.filter(each => each.active !== false)
         .map((each, i) => (
             <button
               disabled={each.active}

@@ -37,6 +37,7 @@ const filtersReducer = (state = initialState, action) => {
       return {
         ...state,
         filters: initialStateFilters,
+        loading: false,
       };
       break;
 

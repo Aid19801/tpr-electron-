@@ -25,15 +25,14 @@ function GigsPage({
 }) {
 
   const [center, setCenter] = useState([-0.1255, 51.5090]);
-  const [popoutBool, setPopoutBool] = useState(false);
 
   useEffect(() => {
     fetchGigs();
-    updateStateResetFilters();
   }, []);
 
   useEffect(() => {
-    const activeFilters = filters.filter(each => each.active).reverse()
+    let activeFilters = filters.filter(each => each.active);
+
     const monResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Mon'));
     const tueResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Tue'));
     const wedResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Wed'));
@@ -77,10 +76,11 @@ function GigsPage({
     if (activeFilters && activeFilters.length && activeFilters[0].name === 'Non-bringers') {
       updateStateFilteredGigs(nonBringerResults);
     }
+
   }, [filters])
 
   const fetchGigs = async () => {
-    console.log('AT | fetching gigs again!!!!!');
+    updateStateResetFilters(); // anytime you fetch all gigs, filters should re-set to zero
     updateStateRequestingGigs();
     const gigs = await firebase.gigs();
     updateStateReceivedGigs(gigs);
@@ -123,7 +123,6 @@ function GigsPage({
           </ToggleButtonGroup>
         </ButtonToolbar>
       </div>
-      { gigs && gigs.length && <div className="col-sm-12" style={{ color: 'white', fontSize: 30 }}>Gigs: {gigs.length}</div> }
       <MapBox gigs={gigs} center={center} />
       {selectedGig && <PopOut selectedGig={selectedGig} killPopout={() => null} />}
 

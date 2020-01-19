@@ -132,6 +132,7 @@ class MapBox extends Component {
     if (!this.state.isLoading) {
       return (
         <div className="map__container">
+          {this.state.gigs && this.state.gigs.length && <h2 className="results__text" style={{ color: 'white', fontSize: 30 }}>Results: {this.state.gigs.length}</h2>}
           <MapBoxMap
             style="mapbox://styles/mapbox/streets-v9"
             center={this.state.center}

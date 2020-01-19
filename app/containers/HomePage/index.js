@@ -325,7 +325,7 @@ function HomePage({
           )
         }
       })}
-      ) }
+
 
       <div className="col-sm-12" style={{ marginBottom: 65 }}></div>
     </div>
