@@ -8,6 +8,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import { withPage, withFooter, MapBox, PopOut, Filters } from '../../components'
 import { withFirebase } from '../../components/Firebase';
 import { requestGigs, cacheExpiredFetchingGigs, loadingCacheIntoStore, receivedGigs, filteredGigs } from '../../actions/gigs';
+import { resetFilters } from '../../actions/filters';
 import { getFromCache, saveToCache } from '../../components/Cache';
 import { days, isDay } from '../../utils';
 import './styles.css';
@@ -20,6 +21,7 @@ function GigsPage({
   updateStateReceivedGigs,
   updateStateRequestingGigs,
   updateStateFilteredGigs,
+  updateStateResetFilters,
 }) {
 
   const [center, setCenter] = useState([-0.1255, 51.5090]);
@@ -27,27 +29,54 @@ function GigsPage({
 
   useEffect(() => {
     fetchGigs();
+    updateStateResetFilters();
   }, []);
 
   useEffect(() => {
-    let updatedFilteredGigs = [];
-    let onlyActiveFilters = filters.filter(each => each.active !== false);
-    console.log('AT | onlyActiveFilters :', onlyActiveFilters);
-    let gigsBefore = gigs;
-    onlyActiveFilters.map((each) => {
-      if (isDay(each.name)) {
-        const filteredGigsToSpecificDay = gigsBefore.filter(eachGig => eachGig.nights.includes(each.name));
-        updatedFilteredGigs = [
-          ...filteredGigsToSpecificDay,
-        ]
-      }
-      // if (each.name === "Bringers") {
-      //   const filteredGigsToBringers = up
-      // }
+    const activeFilters = filters.filter(each => each.active).reverse()
+    const monResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Mon'));
+    const tueResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Tue'));
+    const wedResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Wed'));
+    const thuResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Thu'));
+    const friResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Fri'));
+    const satResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Sat'));
+    const sunResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Sun'));
+    const bringerResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.bringer);
+    const nonBringerResults = gigs && gigs.length && gigs.filter(eachGig => !eachGig.bringer);
 
-    })
-    console.log('AT |2222  updatedFilteredGigs :', updatedFilteredGigs);
-    updateStateFilteredGigs(updatedFilteredGigs);
+    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Mon') {
+      updateStateFilteredGigs(monResults);
+    }
+
+    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Tue') {
+      updateStateFilteredGigs(tueResults);
+    }
+
+    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Wed') {
+      updateStateFilteredGigs(wedResults);
+    }
+
+    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Thu') {
+      updateStateFilteredGigs(thuResults);
+    }
+
+    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Fri') {
+      updateStateFilteredGigs(friResults);
+    }
+
+    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Sat') {
+      updateStateFilteredGigs(satResults);
+    }
+
+    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Sun') {
+      updateStateFilteredGigs(sunResults);
+    }
+    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Bringers') {
+      updateStateFilteredGigs(bringerResults);
+    }
+    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Non-bringers') {
+      updateStateFilteredGigs(nonBringerResults);
+    }
   }, [filters])
 
   const fetchGigs = async () => {
@@ -94,12 +123,13 @@ function GigsPage({
           </ToggleButtonGroup>
         </ButtonToolbar>
       </div>
-
+      { gigs && gigs.length && <div className="col-sm-12" style={{ color: 'white', fontSize: 30 }}>Gigs: {gigs.length}</div> }
       <MapBox gigs={gigs} center={center} />
       {selectedGig && <PopOut selectedGig={selectedGig} killPopout={() => null} />}
 
-
       <Filters results={gigs} />
+
+
       <div className="col-sm-12" style={{ marginBottom: 65 }} />
 
     </div>
@@ -118,6 +148,7 @@ const mapDispatchToProps = dispatch => ({
   updateStateCacheExpiredFetchingGigs: () => dispatch(cacheExpiredFetchingGigs()),
   updateStateLoadingCacheIntoStore: () => dispatch(loadingCacheIntoStore()),
   updateStateFilteredGigs: (arr) => dispatch(filteredGigs(arr)),
+  updateStateResetFilters: () => dispatch(resetFilters()),
 });
 
 export default compose(

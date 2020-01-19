@@ -11,3 +11,6 @@ export const filtersLoaded = () => {
 export const filtersChanged = arr => {
   return { type: types.FILTERS_CHANGED, filters: arr };
 };
+export const resetFilters= arr => {
+  return { type: types.RESET_FILTERS };
+};

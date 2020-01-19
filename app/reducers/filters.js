@@ -32,6 +32,14 @@ const filtersReducer = (state = initialState, action) => {
       };
       break;
 
+    case types.RESET_FILTERS:
+      console.log('reducer heard RESET_FILTERS', action);
+      return {
+        ...state,
+        filters: initialStateFilters,
+      };
+      break;
+
     default:
       return state;
   }

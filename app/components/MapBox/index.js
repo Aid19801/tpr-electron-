@@ -123,10 +123,7 @@ class MapBox extends Component {
   };
 
   render() {
-    // const { updateStateSelectedMarker } = this.props;
     const { selectedGig } = this.props;
-
-    console.log('this zoooooom ', this.state.zoom);
 
     if (this.state.isLoading) {
       return <h2>Loading...</h2>;
