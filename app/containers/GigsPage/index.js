@@ -33,49 +33,75 @@ function GigsPage({
   useEffect(() => {
     let activeFilters = filters.filter(each => each.active);
 
-    const monResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Mon'));
-    const tueResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Tue'));
-    const wedResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Wed'));
-    const thuResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Thu'));
-    const friResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Fri'));
-    const satResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Sat'));
-    const sunResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.nights.includes('Sun'));
-    const bringerResults = gigs && gigs.length && gigs.filter(eachGig => eachGig.bringer);
-    const nonBringerResults = gigs && gigs.length && gigs.filter(eachGig => !eachGig.bringer);
+    console.log('AT | active filters:', activeFilters);
 
-    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Mon') {
-      updateStateFilteredGigs(monResults);
-    }
 
-    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Tue') {
-      updateStateFilteredGigs(tueResults);
-    }
+    if (activeFilters && activeFilters.length && activeFilters.length === 1) {
 
-    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Wed') {
-      updateStateFilteredGigs(wedResults);
-    }
+      if (isDay(activeFilters[0].name)) {
+        const arr = gigs.filter(each => each.nights.includes(activeFilters[0].name));
+        updateStateFilteredGigs(arr);
+      }
+      if (activeFilters[0].name === 'Bringers') {
+        const arr = gigs.filter(each => each.bringer);
+        updateStateFilteredGigs(arr);
+      }
+      if (activeFilters[0].name === 'Non-bringers') {
+        const arr = gigs.filter(each => !each.bringer);
+        updateStateFilteredGigs(arr);
+      }
+    } // ^^ if theres only ONE filter, and its Mon/Tue/Wed etc, filter to that & push to Store
+      // if its Bringers or Non Bringers, push that to the store.
 
-    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Thu') {
-      updateStateFilteredGigs(thuResults);
-    }
 
-    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Fri') {
-      updateStateFilteredGigs(friResults);
-    }
 
-    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Sat') {
-      updateStateFilteredGigs(satResults);
-    }
+    if (activeFilters && activeFilters.length && activeFilters.length === 2) {
 
-    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Sun') {
-      updateStateFilteredGigs(sunResults);
+      if (isDay(activeFilters[0].name)) {
+
+        let arr = gigs.filter(each => each.nights.includes(activeFilters[0].name));
+
+        if (activeFilters[1].name === 'Bringers') {
+          let newArr = arr.filter(eachTwo => eachTwo.bringer);
+          updateStateFilteredGigs(newArr);
+        }
+        if (activeFilters[1].name === 'Non-bringers') {
+          let newArr = arr.filter(eachTwo => !eachTwo.bringer);
+          updateStateFilteredGigs(newArr);
+        }
+        if (isDay(activeFilters[1].name)) {
+          let newArr = arr.filter(eachTwo => eachTwo.nights.includes(activeFilters[1].name));
+          updateStateFilteredGigs(newArr);
+        }
+      }
+
+      // if (activeFilters[0].name === 'Mon') {
+      //   let arr = gigs.filter(eachOne => eachOne.nights.includes('Mon'));
+      //   if (activeFilters[1].name === 'Bringers') {
+      //     let newArr = arr.filter(eachTwo => eachTwo.bringer);
+      //     updateStateFilteredGigs(newArr);
+      //   }
+      //   if (activeFilters[1].name === 'Non-bringers') {
+      //     let newArr = arr.filter(eachTwo => !eachTwo.bringer);
+      //     updateStateFilteredGigs(newArr);
+      //   }
+      // }
+
+      // if (activeFilters[0].name === 'Tue') {
+      //   let arr = gigs.filter(eachOne => eachOne.nights.includes('Tue'));
+      //   if (activeFilters[1].name === 'Bringers') {
+      //     let newArr = arr.filter(eachTwo => eachTwo.bringer);
+      //     updateStateFilteredGigs(newArr);
+      //   }
+      //   if (activeFilters[1].name === 'Non-bringers') {
+      //     let newArr = arr.filter(eachTwo => !eachTwo.bringer);
+      //     updateStateFilteredGigs(newArr);
+      //   }
+      // }
+
     }
-    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Bringers') {
-      updateStateFilteredGigs(bringerResults);
-    }
-    if (activeFilters && activeFilters.length && activeFilters[0].name === 'Non-bringers') {
-      updateStateFilteredGigs(nonBringerResults);
-    }
+    // ^^ if there's TWO filters, 1st one in Tue, filter to that
+    // if 2nd filter is Bringers or Non-bringers, filter down Tue, to those, post that to Store
 
   }, [filters])
 
