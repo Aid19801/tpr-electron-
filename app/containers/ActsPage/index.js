@@ -7,7 +7,7 @@ import { compose } from 'redux';
 import FunkyTitle from '../../components/FunkyTitle';
 import { withPage, withFooter, Icon, Modal, Button, DynamicImage } from '../../components'
 import { loadingCacheIntoStore, requestActs, receivedActs, cacheExpiredFetchingActs, } from '../../actions/acts';
-import { getFromCache, saveToCache } from '../../components/Cache';
+import { saveToCache } from '../../components/Cache';
 import { withAuthentication } from '../../components/Session';
 import { trimStringSpecifically, tooSoon } from '../../utils';
 import './styles.css';

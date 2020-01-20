@@ -1,14 +1,17 @@
 .filters__container {
-  width: 100%;
-  margin-top: 20px;
-  padding: 10px;
-  /* background: linear-gradient(lightgrey, darkgrey); */
+  position: absolute;
+  top: 42%;
   display: flex;
-  flex-direction: row;
-
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
   align-items: center;
+  left: 7%;
+  border: 1px solid orange;
+  width: 220px;
+  z-index: 10;
+  padding: 10px;
 }
 
 .filters__container h4 {
@@ -20,9 +23,9 @@
 }
 
 .filters__container button {
-  min-height: 36px;
-  height: 55px;
-  background: orange;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white !important;
   border-radius: 12px;
   padding: 10px;
   margin-bottom: 10px;
@@ -32,6 +35,9 @@
   flex-direction: column;
   border: none;
   margin-right: 2px;
+  width: 150px;
+  font-size: 18px;
+  justify-content: center;
 }
 
 @media screen and (max-width: 576px) {
@@ -40,7 +46,7 @@
     justify-content: center;
     align-items: center;
     max-width: 380px;
-    
+
   }
 
   .filters__container button {

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PostMarkers from './markers';
 import ReactMapboxGL, { Cluster, Marker } from 'react-mapbox-gl';
+import CountUp from 'react-countup';
 import { selectedGig } from '../../actions/gigs';
 import './styles.css';
 
@@ -132,7 +133,7 @@ class MapBox extends Component {
     if (!this.state.isLoading) {
       return (
         <div className="map__container">
-          {this.state.gigs && this.state.gigs.length && <h2 className="results__text" style={{ color: 'white', fontSize: 30 }}>Results: {this.state.gigs.length}</h2>}
+          {this.state.gigs && this.state.gigs.length && <div className="map__gigs__counter">Results: <CountUp start={1000} end={this.state.gigs.length} /></div>}
           <MapBoxMap
             style="mapbox://styles/mapbox/streets-v9"
             center={this.state.center}

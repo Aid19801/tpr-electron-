@@ -4,10 +4,6 @@
 }
 .map__container {
   width: 100%;
-
-  /* margin-top: 20px; */
-
-  /* border: 1px solid red; */
 }
 
 .map__container > .results__text {
@@ -22,6 +18,24 @@
   left: 5%;
   top: 29%;
 }
+
+.map__gigs__counter {
+  position: absolute;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid orange;
+  background: rgba(0, 0, 0, 0.8);
+  width: 220px;
+  height: 76px;
+  font-family: monospace;
+  font-size: 30px;
+  top: 27%;
+  left: 7%;
+  z-index: 10;
+}
+
 .mapboxgl-map {
   width: 100% !important;
   border: 12px solid orange;

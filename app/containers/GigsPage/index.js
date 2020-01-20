@@ -33,9 +33,6 @@ function GigsPage({
   useEffect(() => {
     let activeFilters = filters.filter(each => each.active);
 
-    console.log('AT | active filters:', activeFilters);
-
-
     if (activeFilters && activeFilters.length && activeFilters.length === 1) {
 
       if (isDay(activeFilters[0].name)) {
@@ -52,8 +49,6 @@ function GigsPage({
       }
     } // ^^ if theres only ONE filter, and its Mon/Tue/Wed etc, filter to that & push to Store
       // if its Bringers or Non Bringers, push that to the store.
-
-
 
     if (activeFilters && activeFilters.length && activeFilters.length === 2) {
 
@@ -74,31 +69,6 @@ function GigsPage({
           updateStateFilteredGigs(newArr);
         }
       }
-
-      // if (activeFilters[0].name === 'Mon') {
-      //   let arr = gigs.filter(eachOne => eachOne.nights.includes('Mon'));
-      //   if (activeFilters[1].name === 'Bringers') {
-      //     let newArr = arr.filter(eachTwo => eachTwo.bringer);
-      //     updateStateFilteredGigs(newArr);
-      //   }
-      //   if (activeFilters[1].name === 'Non-bringers') {
-      //     let newArr = arr.filter(eachTwo => !eachTwo.bringer);
-      //     updateStateFilteredGigs(newArr);
-      //   }
-      // }
-
-      // if (activeFilters[0].name === 'Tue') {
-      //   let arr = gigs.filter(eachOne => eachOne.nights.includes('Tue'));
-      //   if (activeFilters[1].name === 'Bringers') {
-      //     let newArr = arr.filter(eachTwo => eachTwo.bringer);
-      //     updateStateFilteredGigs(newArr);
-      //   }
-      //   if (activeFilters[1].name === 'Non-bringers') {
-      //     let newArr = arr.filter(eachTwo => !eachTwo.bringer);
-      //     updateStateFilteredGigs(newArr);
-      //   }
-      // }
-
     }
     // ^^ if there's TWO filters, 1st one in Tue, filter to that
     // if 2nd filter is Bringers or Non-bringers, filter down Tue, to those, post that to Store
@@ -152,7 +122,7 @@ function GigsPage({
       <MapBox gigs={gigs} center={center} />
       {selectedGig && <PopOut selectedGig={selectedGig} killPopout={() => null} />}
 
-      <Filters results={gigs} />
+      <Filters />
 
 
       <div className="col-sm-12" style={{ marginBottom: 65 }} />

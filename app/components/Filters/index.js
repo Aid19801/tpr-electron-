@@ -79,6 +79,11 @@ function Filters({ gigs, filters, updateStateLoadInFilters, updateStateFiltersCh
             </button>
           )
         )}
+
+      { !filters || !gigs && (
+            <h2>Loading...</h2>
+          )
+        }
     </div>
   );
 }
