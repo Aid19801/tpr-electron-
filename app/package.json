@@ -24,6 +24,7 @@
     "react-animations": "^1.0.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-countup": "^4.3.2",
-    "react-mapbox-gl": "^4.6.0"
+    "react-mapbox-gl": "^4.6.0",
+    "react-player": "^1.14.2"
   }
 }

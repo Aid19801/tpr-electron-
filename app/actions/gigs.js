@@ -3,9 +3,10 @@ import { REQ_GIGS, RECEIVED_GIGS, SELECT_GIG, FILTERED_GIGS, REMOVE_SELECT_GIG, 
 
 
 // actions
-export function requestGigs() {
+export function requestGigs(city) {
   return {
     type: REQ_GIGS,
+    city,
   }
 }
 export function receivedGigs(arr) {

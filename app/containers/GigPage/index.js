@@ -252,7 +252,9 @@ function GigPage({
   const handleAttendClick = (att) => {
     switch (att) {
       case 'Yes':
-        addToAttendedOnFirebase();
+        addToAttendedOnGigsDB();
+        addToAttendedOnUsersDB();
+        setAttended(true);
         break;
       case 'No':
         killAttendedQuestion();
@@ -269,8 +271,41 @@ function GigPage({
     setAttended(false);
   }
 
-  const addToAttendedOnFirebase = () => {
+  const addToAttendedOnUsersDB = () => {
     const userProfile = JSON.parse(localStorage.getItem('user-profile'));
+    let updatedAttendedArray = [];
+    if (userProfile && userProfile.attended && userProfile.attended.length) {
+      updatedAttendedArray = [
+        ...userProfile.attended,
+        {
+          id: selectedGig.id,
+          img: selectedGig.img,
+          name: selectedGig.name,
+        }
+      ]
+    }
+    if (userProfile && !userProfile.attended || !userProfile.attended || userProfile.length < 1) {
+      updatedAttendedArray = [{
+        id: selectedGig.id,
+        img: selectedGig.img,
+        name: selectedGig.name,
+      }]
+    }
+    const updatedUserProfile = {
+      ...userProfile,
+      attended: updatedAttendedArray,
+    }
+
+    const json = JSON.stringify(updatedUserProfile);
+    localStorage.setItem('user-profile', json);
+
+    firebase.user(uid).update({
+      attended: updatedAttendedArray,
+    })
+  }
+
+  const addToAttendedOnGigsDB = () => {
+
     const updatedAttendedArray = [
       ...selectedGig.attended,
       {
@@ -281,7 +316,10 @@ function GigPage({
     ];
 
     firebase.editGig(JSON.stringify(selectedGig.id), "attended", updatedAttendedArray);
-    setAttended(true);
+
+    // firebase.user(uid).update({
+    //   attended: userProfile.attended ? userProfile.attended.push({ id: selectedGig.id, img: selectedGig.img, name: selectedGig.name }) : [ { id: selectedGig.id, img: selectedGig.img, name: selectedGig.name } ],
+    // })
   }
 
   const handleBackButton = () => {
@@ -306,7 +344,7 @@ function GigPage({
 
       <div className="col-sm-12 flex-center">
         <Fade left>
-          {selectedGig && selectedGig.img && <DynamicImage src={selectedGig.img} large fallbackSrc={require('../../media/panda_avatar.jpg')} greyBorder small="" />}
+          {selectedGig && selectedGig.img && <DynamicImage src={selectedGig.img} large fallbackSrc={require('../../media/panda_avatar.jpg')} greyBorder />}
         </Fade>
       </div>
 
@@ -461,7 +499,7 @@ function GigPage({
 
       <div className="col-sm-12 flex-center margin-bottom flex-col">
         <div className="haveIPerformedHere">
-          <p className="orange skew-right">Have <strong>You</strong> Performed Here?</p>
+          <p className="orange skew-right">Have <strong>YOU</strong> Performed Here?</p>
           <div className="flex-row">
             <Button text="Yes" onClick={() => handleAttendClick('Yes')} color={attended ? "green" : "grey"} medium />
             <Button text="No" onClick={() => handleAttendClick('No')} color={attended ? "grey" : "darkred"} medium />

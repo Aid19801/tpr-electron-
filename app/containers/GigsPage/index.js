@@ -18,6 +18,7 @@ function GigsPage({
   filters,
   firebase,
   selectedGig,
+  city,
   updateStateReceivedGigs,
   updateStateRequestingGigs,
   updateStateFilteredGigs,
@@ -27,7 +28,7 @@ function GigsPage({
   const [center, setCenter] = useState([-0.1255, 51.5090]);
 
   useEffect(() => {
-    fetchGigs();
+    city === 'London' || !city ? fetchGigs() : fetchDifferentCity(city);
   }, []);
 
   useEffect(() => {
@@ -77,19 +78,28 @@ function GigsPage({
 
   const fetchGigs = async () => {
     updateStateResetFilters(); // anytime you fetch all gigs, filters should re-set to zero
-    updateStateRequestingGigs();
+    updateStateRequestingGigs('london');
     const gigs = await firebase.gigs();
     updateStateReceivedGigs(gigs);
+  }
+
+  const fetchDifferentCity = async (str) => {
+    updateStateResetFilters();
+    updateStateRequestingGigs(str);
+    const diffCityGigs = await firebase.differentCityGigs(str);
+    updateStateReceivedGigs(diffCityGigs);
   }
 
   // handle city changes the initial center value, passes down
   // to props, to <MapBox />.
   const handleCity = (str) => {
-    switch (str) {
-      case 'London':
+    switch (str.toLowerCase()) {
+      case 'london':
+        fetchGigs()
         return setCenter([-0.1255, 51.5090]);
         break;
-      case 'Manchester':
+      case 'manchester':
+        fetchDifferentCity('manchester');
         return setCenter([-2.2426, 53.4808]);
         break;
       case 'Edinburgh':
@@ -109,20 +119,18 @@ function GigsPage({
   return (
     <div className="row margin-bottom">
 
-      <div className="col-sm-12 margin-top">
+      <div className="col-sm-12 margin-top flex-center">
         <ButtonToolbar>
           <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
             <ToggleButton onClick={() => handleCity('London')} variant="outline-warning" value={1} size="lg">London</ToggleButton>
             <ToggleButton onClick={() => handleCity('Manchester')} variant="outline-warning" value={2} size="lg">Manchester</ToggleButton>
-            <ToggleButton onClick={() => handleCity('Edinburgh')} variant="outline-warning" value={3} size="lg">Edinburgh</ToggleButton>
-            <ToggleButton onClick={() => handleCity('New York')} variant="outline-warning" value={4} size="lg">New York</ToggleButton>
           </ToggleButtonGroup>
         </ButtonToolbar>
       </div>
       <MapBox gigs={gigs} center={center} />
       {selectedGig && <PopOut selectedGig={selectedGig} killPopout={() => null} />}
 
-      <Filters />
+      <Filters handleCity={handleCity} />
 
 
       <div className="col-sm-12" style={{ marginBottom: 65 }} />
@@ -133,12 +141,13 @@ function GigsPage({
 
 const mapStateToProps = state => ({
   gigs: state.gigs.gigs,
+  city: state.gigs.city,
   filters: state.filters.filters,
   selectedGig: state.gigs.selectedGig,
 })
 
 const mapDispatchToProps = dispatch => ({
-  updateStateRequestingGigs: () => dispatch(requestGigs()),
+  updateStateRequestingGigs: (str) => dispatch(requestGigs(str)),
   updateStateReceivedGigs: (arr) => dispatch(receivedGigs(arr)),
   updateStateCacheExpiredFetchingGigs: () => dispatch(cacheExpiredFetchingGigs()),
   updateStateLoadingCacheIntoStore: () => dispatch(loadingCacheIntoStore()),

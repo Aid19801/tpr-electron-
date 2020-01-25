@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 import { withRouter, Link } from 'react-router-dom';
 import { compose } from 'redux';
 import FunkyTitle from '../../components/FunkyTitle';
-import { withPage, withFooter, Icon, Modal, Button, DynamicImage } from '../../components'
+import { withPage, withFooter, Icon, Modal, Button, DynamicImage, EachActCard } from '../../components'
 import { loadingCacheIntoStore, requestActs, receivedActs, cacheExpiredFetchingActs, } from '../../actions/acts';
 import { saveToCache } from '../../components/Cache';
 import { withAuthentication } from '../../components/Session';
@@ -126,7 +126,6 @@ function ActsPage({
     }
   };
 
-
   const showBatchTwo = () => {
     return setBatchTwo(true);
   }
@@ -156,220 +155,13 @@ function ActsPage({
       {!updating &&
         <div className="col-sm-12 flex-center flex-col">
 
-          {acts && acts.slice(0, 12).map((each, i) => {
-            return (
-              <React.Fragment key={i}>
-                <Fade>
-
-                  <div
-                    key={i}
-                    className="each-act-container"
-                  >
-
-                    <div className="each-act-row">
-                      <div className="each-act-rating-container">
-                        <div
-                          className="up-svg-container"
-                          onClick={() => voteAct('up', each)}
-                        >
-                          <Icon icon="clap" />
-                        </div>
-
-                        <h2 className="each-act-rating">{each.rating}</h2>
-
-                        {downVoteSwitchedOn && (
-                          <div
-                            className="down-svg-container"
-                            onClick={() => voteAct('down', each)}
-                          >
-                            <DownArrow />
-                          </div>
-                        )}
-                      </div>
-
-                      <div>
-                        <Link to={`/act/${each.uid}`}>
-                        <DynamicImage small src={each.profilePicture} fallbackSrc={require('../../media/panda_avatar.jpg')} />
-
-                          <div className="each-act-name">
-                            <h4>{each.username}</h4>
-                            <p>{trimStringSpecifically(each.tagline, 55)}</p>
-                          </div>
-                        </Link>
-                      </div>
-
-
-                    </div>
-
-
-                  </div>
-
-                </Fade>
-              </React.Fragment>
-
-            )
-          })}
-
+          {acts && acts.slice(0, 12).map((each, i) => <EachActCard key={i} voteAct={voteAct} each={each} />)}
           {acts && !batchTwo && <Button text="Load more... (25)" onClick={showBatchTwo} small orange />}
-          {acts && batchTwo && acts.slice(12, 37).map((each, i) => {
-            return (
-              <React.Fragment key={i}>
-                <Fade>
-
-                  <div
-                    key={i}
-                    className="each-act-container"
-                  >
-
-                    <div className="each-act-row">
-                      <div className="each-act-rating-container">
-                        <div
-                          className="up-svg-container"
-                          onClick={() => voteAct('up', each)}
-                        >
-                          <Icon icon="clap" />
-                        </div>
-
-                        <h2 className="each-act-rating">{each.rating}</h2>
-
-                        {downVoteSwitchedOn && (
-                          <div
-                            className="down-svg-container"
-                            onClick={() => voteAct('down', each)}
-                          >
-                            <DownArrow />
-                          </div>
-                        )}
-                      </div>
-
-                      <div>
-                        <Link to={`/act/${each.uid}`}>
-                        <DynamicImage small src={each.profilePicture} fallbackSrc={require('../../media/panda_avatar.jpg')} />
-
-                          <div className="each-act-name">
-                            <h4>{each.username}</h4>
-                            <p>{trimStringSpecifically(each.tagline, 55)}</p>
-                          </div>
-                        </Link>
-                      </div>
-
-
-                    </div>
-
-
-                  </div>
-
-                </Fade>
-              </React.Fragment>
-            )
-          })}
+          {acts && batchTwo && acts.slice(12, 37).map((each, i) => <EachActCard key={i} voteAct={voteAct} each={each} />)}
           {acts && !batchThree && batchTwo && <Button text="Load more...(35)" onClick={showBatchThree} small orange />}
-          {acts && batchThree && batchTwo && acts.slice(37, 72).map((each, i) => {
-            return (
-              <React.Fragment key={i}>
-                <Fade>
-
-                  <div
-                    key={i}
-                    className="each-act-container"
-                  >
-
-                    <div className="each-act-row">
-                      <div className="each-act-rating-container">
-                        <div
-                          className="up-svg-container"
-                          onClick={() => voteAct('up', each)}
-                        >
-                          <Icon icon="clap" />
-                        </div>
-
-                        <h2 className="each-act-rating">{each.rating}</h2>
-
-                        {downVoteSwitchedOn && (
-                          <div
-                            className="down-svg-container"
-                            onClick={() => voteAct('down', each)}
-                          >
-                            <DownArrow />
-                          </div>
-                        )}
-                      </div>
-
-                      <div>
-                        <Link to={`/act/${each.uid}`}>
-
-                          <DynamicImage small src={each.profilePicture} fallbackSrc={require('../../media/panda_avatar.jpg')} />
-
-                          <div className="each-act-name">
-                            <h4>{each.username}</h4>
-                            <p>{trimStringSpecifically(each.tagline, 55)}</p>
-                          </div>
-                        </Link>
-                      </div>
-
-
-                    </div>
-
-
-                  </div>
-
-                </Fade>
-              </React.Fragment>
-            )
-          })}
+          {acts && batchThree && batchTwo && acts.slice(37, 72).map((each, i) => <EachActCard key={i} each={each} voteAct={voteAct} /> )}
           {acts && !batchFour && batchThree && <Button text="Load more...(45)" onClick={showBatchFour} small orange />}
-          {acts && batchThree && batchFour && acts.slice(72, 117).map((each, i) => {
-            return (
-              <React.Fragment key={i}>
-                <Fade>
-
-                  <div
-                    key={i}
-                    className="each-act-container"
-                  >
-
-                    <div className="each-act-row">
-                      <div className="each-act-rating-container">
-                        <div
-                          className="up-svg-container"
-                          onClick={() => voteAct('up', each)}
-                        >
-                          <Icon icon="clap" />
-                        </div>
-
-                        <h2 className="each-act-rating">{each.rating}</h2>
-
-                        {downVoteSwitchedOn && (
-                          <div
-                            className="down-svg-container"
-                            onClick={() => voteAct('down', each)}
-                          >
-                            <DownArrow />
-                          </div>
-                        )}
-                      </div>
-
-                      <div>
-                        <Link to={`/act/${each.uid}`}>
-                        <DynamicImage small src={each.profilePicture} fallbackSrc={require('../../media/panda_avatar.jpg')} />
-
-                          <div className="each-act-name">
-                            <h4>{each.username}</h4>
-                            <p>{trimStringSpecifically(each.tagline, 55)}</p>
-                          </div>
-                        </Link>
-                      </div>
-
-
-                    </div>
-
-
-                  </div>
-
-                </Fade>
-              </React.Fragment>
-            )
-          })}
+          {acts && batchThree && batchFour && acts.slice(72, 117).map((each, i) => <EachActCard key={i} each={each} voteAct={voteAct} /> )}
 
         </div>
       }

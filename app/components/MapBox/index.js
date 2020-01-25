@@ -124,8 +124,7 @@ class MapBox extends Component {
   };
 
   render() {
-    const { selectedGig } = this.props;
-
+    const { gigs } = this.state;
     if (this.state.isLoading) {
       return <h2>Loading...</h2>;
     }
@@ -133,7 +132,8 @@ class MapBox extends Component {
     if (!this.state.isLoading) {
       return (
         <div className="map__container">
-          {this.state.gigs && this.state.gigs.length && <div className="map__gigs__counter">Results: <CountUp start={1000} end={this.state.gigs.length} /></div>}
+          {gigs && gigs.length && <div className="map__gigs__counter">Results: <CountUp start={0} end={gigs.length} /></div>}
+          { (!gigs || !gigs.length || gigs.length < 1) && <div className="map__gigs__counter">Results: <CountUp start={50} end={0} /></div>}
           <MapBoxMap
             style="mapbox://styles/mapbox/streets-v9"
             center={this.state.center}
@@ -168,11 +168,12 @@ class MapBox extends Component {
 
 const mapStateToProps = state => ({
   gigs: state.gigs.gigs,
+  city: state.gigs.city,
   selectedGig: state.gigs.selectedGig
 });
 
 const mapDispatchToProps = dispatch => ({
-  updateStateSelectedGig: obj => dispatch(selectedGig(obj))
+  updateStateSelectedGig: id => dispatch(selectedGig(id))
 });
 
 export default connect(

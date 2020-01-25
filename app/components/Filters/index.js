@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
+import { withFirebase } from '../../components/Firebase';
+import { requestGigs, cacheExpiredFetchingGigs, loadingCacheIntoStore, receivedGigs, filteredGigs } from '../../actions/gigs';
+import { resetFilters } from '../../actions/filters';
 import { days, isDay } from '../../utils';
 import {
   fetchFilters,
@@ -11,7 +14,19 @@ import {
 import './styles.css';
 
 
-function Filters({ gigs, filters, updateStateLoadInFilters, updateStateFiltersChanged }) {
+function Filters({
+  gigs,
+  filters,
+  firebase,
+  city,
+  handleCity,
+  updateStateLoadInFilters,
+  updateStateFiltersChanged,
+  updateStateResetFilters,
+  updateStateRequestingGigs,
+  updateStateReceivedGigs,
+
+}) {
   // debugger;
   const [nukeInactive, setNukeInactive] = useState(false);
 
@@ -30,7 +45,6 @@ function Filters({ gigs, filters, updateStateLoadInFilters, updateStateFiltersCh
     };
 
     updatedFilters.push(updatedOption);
-
 
     let sortedFilters = updatedFilters.sort((a, b) => {
       var textA = a.id;
@@ -52,6 +66,27 @@ function Filters({ gigs, filters, updateStateLoadInFilters, updateStateFiltersCh
     }
   }, [filters]);
 
+  const reloadAllGigs = async () => {
+    let c = city;
+
+    updateStateRequestingGigs();
+    let gigsToReRouteTo = [];
+    if (c === 'London') {
+      console.log('AT | city was london:', c)
+      gigsToReRouteTo = await firebase.gigs();
+      console.log('calling ldn gigs from firebase');
+      handleCity(c);
+    } else {
+      console.log('AT | city wasnt london:', c);
+      gigsToReRouteTo = await firebase.differentCityGigs(c);
+      console.log('calling in OTHER gigs from firebase');
+      handleCity(c);
+    }
+    updateStateReceivedGigs(gigsToReRouteTo);
+    setNukeInactive(false);
+    updateStateResetFilters();
+    // handleCity(city);
+  }
 
   return (
     <div className="filters__container">
@@ -60,7 +95,7 @@ function Filters({ gigs, filters, updateStateLoadInFilters, updateStateFiltersCh
           disabled={each.active}
           onClick={() => handleClick(each.id)}
           key={i}
-          style={each.active ? { opacity: '0.3' } : { color: 'black' }}
+          style={each.active ? { background: 'rgba(139, 139, 141, 0.8)', border: '5px solid orange' } : { color: 'black' }}
         >
           {each.name}
         </button>
@@ -73,7 +108,7 @@ function Filters({ gigs, filters, updateStateLoadInFilters, updateStateFiltersCh
               disabled={each.active}
               onClick={() => null}
               key={i}
-              style={{ opacity: '0.5', color: 'white' }}
+              style={{ background: 'rgba(139, 139, 141, 0.8)', border: '5px solid orange' }}
             >
               {each.name}
             </button>
@@ -81,25 +116,35 @@ function Filters({ gigs, filters, updateStateLoadInFilters, updateStateFiltersCh
         )}
 
       { !filters || !gigs && (
-            <h2>Loading...</h2>
-          )
-        }
+        <h2>loading...</h2>
+        )
+      }
+
+      { (!gigs || !gigs.length || gigs.length < 1) && <button onClick={() => reloadAllGigs()}>Reset</button> }
+
+      { gigs && gigs.length && filters && <button onClick={() => reloadAllGigs()}>Show All</button> }
+
     </div>
   );
 }
 
 const mapStateToProps = state => ({
+  city: state.gigs.city,
   gigs: state.gigs.gigs,
   filters: state.filters.filters,
 })
 
 const mapDispatchToProps = dispatch => ({
+  updateStateRequestingGigs: () => dispatch(requestGigs()),
+  updateStateReceivedGigs: (arr) => dispatch(receivedGigs(arr)),
   updateStateLoadInFilters: () => dispatch(fetchFilters()),
   updateStateFiltersLoaded: () => dispatch(filtersLoaded()),
-  updateStateFiltersChanged: arr => dispatch(filtersChanged(arr))
+  updateStateFiltersChanged: arr => dispatch(filtersChanged(arr)),
+  updateStateResetFilters: () => dispatch(resetFilters()),
 });
 
 
 export default compose(
+  withFirebase,
   connect(mapStateToProps, mapDispatchToProps),
 )(Filters)

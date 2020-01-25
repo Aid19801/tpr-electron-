@@ -73,6 +73,20 @@ class Firebase {
       console.log("Error getting documents: ", error);
     });
 
+  differentCityGigs = (str) => this.dbTwo.collection(str)
+    .get()
+    .then((querySnapshot) => {
+      let arr = [];
+      querySnapshot.forEach((doc) => {
+        let eachGig = doc.data();
+        arr.push(eachGig);
+      });
+      return arr;
+    })
+    .catch(function (error) {
+      console.log("Error getting documents: ", error);
+    });
+
   editGig = (id, key, value) => {
     const ref = this.dbTwo.collection("gigs")
       .doc(id);

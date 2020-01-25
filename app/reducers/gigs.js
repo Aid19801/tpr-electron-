@@ -14,6 +14,7 @@ function gigs(state = initialState, action) {
       return {
         ...state,
         loading: true,
+        city: action.city,
       }
       break;
     case types.RECEIVED_GIGS:
