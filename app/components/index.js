@@ -2,6 +2,11 @@ import BoxCard from './BoxCard';
 import BackgroundBanner from './BackgroundBanner';
 import Button from './Button';
 import CircularImage from './CircularImage';
+
+import CommentBox from './CommentBox';
+import Comment from './Comment';
+import Comments from './Comments';
+
 import EachActCard from './EachActCard';
 import DynamicImage from './DynamicImage';
 import Footer from './Footer';
@@ -29,6 +34,11 @@ export {
   BoxCard,
   Button,
   CircularImage,
+
+  CommentBox,
+  Comment,
+  Comments,
+
   DynamicImage,
   EachActCard,
   Footer,

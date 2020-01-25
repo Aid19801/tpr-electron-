@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+require('./ably');
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // ^^ doesnt seem to like import in react app ^^
 // so have imported at app.html level
