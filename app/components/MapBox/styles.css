@@ -4,10 +4,36 @@
 }
 .map__container {
   width: 100%;
+}
 
-  /* margin-top: 20px; */
+.map__container > .results__text {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  width: 180px;
+  border: 3px solid white;
+  text-align: center;
+  left: 5%;
+  top: 29%;
+}
 
-  /* border: 1px solid red; */
+.map__gigs__counter {
+  position: absolute;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid orange;
+  background: rgba(0, 0, 0, 0.8);
+  width: 220px;
+  height: 76px;
+  font-family: monospace;
+  font-size: 30px;
+  top: 27%;
+  right: 6%;
+  z-index: 10;
 }
 
 .mapboxgl-map {

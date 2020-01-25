@@ -28,7 +28,7 @@ a:hover {
 
 .offline-banner {
   position: fixed;
-  z-index: 100;
+  z-index: 1;
   bottom: 0;
   width: 102%;
   padding: 20px;
@@ -682,110 +682,6 @@ ul li a {
   height: 100% !important;
 }
 
-.each-act-container {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: grey;
-  transform: skewY(-2deg);
-  width: 100%;
-  min-width: 550px;
-  max-width: 550px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.each-act-row {
-  max-height: 190px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  animation: fadeIn 0.5s;
-
-  /* border: 1px solid red; */
-}
-
-.each-act-row a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  text-align: start;
-  color: white;
-
-  /* border: 1px solid pink; */
-}
-
-.each-act-rating-container {
-  width: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.each-act-rating {
-  color: orange;
-  width: 60px;
-  text-align: center;
-  text-shadow: 5px 5px 7px black;
-}
-
-.each-act-img {
-  /* border: 2px solid grey; */
-  box-shadow: 6px 6px 17px orange;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.each-act-name {
-  width: 100%;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-}
-.each-act-name h2 {
-  color: orange;
-  margin-bottom: 0;
-  text-align: start;
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-shadow: 0 0 0 !important;
-  border: 1px solid blue;
-}
-.each-act-name p {
-  padding-bottom: 10px;
-  color: orange;
-  width: auto;
-  font-size: 100%;
-  padding: 7px;
-  margin-bottom: 0;
-  text-align: start;
-  background: black;
-  transform: skewY(3deg);
-
-  /* border: 1px solid red; */
-}
-
-@media screen and (min-width: 1000px) {
-  .each-act-container {
-    /* width: 70%; */
-
-    /* border: 1px solid red; */
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .act-rows {
-    width: 100%;
-    max-width: 800px;
-  }
-
-}
 
 @media screen and (max-width: 767px) {
   .page__homepage .container {

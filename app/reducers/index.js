@@ -5,6 +5,7 @@ import { HashHistory } from 'history';
 import acts from './acts';
 import connectivity from './connectivity';
 import counter from './counter';
+import filters from './filters';
 import gigs from './gigs';
 import news from './news';
 import user from './user';
@@ -15,6 +16,7 @@ export default function createRootReducer(history: HashHistory) {
     acts,
     connectivity,
     counter,
+    filters,
     gigs,
     news,
     user,

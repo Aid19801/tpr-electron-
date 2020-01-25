@@ -14,6 +14,7 @@ function gigs(state = initialState, action) {
       return {
         ...state,
         loading: true,
+        city: action.city,
       }
       break;
     case types.RECEIVED_GIGS:
@@ -28,6 +29,12 @@ function gigs(state = initialState, action) {
         ...state,
         id: action.id,
         selectedGig: state.gigs.filter((each) => each.id === action.id)[0],
+      }
+      break;
+    case types.FILTERED_GIGS:
+      return {
+        ...state,
+        gigs: action.gigs,
       }
       break;
 

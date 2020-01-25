@@ -2,8 +2,10 @@ import BoxCard from './BoxCard';
 import BackgroundBanner from './BackgroundBanner';
 import Button from './Button';
 import CircularImage from './CircularImage';
+import EachActCard from './EachActCard';
 import DynamicImage from './DynamicImage';
 import Footer from './Footer';
+import Filters from './Filters';
 import FunkyTitle from './FunkyTitle';
 import Icon from './Icons';
 import Input from './Input';
@@ -28,7 +30,9 @@ export {
   Button,
   CircularImage,
   DynamicImage,
+  EachActCard,
   Footer,
+  Filters,
   FunkyTitle,
   Icon,
   Input,

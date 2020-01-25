@@ -1,0 +1,222 @@
+{
+  "mancs": [
+    {
+      "id": 0,
+      "name": "King Gong",
+      "attended": [],
+      "venue": "The Comedy Store",
+      "img": "https://www.durhambid.co.uk/sites/default/files/styles/galleryformatter_slide/public/comedy_2.jpg?itok=k7TafgfA",
+      "blurb": "King Gong Mancs blurb",
+      "lat": 53.4749,
+      "lng": -2.2500,
+      "nights": [
+        "Sun"
+      ],
+      "walkins": false,
+      "walkinSignUp": "",
+      "prebook": true,
+      "prebookSignUp": "https://thecomedystore.co.uk/manchester/contact-us/",
+      "bringer": false,
+      "nearestTubes": [
+        "Deansgate-Castlefield"
+      ],
+      "twitterHandle": "ComedyStoreMCR",
+      "website": "https://thecomedystore.co.uk/manchester",
+      "howToBook": "https://thecomedystore.co.uk/manchester/contact-us"
+    },
+    {
+      "id": 1,
+      "name": "Wormhole",
+      "attended": [],
+      "venue": "Holdfast",
+      "img": "https://pbs.twimg.com/profile_images/1098264455018893313/C_kR7lMT_400x400.jpg",
+      "blurb": "Monday Night means its NEW MATERIAL NIGHT at Wormhole Comedy in a bar called Holdfast, the show starts @ 20:30. No need to sign up, just show up! Reportedly one of the city's best places to try new material! The Wormhole stables also boast a pro night on Wednesdays.",
+      "lat": 53.4817,
+      "lng": -2.2327,
+      "nights": [
+        "Mon",
+        "Wed"
+      ],
+      "walkins": true,
+      "walkinSignUp": "18:30",
+      "prebook": false,
+      "prebookSignUp": "",
+      "bringer": false,
+      "nearestTubes": [
+        "Picadilly Gardens"
+      ],
+      "twitterHandle": "wormholecomedy",
+      "website": "https://www.facebook.com/wormholecomedy/",
+      "howToBook": "https://www.facebook.com/wormholecomedy/about"
+    },
+    {
+      "id": 2,
+      "name": "New Act Night",
+      "attended": [],
+      "venue": "Hot Water Comedy Club",
+      "img": "https://d31fr2pwly4c4s.cloudfront.net/9/4/8/1241462_1_hot-water-comedy-club_400.jpg",
+      "blurb": "Hot Water Comedy Club is Liverpool's only purpose built comedy club, located in the heart of the city centre - in Hardman Street. They boast an incredible 225 seat room and showcase comedy 7 nights a week. They run a monthly New Act Night. Contact them via the website for booking details.",
+      "lat": 53.4021,
+      "lng": -2.9718,
+      "nights": [
+        "Mon"
+      ],
+      "walkins": false,
+      "walkinSignUp": "",
+      "prebook": true,
+      "prebookSignUp": "",
+      "bringer": false,
+      "nearestTubes": [
+        "South Hunter Street"
+      ],
+      "twitterHandle": "HWCCLiverpool",
+      "website": "https://www.hotwatercomedy.co.uk/",
+      "howToBook": "https://www.hotwatercomedy.co.uk/contact/"
+    },
+    {
+      "id": 3,
+      "name": "Yokozuno Comedy",
+      "attended": [],
+      "venue": "Retro Bar",
+      "img": "https://wp-media-fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDIwLzEvNy8xNS8yMS8wLzcyMi9Zb2tvenVuYSBDb21lZHkuanBnIl1d?auto=format%2Ccompress%2Cenhance&fit=crop&ar=16%3A9&ixlib=imgixjs-3.4.0",
+      "blurb": "Hosted by Canadian Television's Nick Martinello, Yokozuna Comedy is Manchester's newest, bestest and sexiest comedy night featuring a surprise lineup of stand-up heavyweights! Wanna perform? The main event will be followed by a comedy Royal Rumble. Just show up and go up!",
+      "lat": 53.4752,
+      "lng": -2.2350,
+      "nights": [
+        "Tue"
+      ],
+      "walkins": true,
+      "walkinSignUp": "18:30",
+      "prebook": false,
+      "prebookSignUp": "",
+      "bringer": false,
+      "nearestTubes": [
+        "Picadilly"
+      ],
+      "twitterHandle": "NickMartinello",
+      "website": "https://www.facebook.com/nickmartinellol",
+      "howToBook": "https://www.fatsoma.com/RetroManchester/2jdbnik4/yokozuna-comedy"
+    },
+    {
+      "id": 4,
+      "name": "Comedy Balloon!",
+      "attended": [],
+      "venue": "The Ape & Apple",
+      "img": "https://comedyballoon.files.wordpress.com/2015/03/cropped-banner-march-2015_version2.jpg",
+      "blurb": "The Comedy Balloon is Manchester’s official underground comedy club. It is also the oldest FREE comedy venue in this great city of ours and is dedicated to developing new comedy talent. The friendly atmosphere of the Balloon encourages new acts to try their hand, or more experienced acts to work out new material. There are typically 11 acts in a night, 6 doing ten minute spots, plus 5×5 minute spots, each introduced by a different weekly compere!",
+      "lat": 53.4804,
+      "lng": -2.2463,
+      "nights": [
+        "Wed"
+      ],
+      "walkins": false,
+      "walkinSignUp": "",
+      "prebook": true,
+      "prebookSignUp": "",
+      "bringer": false,
+      "nearestTubes": [
+        "Salford Central"
+      ],
+      "twitterHandle": "comedyBalloon",
+      "website": "https://comedyballoon.wordpress.com/",
+      "howToBook": "https://comedyballoon.wordpress.com/category/want-a-gig/"
+    },
+    {
+      "id": 5,
+      "name": "Comics Anonymous",
+      "attended": [],
+      "venue": "The Thirsty Scholar",
+      "img": "data:image/png;base64,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",
+      "blurb": "Previously held at Chaddertons Joshusa Brooks venue, this Open Mic has moved to the Thirsty Scholar on Tuesdays. Acts can rock up for 7pm sign-up with a view to progressing to the Thursday night New Act Night @ Zombie Shack.",
+      "lat": 53.4736,
+      "lng": -2.2428,
+      "nights": [
+        "Tue"
+      ],
+      "walkins": true,
+      "walkinSignUp": "19:00",
+      "prebook": false,
+      "prebookSignUp": "",
+      "bringer": false,
+      "nearestTubes": [
+        "Oxford Road"
+      ],
+      "twitterHandle": "Tuesday_Tony",
+      "website": "",
+      "howToBook": "https://www.facebook.com/messages/t/tuesdaytony.willambolton"
+    },
+    {
+      "id": 6,
+      "name": "Comics Anonymous",
+      "attended": [],
+      "venue": "Zombie Shack",
+      "img": "data:image/png;base64,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",
+      "blurb": "New Act Night run by Comics Anonymous. If you do well at the Open Mic on Tuesdays at The Thirsty Scholar, you could progress to this beauty run by the same Tuesday Tony / Comics Anonymous banner. C/A dont seem to have a website, but clicking the How To Book link below should bounce you to a messenger window to chat to the promoter. Enjoy!",
+      "lat": 53.4736,
+      "lng": -2.2428,
+      "nights": [
+        "Thu"
+      ],
+      "walkins": false,
+      "walkinSignUp": "",
+      "prebook": true,
+      "prebookSignUp": "https://www.facebook.com/messages/t/tuesdaytony.willambolton",
+      "bringer": false,
+      "nearestTubes": [
+        "Oxford Road"
+      ],
+      "twitterHandle": "Tuesday_Tony",
+      "website": "x",
+      "howToBook": "https://www.facebook.com/messages/t/tuesdaytony.willambolton"
+    },
+    {
+      "id": 7,
+      "name": "Giggle Gang",
+      "attended": [],
+      "venue": "Binary Bar",
+      "img": "data:image/png;base64,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",
+      "blurb": "Giggle Gang Comedy is a New Act Night. They have recently appealed to acts to message their Facebook page for bookings requests. They offer 10 minute & MC spots and the nights run on Sundays in Castlefield",
+      "lat": 53.4718,
+      "lng": -2.2601,
+      "nights": [
+        "Sun"
+      ],
+      "walkins": false,
+      "walkinSignUp": "",
+      "prebook": true,
+      "prebookSignUp": "",
+      "bringer": false,
+      "nearestTubes": [
+        "Deansgate",
+        "Cornbrook"
+      ],
+      "twitterHandle": "",
+      "website": "https://www.facebook.com/GiggleGangComedy/?eid=ARDKSzImOvpyeqv6io3SjyZx-FxTezBMFexrsoxzBkmH8dq9CMgpyC5pN-1ndBbzkgPALGKbHVucU_8f",
+      "howToBook": "mailto:gigglegangcomedy@gmail.com"
+    },
+    {
+      "id": 8,
+      "name": "Worst Comedy Night!",
+      "attended": [],
+      "venue": "The Britons Protection",
+      "img": "https://media-cdn.tripadvisor.com/media/photo-s/17/d7/c5/b1/20190608-091126-largejpg.jpg",
+      "blurb": "Hoorrah! A weekly open mic comedy night that takes @ The Britons Protection, Manchester. No need to book a spot-just turn up and have a go. Doors 19.00. Show 19.30. Boom.",
+      "lat": 53.4750,
+      "lng": -2.2471,
+      "nights": [
+        "Sun"
+      ],
+      "walkins": true,
+      "walkinSignUp": "19:00",
+      "prebook": false,
+      "prebookSignUp": "",
+      "bringer": false,
+      "nearestTubes": [
+        "Deansgate"
+      ],
+      "twitterHandle": "",
+      "website": "https://www.facebook.com/Theworstcomedynight/",
+      "howToBook": ""
+    }
+  ]
+}

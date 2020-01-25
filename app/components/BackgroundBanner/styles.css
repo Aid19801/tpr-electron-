@@ -10,17 +10,9 @@
   margin: 0;
   object-fit: cover;
   left: 0;
+  z-index: -1;
 }
 .banner__container > video {
-  /* background-repeat: repeat-x;
-  background-attachment: fixed;
-  background-position: left top;
-  position: absolute;
-  top: 50px; */
   height: 100%;
   width: 100%;
-
-  /* margin: 0;
-  object-fit: cover;
-  left: 0; */
 }

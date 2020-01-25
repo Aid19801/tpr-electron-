@@ -29,7 +29,16 @@ const withPage = MyComponent => {
     useEffect(() => {
       setInterval(() => {
         navigator.onLine ? props.updateStateConnected() : props.updateStateDisconnected();
-      }, 5000);
+      }, 60000);
+    }, []);
+
+    // PAGE | always scroll to top when fresh re-render of page
+    useEffect(() => {
+      window.scrollTo({
+        top: 1,
+        left: 100,
+        behavior: 'smooth',
+      })
     }, []);
 
     return (

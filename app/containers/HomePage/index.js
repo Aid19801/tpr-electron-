@@ -208,7 +208,7 @@ function HomePage({
         }
       })}
 
-      {newsStories && newsStories.length > 0 && newsStories.slice(12, 15).map((each, i) => {
+      {newsStories && newsStories.length > 0 && newsStories.slice(13, 15).map((each, i) => {
 
         if (!each.first_publication_date) {
           return (
@@ -269,7 +269,7 @@ function HomePage({
       )
     }
 
-      {loadMore && newsStories && newsStories.length > 0 && newsStories.slice(15, 21).map((each, i) => {
+      {loadMore && newsStories && newsStories.length > 0 && newsStories.slice(16, 21).map((each, i) => {
 
         if (!each.first_publication_date) {
           return (
@@ -297,7 +297,7 @@ function HomePage({
           )
         }
       })}
-      {loadMore && newsStories && newsStories.length > 0 && newsStories.slice(21, 27).map((each, i) => {
+      {loadMore && newsStories && newsStories.length > 0 && newsStories.slice(22, 27).map((each, i) => {
 
         if (!each.first_publication_date) {
           return (
@@ -325,7 +325,7 @@ function HomePage({
           )
         }
       })}
-      ) }
+
 
       <div className="col-sm-12" style={{ marginBottom: 65 }}></div>
     </div>

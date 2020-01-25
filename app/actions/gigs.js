@@ -1,16 +1,23 @@
 // import firebase from 'firebase';
-import { REQ_GIGS, RECEIVED_GIGS, SELECT_GIG, REMOVE_SELECT_GIG, CACHE_EXPIRED_FETCHING_GIGS, LOADING_CACHE_GIGS_INTO_STORE } from './types';
+import { REQ_GIGS, RECEIVED_GIGS, SELECT_GIG, FILTERED_GIGS, REMOVE_SELECT_GIG, CACHE_EXPIRED_FETCHING_GIGS, LOADING_CACHE_GIGS_INTO_STORE } from './types';
 
 
 // actions
-export function requestGigs() {
+export function requestGigs(city) {
   return {
     type: REQ_GIGS,
+    city,
   }
 }
 export function receivedGigs(arr) {
   return {
     type: RECEIVED_GIGS,
+    gigs: arr,
+  }
+}
+export function filteredGigs(arr) {
+  return {
+    type: FILTERED_GIGS,
     gigs: arr,
   }
 }

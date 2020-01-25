@@ -63,7 +63,20 @@ class Firebase {
     .get()
     .then((querySnapshot) => {
       let arr = [];
-      console.log('AT | QUERY SNAPSHOT ', querySnapshot);
+      querySnapshot.forEach((doc) => {
+        let eachGig = doc.data();
+        arr.push(eachGig);
+      });
+      return arr;
+    })
+    .catch(function (error) {
+      console.log("Error getting documents: ", error);
+    });
+
+  differentCityGigs = (str) => this.dbTwo.collection(str)
+    .get()
+    .then((querySnapshot) => {
+      let arr = [];
       querySnapshot.forEach((doc) => {
         let eachGig = doc.data();
         arr.push(eachGig);

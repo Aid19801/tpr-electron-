@@ -43,7 +43,7 @@ class DynamicImage extends Component {
     } = this.props;
 
     return (
-      <div className={`circ-img__container${small && '__small'} ${large && 'large'} ${greyBorder && 'greyBorder'}`}>
+      <div className={`circ-img__container${small ? '__small' : ''}${large ? '__large' : ''} ${greyBorder && 'greyBorder'}`}>
         <img
           className="dynamic-img__img"
           src={src}

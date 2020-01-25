@@ -20,6 +20,17 @@
   min-height: 100px;
 }
 
+.circ-img__container__large {
+  border: 5px solid orange;
+  border-radius: 50%;
+  height: 210px;
+  width: 210px;
+  max-width: 210px;
+  max-height: 210px;
+  min-width: 210px;
+  min-height: 210px;
+}
+
 .dynamic-img__img {
   height: 100%;
   width: 100%;
