@@ -2,6 +2,7 @@ import BoxCard from './BoxCard';
 import BackgroundBanner from './BackgroundBanner';
 import Button from './Button';
 import CircularImage from './CircularImage';
+import Comments from './Comments';
 import EachActCard from './EachActCard';
 import DynamicImage from './DynamicImage';
 import Footer from './Footer';
@@ -24,10 +25,12 @@ import PasswordForgetLink from './PasswordForgetLink';
 import withFooter from './Footer';
 import withPage from './WithPage';
 
+
 export {
   BackgroundBanner,
   BoxCard,
   Button,
+  Comments,
   CircularImage,
   DynamicImage,
   EachActCard,
@@ -50,4 +53,5 @@ export {
   // HOCs
   withFooter,
   withPage,
+
 };

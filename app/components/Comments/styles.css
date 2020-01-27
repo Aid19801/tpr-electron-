@@ -1,0 +1,22 @@
+.comments__container {
+
+}
+.comments__box {
+  height: 100px;
+  border: 0;
+  border-radius: 12px;
+  background: grey;
+  color: white;
+  font-size: 12px;
+}
+.comments__container h4 {
+  margin: 0;
+  color: white !important;
+}
+.comments__container form {
+  height: 100px;
+  border: 0;
+  border-radius: 12px;
+  background: grey;
+  width: 50%;
+}

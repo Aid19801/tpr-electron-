@@ -92,6 +92,7 @@ class AccountFormBase extends Component {
       website,
       youtube,
       youtubeChannelURL,
+      comments,
     } = this.state;
 
     this.props.firebase.user(uid).set({
@@ -109,6 +110,7 @@ class AccountFormBase extends Component {
       website,
       youtube,
       youtubeChannelURL,
+      comments,
     });
 
     event.preventDefault();

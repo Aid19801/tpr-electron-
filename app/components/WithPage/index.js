@@ -42,7 +42,7 @@ const withPage = MyComponent => {
     }, []);
 
     return (
-      <div className="container">
+      <div className="container" style={{ height: 'auto', marginBottom: 70 }}>
         <BackgroundBanner />
         <MyComponent {...props} />
         { !props.isConnected && <p className="offline-banner">Offline Mode</p> }

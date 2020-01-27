@@ -5,13 +5,14 @@ import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
 import { compose } from 'redux';
 import FunkyTitle from '../../components/FunkyTitle';
-import { withPage, withFooter, BoxCard, LargeBoxCard, Button, CircularImage, Icon, DynamicImage } from '../../components'
+import { Comments, withPage, withFooter, BoxCard, LargeBoxCard, Button, CircularImage, Icon, DynamicImage } from '../../components'
 import { fetchGigsFromGist, cacheExpiredFetchingGigs, loadingCacheIntoStore, receivedGigs } from '../../actions/gigs';
 import { filtersChanged } from '../../actions/filters';
 import { withFirebase } from '../../components/Firebase';
 import { filters as resetFiltersAsAll } from '../../components/Filters/filters';
 import { getFromCache, saveToCache } from '../../components/Cache';
 import './styles.css';
+import comments from '../../components/Comments/comments';
 
 
 // let selectedGig = {
@@ -45,186 +46,6 @@ import './styles.css';
 //       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
 //       username: "James StPatrick"
 //     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
 //   ]
 // }
 
@@ -239,6 +60,7 @@ function GigPage({
   const [uid, setUid] = useState(localStorage.getItem('uid'));
   const [userProfile, setUserProfile] = useState(JSON.parse(localStorage.getItem('user-profile')));
   const [attended, setAttended] = useState(false);
+  const [commentsFromFirebase, setCommentsFromFirebase] = useState(false);
 
   useEffect(() => {
     const arr = selectedGig && selectedGig.attended && selectedGig.attended.length && selectedGig.attended || [];
@@ -247,6 +69,8 @@ function GigPage({
         setAttended(true)
       }
     })
+
+
   }, []);
 
   const handleAttendClick = (att) => {
@@ -306,14 +130,28 @@ function GigPage({
 
   const addToAttendedOnGigsDB = () => {
 
-    const updatedAttendedArray = [
-      ...selectedGig.attended,
-      {
-        profilePicture: userProfile.profilePicture,
-        uid: uid,
-        username: userProfile.username,
-      }
-    ];
+    let updatedAttendedArray = [];
+
+    if (selectedGig.attended) {
+      updatedAttendedArray = [
+        ...selectedGig.attended,
+        {
+          profilePicture: userProfile.profilePicture,
+          uid: uid,
+          username: userProfile.username,
+        }
+      ];
+    }
+
+    if (!selectedGig.attended) {
+      updatedAttendedArray = [
+        {
+          profilePicture: userProfile.profilePicture,
+          uid: uid,
+          username: userProfile.username,
+        }
+      ];
+    }
 
     firebase.editGig(JSON.stringify(selectedGig.id), "attended", updatedAttendedArray);
 
@@ -325,6 +163,11 @@ function GigPage({
   const handleBackButton = () => {
     updateStateFiltersChanged(resetFiltersAsAll);
     history.goBack();
+  }
+
+  if (!selectedGig) {
+    // no gig, you've saved & refreshed
+    return <div>no gig info</div>
   }
   return (
     <div className="gig__page row margin-bottom flex-center">
@@ -507,7 +350,8 @@ function GigPage({
         </div>
       </div>
 
-      <div className="col-sm-12" style={{ marginBottom: 65, marginTop: 65 }} />
+      <Comments firebase={firebase} comments={selectedGig && selectedGig.comments || []} />
+
 
     </div>
   )

@@ -4,7 +4,7 @@ import { fadeInAnim, fadeInKeyframes } from '../../globalStyles';
 const useStyles = createUseStyles({
   withPageContainer: {
     width: '98vw',
-    height: 'auto',
+    height: '200vh',
     border: '1px solid white',
     background: 'rgba(0, 0, 0, 0.4)',
     display: 'flex',

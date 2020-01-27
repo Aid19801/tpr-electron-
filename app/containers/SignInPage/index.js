@@ -79,11 +79,8 @@ class SignInFormBase extends Component {
       .catch(error => {
         console.log('AT | 1. error back is ', error);
         if (error.code === 'auth/network-request-failed') {
-          console.log('AT | 2. error back is ', error);
           const offlineUid = getFromCache('uid');
-          console.log('AT | 3. offlineUid ', offlineUid);
           const offlineRetrievedUserProfile = getFromCache('user-profile');
-          console.log('AT | 4. user prof ', offlineRetrievedUserProfile);
           this.props.updateStateAuthenticatedUID(offlineUid);
           this.props.updateStateUserProfile(JSON.parse(offlineRetrievedUserProfile))
           return this.props.history.push(ROUTES.HOME);
