@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { compose } from 'redux';
 import { withRouter } from 'react-router-dom';
-import './styles.css';
+import EachComment from './comment';
 import { saveToCache, getFromCache } from '../Cache';
+import './styles.css';
 
 function Comments({ comments, firebase, location, match }) {
 
   const [ uid, setUid ] = useState(null); // useEffect | take from cache
+  const [ userProfile, setUserProfile ] = useState(null); // useEffect | take from cache
   const [ str, setStr ] = useState(''); // handleChange | store in local state
 
   const [ obj, setObj ] = useState({});
 
   useEffect(() => {
-    console.log('AT | FBFBFBFBFB props:', firebase);
     const usersUid = localStorage.getItem('uid');
+    const userProfile = JSON.parse(localStorage.getItem('user-profile'));
+    setUserProfile(userProfile);
     setUid(usersUid);
   }, []);
 
@@ -25,6 +28,8 @@ function Comments({ comments, firebase, location, match }) {
       pageId: location.pathname, // pageID ref so we can group comments for Act page or Gig page
       timeposted: Date.now(), // time it was posted
       comment: str, // the comment itself
+      username: userProfile.username,
+      profilePicture: userProfile.profilePicture || "https://vignette.wikia.nocookie.net/fma/images/c/cd/Avatar_xiao-mei.png/revision/latest/top-crop/width/360/height/450?cb=20170316205323"
     }
     // 1. ADD TO USERS FIREBASE PROFILE
     // get users profile from FB
@@ -53,12 +58,13 @@ function Comments({ comments, firebase, location, match }) {
       console.log('AT | this isAct :', isAct);
 
       if (isGig) {
-        let updatedComments = comments && comments.length && comments || [];
-        updatedComments.push(commentObject);
+        let myArr = comments && comments.length ? comments : [];
+        console.log('AT | updated Comments w/ commenObject pushed ', myArr);
         // if comments exist, clone them, if not empty array
-        firebase.editGig(match.params.id, "comments", updatedComments);
+        firebase.editGig(match.params.id, "comments", [ ...myArr, commentObject ]);
         // edit the gig on firebase and make that array
         // the `comments`
+        // FIND A WAY TO RE-FETCH this gig and re-populate
       }
   }
 
@@ -67,10 +73,16 @@ function Comments({ comments, firebase, location, match }) {
   }
 
   return (
-    <div className="comments__container row">
-      <div className="col-sm-12 h-100 flex-center flex-col">
-       <h4>Enter Your Comment</h4>
+    <div className="col-sm-12 comments__container black">
+      <div className="h-100 flex-center flex-col">
 
+      <p className="orange margin-off">Comments ({comments.length})</p>
+      { comments && comments.length && comments.map((each, i) => {
+        return <EachComment {...each} key={i} />
+      }) }
+
+
+      <h4>Enter Your Comment</h4>
        <form onSubmit={handleSubmit} className="flex-col">
         <textarea name="comment" onChange={handleChange} className="comments__box" />
         <button type="submit">POST</button>

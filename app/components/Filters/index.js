@@ -68,10 +68,11 @@ function Filters({
 
   const reloadAllGigs = async () => {
     let c = city;
+    console.log('AT | reload all gigs:', c);
 
     updateStateRequestingGigs();
     let gigsToReRouteTo = [];
-    if (c === 'London') {
+    if (c === 'london') {
       console.log('AT | city was london:', c)
       gigsToReRouteTo = await firebase.gigs();
       console.log('calling ldn gigs from firebase');

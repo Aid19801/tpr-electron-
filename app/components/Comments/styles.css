@@ -20,3 +20,12 @@
   background: grey;
   width: 50%;
 }
+
+.comments__comment__container {
+  margin-bottom: 10px;
+}
+
+.comments__comment__container p {
+  width: 50%;
+
+}

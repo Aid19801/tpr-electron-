@@ -50,7 +50,7 @@ class DynamicImage extends Component {
           onError={this.onError}
           {...props}
         />
-        <p className="dynamic-img__caption">{caption}</p>
+        { caption && <p className="dynamic-img__caption">{caption}</p> }
       </div>
     );
   }

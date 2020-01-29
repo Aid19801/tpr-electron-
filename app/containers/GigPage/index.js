@@ -15,45 +15,63 @@ import './styles.css';
 import comments from '../../components/Comments/comments';
 
 
-// let selectedGig = {
-//   id: 38,
-//   name: 'Lol Factory Blahdy BLAH!',
-//   venue: 'The Queens Head Arms',
-//   img: "https://i.ytimg.com/vi/5kOzeYp8RgU/hqdefault.jpg",
-//   lat: 51.5024,
-//   lng: -0.0734,
-//   blurb: "LOLLY POPS is a weekly FREE comedy night founded & compered by Irish MC, Wes Dalton. Branching out from their Camden roots with a brand new Monday show @ The Dean Swift in Tower Bridge. Each week they bring you a craic-ing bill of up-and-coming acts and special guest to headline. Fun and friendly night which brings people together through laughter and silliness. Doors 19.30!",
-//   nearestTubes: ['Picadilly Circus', 'Leics Square'],
-//   nights: ['Mon', 'Tue'],
-//   bringer: true,
-//   prebook: true,
-//   walkins: true,
-//   walkinSignUp: "",
-//   prebookSignUp: "monthly booking via email",
-//   howToBook: "http://www.funnyfeckers.co.uk/performers/",
-//   website: 'http://wearefunnyproject.com/',
-//   facebook: 'https://www.facebook.com/wearefunnyproject',
-//   twitterHandle: 'funnyFeckers',
-//   email: 'hello@google.com',
-//   attended: [
-//     {
-//       profilePicture: "/static/no_prof_pic.png",
-//       uid: "test-uid-9379623-TESTY",
-//       username: "Aid Thompsin"
-//     },
-//     {
-//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-//       username: "James StPatrick"
-//     },
-//   ]
-// }
+let selectedGig = {
+  id: 38,
+  name: 'Lol Factory Blahdy BLAH!',
+  venue: 'The Queens Head Arms',
+  img: "https://i.ytimg.com/vi/5kOzeYp8RgU/hqdefault.jpg",
+  lat: 51.5024,
+  lng: -0.0734,
+  blurb: "LOLLY POPS is a weekly FREE comedy night founded & compered by Irish MC, Wes Dalton. Branching out from their Camden roots with a brand new Monday show @ The Dean Swift in Tower Bridge. Each week they bring you a craic-ing bill of up-and-coming acts and special guest to headline. Fun and friendly night which brings people together through laughter and silliness. Doors 19.30!",
+  nearestTubes: ['Picadilly Circus', 'Leics Square'],
+  nights: ['Mon', 'Tue'],
+  bringer: true,
+  prebook: true,
+  walkins: true,
+  walkinSignUp: "",
+  prebookSignUp: "monthly booking via email",
+  howToBook: "http://www.funnyfeckers.co.uk/performers/",
+  website: 'http://wearefunnyproject.com/',
+  facebook: 'https://www.facebook.com/wearefunnyproject',
+  twitterHandle: 'funnyFeckers',
+  email: 'hello@google.com',
+  attended: [
+    {
+      profilePicture: "/static/no_prof_pic.png",
+      uid: "test-uid-9379623-TESTY",
+      username: "Aid Thompsin"
+    },
+    {
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+      username: "James StPatrick"
+    },
+  ],
+  comments: [
+    {
+      id: 1,
+      comment: "i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah ",
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      timeposted: 1580117053174,
+      username: "Des Lynham",
+      uid: "BjXbpuR4XleEzojEXjIA28liOIC3",
+    },
+    {
+      id: 2,
+      comment: "i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah ",
+      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+      timeposted: 158011702000,
+      username: "Funny Chuckly Joe!",
+      uid: "BjXbpuR4XleEzojEXjIA28liOIC3",
+    }
+  ]
+}
 
 function GigPage({
   gigs,
   history,
   firebase,
-  selectedGig,
+  // selectedGig,
   updateStateFiltersChanged
 }) {
 
@@ -161,6 +179,7 @@ function GigPage({
   }
 
   const handleBackButton = () => {
+    debugger;
     updateStateFiltersChanged(resetFiltersAsAll);
     history.goBack();
   }

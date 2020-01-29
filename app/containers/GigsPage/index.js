@@ -28,7 +28,7 @@ function GigsPage({
   const [center, setCenter] = useState([-0.1255, 51.5090]);
 
   useEffect(() => {
-    city === 'London' || !city ? fetchGigs() : fetchDifferentCity(city);
+    city === 'london' || !city ? fetchGigs() : fetchDifferentCity(city);
   }, []);
 
   useEffect(() => {
