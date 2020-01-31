@@ -1,31 +1,86 @@
-.comments__container {
-
+.comments__comment__container {
+  /* border: 1px solid red; */
+  width: 64%;
+  min-width: 64%;
+  position: relative;
+  min-height: 100px;
+  height: auto;
 }
-.comments__box {
-  height: 100px;
-  border: 0;
-  border-radius: 12px;
-  background: grey;
-  color: white;
+
+.timeposted {
+  /* border: 1px solid green; */
+  text-align: end;
+  color: darkgrey;
+  font-size: 8px;
+}
+
+.comments__comment {
+  /* border: 1px solid orange; */
+  width: 80%;
+  text-align: start;
+  margin-left: 67px;
+  color: grey;
+  margin-top: -31px;
   font-size: 12px;
 }
-.comments__container h4 {
-  margin: 0;
-  color: white !important;
+
+.comments__comment__container .circ-img__container__small {
+  /* border: 1px solid yellow; */
+  margin-top: 3px;
+  height: 55px;
+  width: 55px;
+  max-height: 55px;
+  max-width: 55px;
+  min-width: 55px;
+  min-height: 55px;
 }
-.comments__container form {
-  height: 100px;
-  border: 0;
+
+.comments__comment__container .circ-img__container__small p {
+  /* border: 1px solid purple; */
+  margin-top: 3px;
+}
+
+.comments__add-comment-container {
+  position: absolute;
+  z-index: 100000;
+  width: 100vw;
+  height: 137vh;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+}
+
+.comments__add-comment-form {
+  border: 3px solid orange;
   border-radius: 12px;
-  background: grey;
-  width: 50%;
+  background: linear-gradient(grey, lightgrey);
+  width: 300px;
+  height: 220px;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.comments__comment__container {
-  margin-bottom: 10px;
+.comments__box {
+  height: 174px;
+  width: 100%;
+  background: linear-gradient(45deg, lightgrey, darkgrey);
+  color: white;
+  font-size: 24px;
 }
 
-.comments__comment__container p {
-  width: 50%;
+.comments__add-comment-form .buttonContainer {
+  margin-top: -10px;
+}
 
+.comments__add-comment-form p {
+  width: 300px;
+  text-align: end;
+  margin-top: -14px;
+}
+
+.comments__container .buttonContainer>button {
+  border: 0 !important;
 }

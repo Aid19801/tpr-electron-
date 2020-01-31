@@ -15,7 +15,7 @@ const Button = ({
     <div
       className={disabled ? "disabledContainer" : "buttonContainer" }
       style={ color ? { padding: 0, border: `1px solid ${color}` } : null }
-      style={ medium ? { width: '120px', height: '50px' } : null }
+      style={ medium ? { width: '189px', height: '92px' } : null }
       >
       <button
         type={type ? type : null}

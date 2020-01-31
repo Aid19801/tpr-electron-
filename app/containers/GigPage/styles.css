@@ -2,6 +2,16 @@
   margin-top: -3vh;
 }
 
+.gig__page .margin-left .buttonContainer:nth-child(1) {
+  position: absolute;
+  left: 1px;
+  width: 132px;
+  z-index: 1000000;
+}
+.gig__page .margin-left .buttonContainer:nth-child(1) .button {
+  border: 0 !important;
+}
+
 .gig__page .gig__blurb {
   font-size: 20px;
   transform: skewY(-2deg);

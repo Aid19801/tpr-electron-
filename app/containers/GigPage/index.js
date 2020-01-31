@@ -6,7 +6,7 @@ import { withRouter, Link } from 'react-router-dom';
 import { compose } from 'redux';
 import FunkyTitle from '../../components/FunkyTitle';
 import { Comments, withPage, withFooter, BoxCard, LargeBoxCard, Button, CircularImage, Icon, DynamicImage } from '../../components'
-import { fetchGigsFromGist, cacheExpiredFetchingGigs, loadingCacheIntoStore, receivedGigs } from '../../actions/gigs';
+import { fetchGigsFromGist, cacheExpiredFetchingGigs, loadingCacheIntoStore, receivedGigs, selectedGig } from '../../actions/gigs';
 import { filtersChanged } from '../../actions/filters';
 import { withFirebase } from '../../components/Firebase';
 import { filters as resetFiltersAsAll } from '../../components/Filters/filters';
@@ -14,65 +14,67 @@ import { getFromCache, saveToCache } from '../../components/Cache';
 import './styles.css';
 import comments from '../../components/Comments/comments';
 
-
-let selectedGig = {
-  id: 38,
-  name: 'Lol Factory Blahdy BLAH!',
-  venue: 'The Queens Head Arms',
-  img: "https://i.ytimg.com/vi/5kOzeYp8RgU/hqdefault.jpg",
-  lat: 51.5024,
-  lng: -0.0734,
-  blurb: "LOLLY POPS is a weekly FREE comedy night founded & compered by Irish MC, Wes Dalton. Branching out from their Camden roots with a brand new Monday show @ The Dean Swift in Tower Bridge. Each week they bring you a craic-ing bill of up-and-coming acts and special guest to headline. Fun and friendly night which brings people together through laughter and silliness. Doors 19.30!",
-  nearestTubes: ['Picadilly Circus', 'Leics Square'],
-  nights: ['Mon', 'Tue'],
-  bringer: true,
-  prebook: true,
-  walkins: true,
-  walkinSignUp: "",
-  prebookSignUp: "monthly booking via email",
-  howToBook: "http://www.funnyfeckers.co.uk/performers/",
-  website: 'http://wearefunnyproject.com/',
-  facebook: 'https://www.facebook.com/wearefunnyproject',
-  twitterHandle: 'funnyFeckers',
-  email: 'hello@google.com',
-  attended: [
-    {
-      profilePicture: "/static/no_prof_pic.png",
-      uid: "test-uid-9379623-TESTY",
-      username: "Aid Thompsin"
-    },
-    {
-      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-      uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
-      username: "James StPatrick"
-    },
-  ],
-  comments: [
-    {
-      id: 1,
-      comment: "i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah ",
-      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-      timeposted: 1580117053174,
-      username: "Des Lynham",
-      uid: "BjXbpuR4XleEzojEXjIA28liOIC3",
-    },
-    {
-      id: 2,
-      comment: "i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah ",
-      profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
-      timeposted: 158011702000,
-      username: "Funny Chuckly Joe!",
-      uid: "BjXbpuR4XleEzojEXjIA28liOIC3",
-    }
-  ]
-}
+// let selectedGig = {
+//   id: 38,
+//   name: 'Lol Factory Blahdy BLAH!',
+//   venue: 'The Queens Head Arms',
+//   img: "https://i.ytimg.com/vi/5kOzeYp8RgU/hqdefault.jpg",
+//   lat: 51.5024,
+//   lng: -0.0734,
+//   blurb: "LOLLY POPS is a weekly FREE comedy night founded & compered by Irish MC, Wes Dalton. Branching out from their Camden roots with a brand new Monday show @ The Dean Swift in Tower Bridge. Each week they bring you a craic-ing bill of up-and-coming acts and special guest to headline. Fun and friendly night which brings people together through laughter and silliness. Doors 19.30!",
+//   nearestTubes: ['Picadilly Circus', 'Leics Square'],
+//   nights: ['Mon', 'Tue'],
+//   bringer: true,
+//   prebook: true,
+//   walkins: true,
+//   walkinSignUp: "",
+//   prebookSignUp: "monthly booking via email",
+//   howToBook: "http://www.funnyfeckers.co.uk/performers/",
+//   website: 'http://wearefunnyproject.com/',
+//   facebook: 'https://www.facebook.com/wearefunnyproject',
+//   twitterHandle: 'funnyFeckers',
+//   email: 'hello@google.com',
+//   attended: [
+//     {
+//       profilePicture: "/static/no_prof_pic.png",
+//       uid: "test-uid-9379623-TESTY",
+//       username: "Aid Thompsin"
+//     },
+//     {
+//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+//       uid: "fpLXYiJpSCVNcuoEwF99N892457894u2",
+//       username: "James StPatrick"
+//     },
+//   ],
+//   comments: [
+//     {
+//       id: 1,
+//       comment: "i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah ",
+//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+//       timeposted: 1580117053174,
+//       username: "Des Lynham",
+//       uid: "BjXbpuR4XleEzojEXjIA28liOIC3",
+//     },
+//     {
+//       id: 2,
+//       comment: "i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah i am a comment blah ",
+//       profilePicture: "https://cdn.images.express.co.uk/img/dynamic/1/590x/des_lynam-398579.jpg",
+//       timeposted: 158011702000,
+//       username: "Funny Chuckly Joe!",
+//       uid: "BjXbpuR4XleEzojEXjIA28liOIC3",
+//     }
+//   ]
+// }
 
 function GigPage({
   gigs,
   history,
+  match,
   firebase,
-  // selectedGig,
-  updateStateFiltersChanged
+  selectedGig,
+  updateStateFiltersChanged,
+  updateStateSelectedGig,
+  updateStateReceivedGigs,
 }) {
 
   const [uid, setUid] = useState(localStorage.getItem('uid'));
@@ -179,19 +181,27 @@ function GigPage({
   }
 
   const handleBackButton = () => {
-    debugger;
+    // debugger;
     updateStateFiltersChanged(resetFiltersAsAll);
     history.goBack();
   }
 
+  const refetchThisGig = async() => {
+    const { params: { id }} = match;
+    const allGigs = await firebase.gigs();
+    updateStateReceivedGigs(allGigs);
+    updateStateSelectedGig(JSON.parse(id));
+  }
+
   if (!selectedGig) {
-    // no gig, you've saved & refreshed
+    // refetchThisGig();
     return <div>no gig info</div>
   }
+
   return (
     <div className="gig__page row margin-bottom flex-center">
       <div className="margin-left margin-top">
-        <Button onClick={() => handleBackButton()} text="Back" small color="orange" />
+        <Button onClick={() => handleBackButton()} text="<= Back" small color="grey" />
       </div>
       <div className="col-sm-12">
         {selectedGig && selectedGig.name && (
@@ -272,7 +282,7 @@ function GigPage({
 
       <React.Fragment>
         <Fade>
-          <div className="contact__container flex-center flex-row margin-top margin-bottom grey border-on rounded-corners">
+          <div className="contact__container flex-center flex-col margin-top margin-bottom grey border-on rounded-corners">
 
             <p className="margin-off nuke-grey">Contact:</p>
 
@@ -363,13 +373,17 @@ function GigPage({
         <div className="haveIPerformedHere">
           <p className="orange skew-right">Have <strong>YOU</strong> Performed Here?</p>
           <div className="flex-row">
-            <Button text="Yes" onClick={() => handleAttendClick('Yes')} color={attended ? "green" : "grey"} medium />
-            <Button text="No" onClick={() => handleAttendClick('No')} color={attended ? "grey" : "darkred"} medium />
+            <Button text="Yes" onClick={() => handleAttendClick('Yes')} color={attended ? "green" : "grey"} />
+            <Button text="No" onClick={() => handleAttendClick('No')} color={attended ? "grey" : "darkred"} />
           </div>
         </div>
       </div>
 
-      <Comments firebase={firebase} comments={selectedGig && selectedGig.comments || []} />
+      <Comments
+        firebase={firebase}
+        comments={selectedGig && selectedGig.comments || []}
+        refetchGig={refetchThisGig}
+        />
 
 
     </div>
@@ -382,7 +396,9 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  updateStateFiltersChanged: arr => dispatch(filtersChanged(arr))
+  updateStateFiltersChanged: arr => dispatch(filtersChanged(arr)),
+  updateStateSelectedGig: id => dispatch(selectedGig(id)),
+  updateStateReceivedGigs: (arr) => dispatch(receivedGigs(arr)),
 });
 
 export default compose(

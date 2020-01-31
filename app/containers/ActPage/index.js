@@ -70,11 +70,11 @@ function ActPage({
       <div className="col-sm-8 black flex-col">
         <div className="flex-row flex-center">
           <h2 className="margin-right">Fave Gig</h2>
-          <p className="orange skew-left">&nbsp; {usersProfile && usersProfile.faveGig}</p>
+          <p className="orange skew-left">&nbsp; {usersProfile && usersProfile.faveGig || "Unknown"}</p>
         </div>
         <div className="flex-row flex-center">
           <h2 className="margin-right">Style</h2>
-          <p className="orange skew-left">&nbsp; {usersProfile && usersProfile.genre}</p>
+          <p className="orange skew-left">&nbsp; {usersProfile && usersProfile.genre || "Unknown"}</p>
         </div>
         <div className="flex-row flex-center">
           {usersProfile && usersProfile.twitter && <div onClick={() => window.open(twitter, '_newtab')}><Icon icon="twitter" /></div>}

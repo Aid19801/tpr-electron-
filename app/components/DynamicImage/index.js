@@ -30,6 +30,10 @@ class DynamicImage extends Component {
     }
   }
 
+  handleClick() {
+    return this.props.onClick ? this.props.onClick() : null;
+  }
+
   render() {
     const { src } = this.state;
     const {
@@ -43,7 +47,7 @@ class DynamicImage extends Component {
     } = this.props;
 
     return (
-      <div className={`circ-img__container${small ? '__small' : ''}${large ? '__large' : ''} ${greyBorder && 'greyBorder'}`}>
+      <div className={`circ-img__container${small ? '__small' : ''}${large ? '__large' : ''} ${greyBorder && 'greyBorder'}`} onClick={ this.handleClick }>
         <img
           className="dynamic-img__img"
           src={src}
@@ -61,6 +65,7 @@ DynamicImage.propTypes = {
   small: PropTypes.bool,
   large: PropTypes.bool,
   caption: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default DynamicImage;

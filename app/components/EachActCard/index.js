@@ -34,7 +34,7 @@ function EachActCard({
                   className="down-svg-container"
                   onClick={() => voteAct('down', each)}
                 >
-                  <DownArrow />
+                  <p>DOWN</p>
                 </div>
               )}
             </div>

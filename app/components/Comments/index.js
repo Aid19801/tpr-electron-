@@ -3,15 +3,17 @@ import { compose } from 'redux';
 import { withRouter } from 'react-router-dom';
 import EachComment from './comment';
 import { saveToCache, getFromCache } from '../Cache';
+import Button from '../Button';
 import './styles.css';
 
-function Comments({ comments, firebase, location, match }) {
+function Comments({ comments, firebase, location, match, refetchGig }) {
 
-  const [ uid, setUid ] = useState(null); // useEffect | take from cache
-  const [ userProfile, setUserProfile ] = useState(null); // useEffect | take from cache
-  const [ str, setStr ] = useState(''); // handleChange | store in local state
+  const [uid, setUid] = useState(null); // useEffect | take from cache
+  const [userProfile, setUserProfile] = useState(null); // useEffect | take from cache
+  const [str, setStr] = useState(''); // handleChange | store in local state
+  const [addComment, showAddComment] = useState(false); // handleChange | store in local state
 
-  const [ obj, setObj ] = useState({});
+  const [obj, setObj] = useState({});
 
   useEffect(() => {
     const usersUid = localStorage.getItem('uid');
@@ -34,60 +36,80 @@ function Comments({ comments, firebase, location, match }) {
     // 1. ADD TO USERS FIREBASE PROFILE
     // get users profile from FB
 
-      let arr = [];
+    let arr = [];
 
-      let currentCacheProfile = JSON.parse(getFromCache('user-profile'));
+    let currentCacheProfile = JSON.parse(getFromCache('user-profile'));
 
-      currentCacheProfile && currentCacheProfile.comments ? arr = [ ...currentCacheProfile.comments, commentObject ]
+    currentCacheProfile && currentCacheProfile.comments ? arr = [...currentCacheProfile.comments, commentObject]
       : arr.push(commentObject);
 
-      currentCacheProfile.comments = arr;
+    currentCacheProfile.comments = arr;
 
-      const json = JSON.stringify(currentCacheProfile);
-      saveToCache('user-profile', json);
-      setObj(currentCacheProfile);
+    const json = JSON.stringify(currentCacheProfile);
+    saveToCache('user-profile', json);
+    setObj(currentCacheProfile);
 
-      firebase.user(uid).set({
-        ...currentCacheProfile,
-      });
+    firebase.user(uid).set({
+      ...currentCacheProfile,
+    });
 
-      const isGig = location.pathname.includes('gig');
-      const isAct = location.pathname.includes('act');
+    const isGig = location.pathname.includes('gig');
+    const isAct = location.pathname.includes('act');
 
-      console.log('AT | this isGig :', isGig);
-      console.log('AT | this isAct :', isAct);
+    console.log('AT | this isGig :', isGig);
+    console.log('AT | this isAct :', isAct);
 
-      if (isGig) {
-        let myArr = comments && comments.length ? comments : [];
-        console.log('AT | updated Comments w/ commenObject pushed ', myArr);
-        // if comments exist, clone them, if not empty array
-        firebase.editGig(match.params.id, "comments", [ ...myArr, commentObject ]);
-        // edit the gig on firebase and make that array
-        // the `comments`
-        // FIND A WAY TO RE-FETCH this gig and re-populate
-      }
+    if (isGig) {
+      let myArr = comments && comments.length ? comments : [];
+      console.log('AT | updated Comments w/ commenObject pushed ', myArr);
+      // if comments exist, clone them, if not empty array
+      firebase.editGig(match.params.id, "comments", [...myArr, commentObject]);
+      // edit the gig on firebase and make that array
+      // the `comments`
+      // FIND A WAY TO RE-FETCH this gig and re-populate
+    }
+    setStr('');
+    showAddComment(false);
+    refetchGig();
   }
 
   const handleChange = (event) => {
     setStr(event.target.value);
   }
 
+  const handleAddCommentClick = () => showAddComment(!addComment);
+  const handleCancelComment = () => showAddComment(!addComment);
+
+  console.log('AT | comments :', comments);
+
   return (
-    <div className="col-sm-12 comments__container black">
-      <div className="h-100 flex-center flex-col">
+    <div className="col-sm-12 comments__container flex-center flex-col black">
+      <div className="flex-center flex-col black">
 
-      <p className="orange margin-off">Comments ({comments.length})</p>
-      { comments && comments.length && comments.map((each, i) => {
-        return <EachComment {...each} key={i} />
-      }) }
+        <p className="margin-top margin-bottom">Comments ({comments && comments.length})</p>
 
 
-      <h4>Enter Your Comment</h4>
-       <form onSubmit={handleSubmit} className="flex-col">
-        <textarea name="comment" onChange={handleChange} className="comments__box" />
-        <button type="submit">POST</button>
-       </form>
+        { (!comments || comments.length === 0) && <p>No Comments Yet</p>}
+
+        { comments && comments.length > 0 && comments.map((each, i) => <EachComment {...each} key={i} /> )}
+
+        {addComment && (
+          <div className="comments__add-comment-container">
+            <div className="comments__add-comment-form">
+              <form onSubmit={handleSubmit} className="flex-col flex-center">
+                <textarea name="comment" onChange={handleChange} className="comments__box" />
+                <Button type="submit" text="post" color="orange" />
+              </form>
+              <p onClick={handleCancelComment}>cancel</p>
+            </div>
+          </div>
+        )}
+
+
       </div>
+
+      {!addComment && <Button onClick={handleAddCommentClick} text="Add Comment" color="grey" />}
+
     </div>
   );
 }
