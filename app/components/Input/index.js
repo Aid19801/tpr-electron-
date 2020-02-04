@@ -16,9 +16,10 @@ const Input = ({
   icon,
   disabled
   }) => {
-// console.log('input has icon ', icon)
+
   const classes = useStyles();
 
+  console.log('input has name ', name)
 
   return (
     <React.Fragment>
@@ -41,9 +42,10 @@ const Input = ({
           </select>
         )}
         {
-          ( type === 'text' || type=== 'password') && (
+          ( type === 'text' || type === 'password') && (
           <input
             name={name}
+            disabled={ name === 'email' || name === 'username' }
             value={value}
             onChange={(e) => handleChange(e)}
             type={type}

@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Jump from 'react-reveal/Jump';
 import { connect } from 'react-redux';
-import Fade from 'react-reveal/Fade';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import FunkyTitle from '../../components/FunkyTitle';
-import { withPage, withFooter, Icon, Modal, Button, DynamicImage, EachActCard } from '../../components'
+import { withPage, withFooter, Modal, Button, EachActCard } from '../../components';
 import { loadingCacheIntoStore, requestActs, receivedActs, cacheExpiredFetchingActs, } from '../../actions/acts';
 import { saveToCache } from '../../components/Cache';
 import { withAuthentication } from '../../components/Session';
-import { trimStringSpecifically, tooSoon } from '../../utils';
+import { tooSoon } from '../../utils';
 import './styles.css';
-
-const downVoteSwitchedOn = false;
 
 function ActsPage({
   acts,
@@ -35,18 +32,26 @@ function ActsPage({
   }, []);
 
   const fetchActs = async () => {
+    // console.log('AT | fetching acts...');
     updateStateRequestingActs();
+    // console.log('AT | updateStateRequestingActs:');
+
     firebase.users().on('value', snapshot => {
+      // console.log('AT | firebase.users() fired');
       const usersObject = snapshot.val();
+      // console.log('AT | usersObject back');
 
       const usersList = Object.keys(usersObject).map(key => ({
         ...usersObject[key],
         uid: key
       }));
 
+      // console.log('AT | usersList is back:');
       const filteredOutNonVotingUsers = usersList.filter(
         each => each.includeInActRater
       );
+
+      console.log('AT | users: ', filteredOutNonVotingUsers);
 
       const filteredOutNoProfilePic = filteredOutNonVotingUsers.filter(
         each => each.profilePicture
