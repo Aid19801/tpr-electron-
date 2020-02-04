@@ -119,7 +119,7 @@ class AccountFormBase extends Component {
       attended,
     });
 
-    debugger;
+    // debugger;
 
     event.preventDefault();
     return this.props.history.push(ROUTES.HOME);

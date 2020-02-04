@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import { Icon, DynamicImage } from '../../components';
-import { trimStringSpecifically, tooSoon } from '../../utils';
+import { trimStringSpecifically } from '../../utils';
 import './styles.css';
 
 const downVoteSwitchedOn = false;
@@ -24,12 +24,12 @@ function EachActCard({
                 className="up-svg-container"
                 onClick={() => voteAct('up', each)}
               >
-                <Icon icon="clap" />
+                👍🏻
               </div>
 
               <h2 className="each-act-rating">{each.rating}</h2>
 
-              {downVoteSwitchedOn && (
+              { downVoteSwitchedOn && (
                 <div
                   className="down-svg-container"
                   onClick={() => voteAct('down', each)}
