@@ -33,44 +33,60 @@ function Comments({ comments, firebase, location, match, refetchGig }) {
       username: userProfile.username,
       profilePicture: userProfile.profilePicture || "https://vignette.wikia.nocookie.net/fma/images/c/cd/Avatar_xiao-mei.png/revision/latest/top-crop/width/360/height/450?cb=20170316205323"
     }
+
+    console.log('AT | comment object is :', commentObject);
     // 1. ADD TO USERS FIREBASE PROFILE
     // get users profile from FB
 
     let arr = [];
 
+    // 1. SAVE TO USER CACHE
     let currentCacheProfile = JSON.parse(getFromCache('user-profile'));
-
+    // if this user has comments existing, then include them
+    // AND the comment obj
+    // if it doesnt, just push 1 comment object into it ^^
     currentCacheProfile && currentCacheProfile.comments ? arr = [...currentCacheProfile.comments, commentObject]
       : arr.push(commentObject);
 
     currentCacheProfile.comments = arr;
-
+    // then make that object's comments equal the `arr` of comments.
     const json = JSON.stringify(currentCacheProfile);
     saveToCache('user-profile', json);
+    // save to cache
     setObj(currentCacheProfile);
 
+    // 2. UPDATE FIREBASE USER | update the user's record on Firebase User Profile
     firebase.user(uid).set({
       ...currentCacheProfile,
     });
 
+    // is this a GIG page comment, or an ACT page comment
     const isGig = location.pathname.includes('gig');
     const isAct = location.pathname.includes('act');
 
-    console.log('AT | this isGig :', isGig);
-    console.log('AT | this isAct :', isAct);
+    console.log('AT | isGig :', isGig);
+    console.log('AT | isAct :', isAct);
 
+    // 3. UPDATE FIREBASE GIG DB
     if (isGig) {
-      let myArr = comments && comments.length ? comments : [];
-      console.log('AT | updated Comments w/ commenObject pushed ', myArr);
-      // if comments exist, clone them, if not empty array
-      firebase.editGig(match.params.id, "comments", [...myArr, commentObject]);
-      // edit the gig on firebase and make that array
-      // the `comments`
-      // FIND A WAY TO RE-FETCH this gig and re-populate
+      // if its a gig, take all of existing comments from selectedGig / store
+      let existingCommentsFromStore = comments && comments.length ? comments : [];
+
+      const allComments = [
+        ...existingCommentsFromStore,
+        commentObject,
+      ]
+
+      console.log('AT | allComments pushed to gig DB', allComments);
+
+      firebase.editGig(match.params.id, "comments", allComments);
+      // POST to gig fb firebase ^^
     }
-    setStr('');
-    showAddComment(false);
-    refetchGig();
+    setStr(''); // nuke the content
+    showAddComment(false); // kill the modal
+    setTimeout(() => {
+      refetchGig(); // force a refetch
+    }, 2000);
   }
 
   const handleChange = (event) => {

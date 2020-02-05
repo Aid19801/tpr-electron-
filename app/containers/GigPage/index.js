@@ -187,8 +187,10 @@ function GigPage({
   }
 
   const refetchThisGig = async() => {
+    console.log('AT | refetching gig...');
     const { params: { id }} = match;
     const allGigs = await firebase.gigs();
+    console.log('AT | refetched allGigs', allGigs);
     updateStateReceivedGigs(allGigs);
     updateStateSelectedGig(JSON.parse(id));
   }
