@@ -48,14 +48,14 @@ export default class MenuBuilder {
       label: 'The Panda Riot',
       submenu: [
         {
-          label: 'About ElectronReact',
+          label: 'About The Panda Riot',
           selector: 'orderFrontStandardAboutPanel:'
         },
         { type: 'separator' },
         { label: 'Services', submenu: [] },
         { type: 'separator' },
         {
-          label: 'Hide ElectronReact',
+          label: 'Hide The Panda Riot',
           accelerator: 'Command+H',
           selector: 'hide:'
         },

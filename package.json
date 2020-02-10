@@ -56,7 +56,7 @@
     ]
   },
   "build": {
-    "productName": "ElectronReact",
+    "productName": "The Panda Riot",
     "appId": "org.develar.ElectronReact",
     "files": [
       "dist/",
@@ -110,38 +110,27 @@
     "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
   },
   "author": {
-    "name": "Electron React Boilerplate Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://electron-react-boilerplate.js.org"
+    "name": "Aid Thompsin",
+    "email": "thePandaRiot@gmail.com",
+    "url": "https://www.thePandaRiot.com"
   },
   "contributors": [
     {
-      "name": "Vikram Rangaraj",
-      "email": "vikr01@icloud.com",
-      "url": "https://github.com/vikr01"
-    },
-    {
-      "name": "Amila Welihinda",
-      "email": "amilajack@gmail.com",
-      "url": "https://github.com/amilajack"
+      "name": "Adrian Thompson",
+      "email": "aidThompsin@gmail.com",
+      "url": "https://github.com/Aid19801"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues"
+    "url": "https://github.com/Aid19801/tpr-electron-/issues"
   },
   "keywords": [
     "electron",
-    "boilerplate",
     "react",
-    "redux",
-    "flow",
-    "sass",
-    "webpack",
-    "hot",
-    "reload"
+    "redux"
   ],
-  "homepage": "https://github.com/electron-react-boilerplate/electron-react-boilerplate#readme",
+  "homepage": "https://www.thePandaRiot.com",
   "jest": {
     "testURL": "http://localhost/",
     "moduleNameMapper": {
