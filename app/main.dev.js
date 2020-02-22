@@ -33,7 +33,7 @@ if (
   process.env.NODE_ENV === 'development' ||
   process.env.DEBUG_PROD === 'true'
 ) {
-  require('electron-debug')()
+  require('electron-debug')();
 }
 
 const installExtensions = async () => {
@@ -66,9 +66,9 @@ app.on('ready', async () => {
     await installExtensions();
   }
 
-  if (process.env.NODE_ENV !== 'development') {
-    await installExtensions();
-  }
+  // if (process.env.NODE_ENV !== 'development') {
+  //   await installExtensions();
+  // }
 
   mainWindow = new BrowserWindow({
     show: false,
@@ -81,8 +81,12 @@ app.on('ready', async () => {
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);
 
-  if (process.env.NODE_ENV === 'development')  mainWindow.webContents.once('dom-ready', () => mainWindow.webContents.openDevTools())
-  if (process.env.NODE_ENV !== 'development')  mainWindow.webContents.once('dom-ready', () => mainWindow.webContents.openDevTools())
+  if (process.env.NODE_ENV === 'development') {
+    mainWindow.webContents.once('dom-ready', () =>
+      mainWindow.webContents.openDevTools()
+    );
+  }
+  // if (process.env.NODE_ENV !== 'development')  mainWindow.webContents.once('dom-ready', () => mainWindow.webContents.openDevTools())
 
   // @TODO: Use 'ready-to-show' event
   //        https://github.com/electron/electron/blob/master/docs/api/browser-window.md#using-ready-to-show-event
@@ -107,5 +111,5 @@ app.on('ready', async () => {
 
   // Remove this if your app does not use auto updates
   // eslint-disable-next-line
-  new AppUpdater();
+  // new AppUpdater();
 });
