@@ -68,6 +68,8 @@
     ],
     "afterSign": "./build/notarize.js",
     "mac": {
+      "type": "distribution",
+      "category": "public.app-category.productivity",
       "hardenedRuntime": true,
       "gatekeeperAssess": false,
       "entitlements": "build/entitlements.mac.plist",
@@ -76,8 +78,8 @@
     },
     "mas": {
       "type": "distribution",
-      "hardenedRuntime": true,
-      "gatekeeperAssess": false,
+      "category": "public.app-category.productivity",
+      "hardenedRuntime": false,
       "entitlements": "build/entitlements.mas.plist",
       "entitlementsInherit": "build/entitlements.mas.inherit.plist"
     },

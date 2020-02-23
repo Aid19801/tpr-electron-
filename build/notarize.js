@@ -33,7 +33,8 @@ exports.default = async params => {
       // appleId: 'oelbaga@newworldgroup.com',
       // appleIdPassword: 'MtK5bBBSp545Up3g',
       appleId: process.env.APPLEID,
-      appleIdPassword: process.env.APPLEIDPASSWORD
+      appleIdPassword: process.env.APPLEIDPASSWORD,
+      ascProvider: process.env.ASCPROVIDER
     });
   } catch (error) {
     console.error(error);
