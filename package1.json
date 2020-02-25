@@ -68,10 +68,14 @@
     ],
     "afterSign": "./build/notarize.js",
     "mac": {
-      "hardenedRuntime": true,
-      "gatekeeperAssess": false,
-      "entitlements": "build/entitlements.mac.plist",
-      "entitlementsInherit": "build/entitlements.mac.plist"
+      "target": ["mas"]
+    },
+    "mas": {
+      "type": "distribution",
+      "category": "public.app-category.productivity",
+      "hardenedRuntime": false,
+      "entitlements": "build/entitlements.mas.plist",
+      "entitlementsInherit": "build/entitlements.mas.inherit.plist"
     },
     "dmg": {
       "contents": [
@@ -104,12 +108,6 @@
     "directories": {
       "buildResources": "resources",
       "output": "release"
-    },
-    "publish": {
-      "provider": "github",
-      "owner": "electron-react-boilerplate",
-      "repo": "electron-react-boilerplate",
-      "private": false
     }
   },
   "repository": {
