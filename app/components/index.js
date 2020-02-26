@@ -24,6 +24,7 @@ import PasswordForgetLink from './PasswordForgetLink';
 // HOCs
 import withFooter from './Footer';
 import withPage from './WithPage';
+import withMessagesHOC from './Messages';
 
 
 export {
@@ -53,5 +54,5 @@ export {
   // HOCs
   withFooter,
   withPage,
-
+  withMessagesHOC,
 };

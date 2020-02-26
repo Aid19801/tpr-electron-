@@ -1,0 +1,36 @@
+.messages__container {
+  /* border: 4px solid orange; */
+  /* border-radius: 16px; */
+  transform: skewY(-2deg);
+  background: linear-gradient(red, darkred);
+  width: 26vw;
+  /* height: 11vh; */
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 100000;
+  top: 53px;
+  left: 0;
+  text-align: center;
+  color: white;
+
+
+  animation-name: bounceInMessage;
+  animation-duration: 600ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+
+
+@keyframes bounceInMessage {
+  from {
+    /* border: 4px solid red; */
+  }
+  to {
+    /* border: 6px solid red; */
+  }
+}
+

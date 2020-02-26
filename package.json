@@ -1,7 +1,7 @@
 {
   "name": "the-panda-riot",
   "productName": "The Panda Riot",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Desktop app for comedians in London",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",

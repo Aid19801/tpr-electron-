@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import FunkyTitle from '../../components/FunkyTitle';
-import { withPage, withFooter, BoxCard, LargeBoxCard, Button } from '../../components'
+import { withPage, withFooter, BoxCard, LargeBoxCard, Button, withMessagesHOC } from '../../components'
 import { fetchNewsStories, receivedNewsStories, selectedStory, cacheExpiredFetchingNews, loadingCacheIntoStore } from '../../actions/news';
 import { saveToCache, getFromCache } from '../../components/Cache';
 import './styles.css';
@@ -11,7 +11,6 @@ function HomePage({
   updateStateFetchNewsStories,
   updateStateReceivedNewsStories,
   newsStories,
-  updateStateCacheExpiredFetchNews,
   updateStateLoadingCacheIntoStore,
   updateStateCacheExpiredFetchingNews,
 }) {
@@ -347,6 +346,7 @@ const mapDispatchToProps = dispatch => ({
 export default compose(
   withPage,
   withFooter,
+  withMessagesHOC,
   connect(mapStateToProps, mapDispatchToProps),
 )(HomePage);
 
