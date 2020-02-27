@@ -46,7 +46,6 @@ const PopOut = ({
           </div>
 
           <div onClick={handleClick}>
-            <p style={{ fontSize: 9, position: 'relative', top: 45, left: 17, color: 'grey' }}>more info</p>
             <Icon icon="more_info" />
           </div>
         </div>

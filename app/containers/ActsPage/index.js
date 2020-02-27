@@ -178,11 +178,11 @@ function ActsPage({
         <div className="col-sm-12 flex-center flex-col">
 
           {acts && acts.slice(0, 12).map((each, i) => <EachActCard key={i} voteAct={voteAct} each={each} />)}
-          {acts && !batchTwo && <Button text="Load more... (25)" onClick={showBatchTwo} medium  color="green" />}
+          {acts && !batchTwo && <Button text="Load more... (25)" onClick={showBatchTwo} medium  color="orange" />}
           {acts && batchTwo && acts.slice(12, 37).map((each, i) => <EachActCard key={i} voteAct={voteAct} each={each} />)}
-          {acts && !batchThree && batchTwo && <Button text="Load more...(35)" onClick={showBatchThree} medium color="green"  />}
+          {acts && !batchThree && batchTwo && <Button text="Load more...(35)" onClick={showBatchThree} medium color="orange"  />}
           {acts && batchThree && batchTwo && acts.slice(37, 72).map((each, i) => <EachActCard key={i} each={each} voteAct={voteAct} /> )}
-          {acts && !batchFour && batchThree && <Button text="Load more...(45)" onClick={showBatchFour} medium color="green"  />}
+          {acts && !batchFour && batchThree && <Button text="Load more...(45)" onClick={showBatchFour} medium color="orange"  />}
           {acts && batchThree && batchFour && acts.slice(72, 117).map((each, i) => <EachActCard key={i} each={each} voteAct={voteAct} /> )}
 
         </div>

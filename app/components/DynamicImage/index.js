@@ -13,7 +13,7 @@ class DynamicImage extends Component {
   }
 
   onError = () => {
-    console.log('AT | onerror fired...');
+    // console.log('AT | onerror fired for: ', this.props.src);
     if (!this.state.errored) {
       this.setState({
         src: require('../../media/panda_avatar.jpg'),

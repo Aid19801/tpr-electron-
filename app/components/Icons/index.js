@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Avatar from './avatar';
+import Beer from './beer';
 import Bringer from './bringer';
 import Calendar from './calendar';
 import Camera from './camera';
@@ -28,6 +29,7 @@ function Icon({ icon }) {
   return (
     <div className="iconContainer">
         { icon === 'avatar' && <Avatar /> }
+        { icon === 'beer' && <Beer /> }
         { icon === 'bringer' && <Bringer /> }
         { icon === 'book' && <HowToBook /> }
         { icon === 'calendar' && <Calendar /> }

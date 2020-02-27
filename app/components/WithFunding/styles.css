@@ -1,0 +1,52 @@
+.funding {
+  background: none;
+  position: fixed;
+  z-index: 10000000000000;
+  right: 1px;
+  top: 1px;
+  height: auto;
+  padding: 15px;
+  transform: skewY(-2deg);
+}
+
+.funding > .flex-col {
+  height: 65%;
+  border-radius: 15px;
+  border: 4px solid white;
+  background: orange;
+  margin-top: -3px;
+  padding: 5px;
+}
+
+.funding p {
+  color: grey;
+  font-family: 'Raleway';
+  font-weight: 300;
+  font-size: 10px;
+  background: orange;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 2px;
+}
+
+.funding p:hover {
+  color: white;
+}
+.funding__img {
+  height: 20px;
+  width: auto;
+}
+
+#isMob {
+  border: 2px solid red;
+}
+
+@media screen and (max-width: 900px) {
+  .funding {
+      height: auto;
+      padding: 20px;
+      top: 10;
+      max-width: 90%;
+  }
+}

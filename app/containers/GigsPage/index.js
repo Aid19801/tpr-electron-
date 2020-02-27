@@ -11,6 +11,7 @@ import { requestGigs, cacheExpiredFetchingGigs, loadingCacheIntoStore, receivedG
 import { resetFilters } from '../../actions/filters';
 import { getFromCache, saveToCache } from '../../components/Cache';
 import { days, isDay } from '../../utils';
+import withFunding from '../../components/WithFunding';
 import './styles.css';
 
 function GigsPage({
@@ -159,6 +160,7 @@ export default compose(
   withPage,
   withFooter,
   withFirebase,
+  withFunding,
   connect(mapStateToProps, mapDispatchToProps),
 )(GigsPage);
 
