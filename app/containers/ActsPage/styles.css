@@ -1,0 +1,36 @@
+.daysUntil__container {
+    opacity: 1;
+    position: absolute;
+    top: 69px;
+    left: 24px;
+    transform: skewY(-2deg);
+    padding: 7px;
+    color: white;
+
+    animation-name: fadeInDaysUntil;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in;
+}
+
+.lessThanTen {
+  background: red;
+  border: white;
+  border-radius: 12px;
+  box-shadow: 5px 12px 17px 25px red;
+}
+
+.moreThanTen {
+  background: orange;
+  border: white;
+  border-radius: 17px;
+  box-shadow: 5px 12px 17px 25px orange;
+}
+
+@keyframes fadeInDaysUntil {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

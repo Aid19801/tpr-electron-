@@ -11,9 +11,11 @@ import Gigs from './gigs';
 import HowToBook from './howtobook';
 import List from './list';
 import Masks from './masks';
+import MoreInfo from './more-info';
 import Mic from './microphone';
 import SpeechBubble from './speechBubble';
 import Twitter from './twitter';
+import TrashCan from './trash-can';
 import Tube from './tube';
 import Walkins from './walkins';
 import Website from './website';
@@ -36,10 +38,12 @@ function Icon({ icon }) {
         { icon === 'gigs' && <Gigs /> }
         { icon === 'list' && <List /> }
         { icon === 'masks' && <Masks /> }
+        { icon === 'more_info' && <MoreInfo /> }
         { icon === 'mic' && <Mic /> }
         { icon === 'speechBubble' && <SpeechBubble /> }
         { icon === 'twitter' && <Twitter /> }
         { icon === 'tube' && <Tube /> }
+        { icon === 'trash_can' && <TrashCan /> }
         { icon === 'walkins' && <Walkins /> }
         { icon === 'website' && <Website /> }
         { icon === 'youtube' && <YouTube /> }

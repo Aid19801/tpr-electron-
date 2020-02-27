@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Jump from 'react-reveal/Jump';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import moment from 'moment';
 import { compose } from 'redux';
 import FunkyTitle from '../../components/FunkyTitle';
 import { withPage, withFooter, Modal, Button, EachActCard } from '../../components';
@@ -24,12 +25,26 @@ function ActsPage({
   const [batchFour, setBatchFour] = useState(false);
 
   const [updating, setUpdating] = useState(false);
+  const [ daysUntil, setDaysUntil ] = useState('');
+  const [ colour, setColour ] = useState('');
 
   useEffect(() => {
     fetchActs();
     const timestampToCache = Date.now();
     saveToCache('acts-ts', timestampToCache); // time that gigs was saved to cache
+    calculateDaysUntil();
   }, []);
+
+  const calculateDaysUntil = () => {
+    var a = moment().endOf('month');
+    var b = moment();
+    const diff = a.diff(b, 'days');
+
+    const colour = diff < 10 ? 'lessThanTen' : 'moreThanTen';
+
+    setColour(colour)
+    setDaysUntil(a.diff(b, 'days'));
+  }
 
   const fetchActs = async () => {
     // console.log('AT | fetching acts...');
@@ -155,6 +170,8 @@ function ActsPage({
         </React.Fragment>
 
       </div>
+
+      <div className={`daysUntil__container ${colour}`}><h4>Days until Winner Announced:</h4><p>{daysUntil}</p></div>
 
       {updating && <h1>Loading...</h1>}
       {!updating &&

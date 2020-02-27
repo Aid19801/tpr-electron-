@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
-
+import Icon from '../Icons';
 import { removeSelectedGig } from '../../actions/gigs';
 import { trimStringSpecifically } from '../../utils';
 import './styles.css';
@@ -39,10 +39,17 @@ const PopOut = ({
         </div>
         <p className="popout__body">{trimStringSpecifically(selectedGig.blurb, 300)}</p>
 
-        <ButtonToolbar>
-          <Button onClick={killPopout} variant="secondary" size="sm">X</Button>
-          <Button onClick={handleClick} variant="success" size="sm">More Info...</Button>
-        </ButtonToolbar>
+        <div className="popout__actions">
+
+          <div onClick={killPopout}>
+            <Icon icon="trash_can" />
+          </div>
+
+          <div onClick={handleClick}>
+            <p style={{ fontSize: 9, position: 'relative', top: 45, left: 17, color: 'grey' }}>more info</p>
+            <Icon icon="more_info" />
+          </div>
+        </div>
 
       </div>
     </div>
