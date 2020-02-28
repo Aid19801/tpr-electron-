@@ -3,7 +3,8 @@ import { Link, withRouter } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import { compose } from 'redux';
 import { withFirebase } from '../../components/Firebase';
-import { Input, FunkyTitle, Button, withPage, Modal, Icon, ProfilePic, withFooter } from '../../components';
+import { withPage, Icon, ProfilePic, withFooter } from '../../components';
+import withFunding from '../../components/WithFunding';
 import * as ROUTES from '../../constants/routes';
 import mockGigs from '../../mocks/mockGigs.json';
 
@@ -32,7 +33,6 @@ const LandingPage = (props) => {
 
   useEffect(() => {
     handleGigsArray();
-    console.log('props ', props);
   }, [])
 
   return (
@@ -113,6 +113,7 @@ const LandingPage = (props) => {
 }
 
 export default compose(
+  withFunding,
   withPage,
   withFooter,
   withRouter,

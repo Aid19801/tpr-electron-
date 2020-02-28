@@ -55,12 +55,12 @@ const withMessagesHOC = MyComponent => {
 
     render() {
 
-      const { endpoint } = this.state;
+      const { endpoint, shouldUpdate } = this.state;
 
       console.log('AT | STATE yo:', this.state);
       return (
         <React.Fragment>
-          <a href={`https://www.thePandaRiot.com/downloads/${endpoint}`} className="messages__container">👨🏻‍💻New app version available now - Download? 👨🏻‍💻</a>
+          { shouldUpdate && <a href={`https://www.thePandaRiot.com/downloads/${endpoint}`} className="messages__container">👨🏻‍💻New app version available now - Download? 👨🏻‍💻</a> }
           <MyComponent />
         </React.Fragment>
       )

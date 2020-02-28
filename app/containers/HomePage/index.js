@@ -5,6 +5,7 @@ import FunkyTitle from '../../components/FunkyTitle';
 import { withPage, withFooter, BoxCard, LargeBoxCard, Button, withMessagesHOC } from '../../components'
 import { fetchNewsStories, receivedNewsStories, selectedStory, cacheExpiredFetchingNews, loadingCacheIntoStore } from '../../actions/news';
 import { saveToCache, getFromCache } from '../../components/Cache';
+import withFunding from '../../components/WithFunding';
 import './styles.css';
 
 function HomePage({
@@ -345,6 +346,7 @@ const mapDispatchToProps = dispatch => ({
 
 export default compose(
   withPage,
+  withFunding,
   withFooter,
   withMessagesHOC,
   connect(mapStateToProps, mapDispatchToProps),

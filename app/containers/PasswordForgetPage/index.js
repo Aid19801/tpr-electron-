@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { withFirebase } from '../../components/Firebase';
+import { Input, Button } from '../../components';
 import * as ROUTES from '../../constants/routes';
 
 const PasswordForgetPage = () => (
@@ -12,12 +13,13 @@ const PasswordForgetPage = () => (
 
 const INITIAL_STATE = {
   email: '',
-  error: null
+  error: null,
+  hasReset: false,
 }
 
 class PasswordForgetFormBase extends Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = { ...INITIAL_STATE }
   }
@@ -27,7 +29,7 @@ class PasswordForgetFormBase extends Component {
     this.props.firebase
       .doPasswordReset(email)
       .then(() => {
-        this.setState({ ...INITIAL_STATE })
+        this.setState({ email: '', error: null, hasReset: true })
       })
       .catch(error => {
         this.setState({ error })
@@ -39,32 +41,42 @@ class PasswordForgetFormBase extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
-  render () {
+  render() {
 
-    const { email, error } = this.state;
+    console.log('AT | psfnobd:', this.props);
+
+    const { email, error, hasReset } = this.state;
     const isInvalid = email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name='email'
-          value={this.state.email}
-          onChange={this.onChange}
-          type='text'
-          placeholder='Email Address'
-        />
-        <button disabled={isInvalid} type='submit'>
-          Reset My Password
-        </button>
-        {error && <p>{error.message}</p>}
-      </form>
+      <React.Fragment>
+        <form onSubmit={this.onSubmit} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+          <Input
+            name='email'
+            value={this.state.email}
+            handleChange={this.onChange}
+            type='text'
+            placeholder='Email Address'
+          />
+
+          <Button text="Submit" disabled={isInvalid} type='submit' medium />
+          {error && <p className="orange padding-on fadeIn">{error.message}</p>}
+          {hasReset && <p className="orange padding-on fadeIn">Please check your email for your reset instructions!</p>}
+        </form>
+
+        {hasReset && (
+          <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+            <Button onClick={() => this.props.history.push('/signin')} text="Go back to Sign In?" medium />
+          </div>
+        )}
+      </React.Fragment>
     )
   }
 }
 
 export default PasswordForgetPage;
 
-const PasswordForgetForm = withFirebase(PasswordForgetFormBase);
+const PasswordForgetForm = withRouter(withFirebase(PasswordForgetFormBase));
 
 export {
   PasswordForgetForm,

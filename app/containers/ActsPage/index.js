@@ -66,7 +66,7 @@ function ActsPage({
         each => each.includeInActRater
       );
 
-      console.log('AT | users: ', filteredOutNonVotingUsers);
+      // console.log('AT | users: ', filteredOutNonVotingUsers);
 
       const filteredOutNoProfilePic = filteredOutNonVotingUsers.filter(
         each => each.profilePicture

@@ -30,16 +30,16 @@ class SignUpFormBase extends Component {
         error: null,
 
         // // stage 0
-        username: 'testy mctestface',
-        email: 'test@test.com',
-        passwordOne: 'London01',
-        passwordTwo: 'London01',
+        username: '',
+        email: '',
+        passwordOne: '',
+        passwordTwo: '',
 
         // stage 1
         profilePicture: 'https://i.ytimg.com/vi/kQBHzHBMlM4/hqdefault.jpg',
-        tagline: 'Testing The Signup Flow!',
-        genre: 'Bot',
-        faveGig: 'Botty Comedy!',
+        tagline: '',
+        genre: '',
+        faveGig: '',
 
         // stage 2
         includeInActRater: true,
@@ -47,9 +47,9 @@ class SignUpFormBase extends Component {
         youtubeChannelURL: '',
 
         // stage 3
-        facebook: 'https://www.facebook.com/aidthompsin',
-        twitter: '@aidThompsin',
-        website: 'www.bbc.co.uk/news',
+        facebook: '',
+        twitter: '@',
+        website: '',
 
         rating: 0
       }
@@ -76,7 +76,7 @@ class SignUpFormBase extends Component {
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(res => {
-        console.log('User Created! This user unique-id is: ', res.user.uid);
+        // console.log('User Created! This user unique-id is: ', res.user.uid);
         // updateStateAuthenticatedUID(res.user.uid); // contains email & uid
         // cache.saveToCache('uid', res.user.uid); // just uid
 
@@ -98,11 +98,11 @@ class SignUpFormBase extends Component {
           youtubeChannelURL,
         });
 
-        console.log('created user in DB with ', this.state);
+        // console.log('created user in DB with ', this.state);
         this.props.history.push('/home');
       })
       .catch(error => {
-        console.log('firebase error: ', error);
+        // console.log('firebase error: ', error);
         return this.setState({ error });
       });
       event.preventDefault();
@@ -162,8 +162,8 @@ class SignUpFormBase extends Component {
       email === '' ||
       username === '';
 
-      console.log('this state ', this.state);
-      console.log('this props ', this.props);
+      // console.log('this state ', this.state);
+      // console.log('this props ', this.props);
 
  return (
    <React.Fragment>

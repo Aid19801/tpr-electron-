@@ -29,7 +29,7 @@ function ActPage({
 
     return firebase.user(id).on('value', snapshot => {
       let chosenUser = snapshot.val();
-      console.log('AT | chosenUser back :', chosenUser);
+      // console.log('AT | chosenUser back :', chosenUser);
       setUsersProfile(chosenUser);
       setLoading(false);
     });
@@ -77,9 +77,9 @@ function ActPage({
           <p className="orange skew-left">&nbsp; {usersProfile && usersProfile.genre || "Unknown"}</p>
         </div>
         <div className="flex-row flex-center">
-          {usersProfile && usersProfile.twitter && <div onClick={() => window.open(twitter, '_newtab')}><Icon icon="twitter" /></div>}
-          {usersProfile && usersProfile.facebook && <div onClick={() => window.open(facebook, '_newtab')}><Icon icon="facebook" /></div>}
-          {usersProfile && usersProfile.website && <div onClick={() => window.open(website, '_newtab')}><Icon icon="website" /></div>}
+          {usersProfile && usersProfile.twitter && <div onClick={() => window.open(`https://www.twitter.com/${usersProfile.twitter}`, '_newtab')}><Icon icon="twitter" /></div>}
+          {usersProfile && usersProfile.facebook && <div onClick={() => window.open(usersProfile.facebook, '_newtab')}><Icon icon="facebook" /></div>}
+          {usersProfile && usersProfile.website && <div onClick={() => window.open(usersProfile.website, '_newtab')}><Icon icon="website" /></div>}
           {usersProfile && usersProfile.youtubeChannelURL && <div onClick={() => window.open(youtubeChannelURL, '_newtab')}><Icon icon="youtube" /></div>}
         </div>
       </div>
