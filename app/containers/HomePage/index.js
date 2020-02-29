@@ -43,7 +43,7 @@ function HomePage({
     if (newsStories) { // if news stories *do* exist, push them into cache
       saveToCache('news-stories', JSON.stringify(newsStories));
     }
-  }, [newsStories])
+  }, [newsStories]);
 
   const fetchNews = () => {
     updateStateFetchNewsStories();

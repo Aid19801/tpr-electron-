@@ -33,6 +33,7 @@ function ActsPage({
     const timestampToCache = Date.now();
     saveToCache('acts-ts', timestampToCache); // time that gigs was saved to cache
     calculateDaysUntil();
+    // firebase.analytics().logEvent('notification_received');
   }, []);
 
   const calculateDaysUntil = () => {
