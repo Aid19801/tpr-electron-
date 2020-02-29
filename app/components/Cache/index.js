@@ -26,3 +26,5 @@ export const removeFromCache = (key) => {
     console.log(`removed ${key} from cache: `, cache);
   }, 1000);
 }
+
+export const clearCache = () => localStorage.clear();

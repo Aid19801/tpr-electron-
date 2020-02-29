@@ -7,7 +7,7 @@ import { SignUpLink, PasswordForgetLink, Input, FunkyTitle, Button, withPage, Mo
 import * as ROUTES from '../../constants/routes';
 import withLayout from '../../components/Layout';
 import { saveUid, saveUserProfile } from '../../actions/user';
-import { getFromCache, saveToCache } from '../../components/Cache';
+import { getFromCache, saveToCache, clearCache } from '../../components/Cache';
 
 const SignInPage = () => (
   <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
@@ -29,6 +29,10 @@ class SignInFormBase extends Component {
     this.state = { ...INITIAL_STATE };
   }
 
+
+  componentDidMount() {
+    clearCache();
+  }
   onSubmit = event => {
 
     const { email, password } = this.state;
@@ -98,6 +102,8 @@ class SignInFormBase extends Component {
   handleKillModal = () => {
     return this.setState({ error: null });
   }
+
+
 
   render() {
 

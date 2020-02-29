@@ -77,7 +77,10 @@ function ActPage({
           <p className="orange skew-left">&nbsp; {usersProfile && usersProfile.genre || "Unknown"}</p>
         </div>
         <div className="flex-row flex-center">
-          {usersProfile && usersProfile.twitter && <div onClick={() => window.open(`https://www.twitter.com/${usersProfile.twitter}`, '_newtab')}><Icon icon="twitter" /></div>}
+
+          {usersProfile && usersProfile.twitter && usersProfile.twitter.includes('twitter.com') && <div onClick={() => window.open(`${usersProfile.twitter}`, '_newtab')}><Icon icon="twitter" /></div>}
+          {usersProfile && usersProfile.twitter && !usersProfile.twitter.includes('twitter.com') && <div onClick={() => window.open(`https://www.twitter.com/${usersProfile.twitter}`, '_newtab')}><Icon icon="twitter" /></div>}
+
           {usersProfile && usersProfile.facebook && <div onClick={() => window.open(usersProfile.facebook, '_newtab')}><Icon icon="facebook" /></div>}
           {usersProfile && usersProfile.website && <div onClick={() => window.open(usersProfile.website, '_newtab')}><Icon icon="website" /></div>}
           {usersProfile && usersProfile.youtubeChannelURL && <div onClick={() => window.open(youtubeChannelURL, '_newtab')}><Icon icon="youtube" /></div>}
