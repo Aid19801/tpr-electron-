@@ -7,10 +7,11 @@ import { SignUpLink, PasswordForgetLink, Input, FunkyTitle, Button, withPage, Mo
 import * as ROUTES from '../../constants/routes';
 import withLayout from '../../components/Layout';
 import { saveUid, saveUserProfile } from '../../actions/user';
+import { showSpinner, hideSpinner } from '../../actions/spinner';
 import { getFromCache, saveToCache, clearCache } from '../../components/Cache';
 
 const SignInPage = () => (
-  <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+  <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', marginTop: 50 }}>
     <FunkyTitle text="Sign In" />
     <SignInForm />
   </div>
@@ -36,6 +37,9 @@ class SignInFormBase extends Component {
   onSubmit = event => {
 
     const { email, password } = this.state;
+    const { updateStateShowSpinner, updateStateHideSpinner } = this.props;
+
+    updateStateShowSpinner();
 
     this.props.firebase
       .doSignInWithEmailAndPassword(email, password)
@@ -74,10 +78,8 @@ class SignInFormBase extends Component {
           this.props.updateStateUserProfile(JSON.parse(cacheUserProfile));
         }
 
-        setTimeout(() => {
-          console.log('retrieved user profile correctly');
-        }, 500);
         // re-direct to HOME page.
+        updateStateHideSpinner();
         return this.props.history.push(ROUTES.HOME);
       })
       .catch(error => {
@@ -89,10 +91,10 @@ class SignInFormBase extends Component {
           this.props.updateStateUserProfile(JSON.parse(offlineRetrievedUserProfile))
           return this.props.history.push(ROUTES.HOME);
         }
-
+        updateStateHideSpinner();
         return this.setState({ error });
       });
-      event.preventDefault();
+    event.preventDefault();
   };
 
   onChange = event => {
@@ -108,31 +110,40 @@ class SignInFormBase extends Component {
   render() {
 
     const { email, password, error } = this.state;
+    const { spinnerLoading } = this.props;
+
     const isInvalid = password === '' || email === '';
 
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
-        <form onSubmit={this.onSubmit} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+        {!spinnerLoading && (
+          <React.Fragment>
+            <form onSubmit={this.onSubmit} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
 
-          <Input
-            name="email"
-            value={email}
-            handleChange={this.onChange}
-            type="text"
-            placeholder="email"
-          />
+              <Input
+                name="email"
+                value={email}
+                handleChange={this.onChange}
+                type="text"
+                placeholder="email"
+              />
 
-          <Input
-            name="password"
-            value={password}
-            handleChange={this.onChange}
-            type="password"
-            placeholder="Password"
-          />
+              <Input
+                name="password"
+                value={password}
+                handleChange={this.onChange}
+                type="password"
+                placeholder="Password"
+              />
 
-          <Button text="Sign In" type="submit" disabled={isInvalid} />
-          {error && <Modal heading="Oh No!" body={error.message} killModal={this.handleKillModal} /> }
-        </form>
+              <Button text="Sign In" type="submit" disabled={isInvalid} />
+              {error && <Modal heading="Oh No!" body={error.message} killModal={this.handleKillModal} />}
+            </form>
+
+          </React.Fragment>
+        )}
+
+        { spinnerLoading && <h1>Loading...</h1> }
 
         <SignUpLink />
 
@@ -142,16 +153,22 @@ class SignInFormBase extends Component {
   }
 }
 
+const mapStateToProps = ({ spinner }) => ({
+  spinnerLoading: spinner.loading,
+});
+
 const mapDispatchToProps = dispatch => ({
   updateStateAuthenticatedUID: id => dispatch(saveUid(id)),
   updateStateUserProfile: (obj) => dispatch(saveUserProfile(obj)),
+  updateStateShowSpinner: () => dispatch(showSpinner()),
+  updateStateHideSpinner: () => dispatch(hideSpinner()),
 });
 
 const SignInForm = compose(
   withRouter,
   withFirebase,
   connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
   )
 )(SignInFormBase);

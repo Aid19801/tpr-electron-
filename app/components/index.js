@@ -13,6 +13,7 @@ import Input from './Input';
 import LargeBoxCard from './LargeBoxCard';
 import Layout from './Layout';
 import MapBox from './MapBox';
+import MiniMap from './MiniMap';
 import Modal from './Modal';
 import Navigation from './Navigation';
 import PopOut from './PopOut';
@@ -43,6 +44,7 @@ export {
   LargeBoxCard,
   Layout,
   MapBox,
+  MiniMap,
   Modal,
   Navigation,
   PasswordForgetLink,

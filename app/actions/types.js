@@ -1,6 +1,9 @@
 export const INET_CONNECTED = 'INET_CONNECTED';
 export const INET_DISCONNECTED = 'INET_DISCONNECTED';
 
+export const SHOW_SPINNER = 'SHOW_SPINNER';
+export const HIDE_SPINNER = 'HIDE_SPINNER';
+
 export const SAVE_UID = 'SAVE_UID';
 export const SAVE_USER_PROFILE = 'SAVE_USER_PROFILE';
 

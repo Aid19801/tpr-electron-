@@ -12,7 +12,7 @@ import { withFirebase } from '../../components/Firebase';
 import { filters as resetFiltersAsAll } from '../../components/Filters/filters';
 import { getFromCache, saveToCache } from '../../components/Cache';
 import './styles.css';
-import comments from '../../components/Comments/comments';
+// import comments from '../../components/Comments/comments';
 
 // let selectedGig = {
 //   id: 38,
@@ -173,7 +173,7 @@ function GigPage({
       ];
     }
 
-    firebase.editGig(JSON.stringify(selectedGig.id), "attended", updatedAttendedArray);
+    firebase.editGig(selectedGig.id, "attended", updatedAttendedArray);
 
     // firebase.user(uid).update({
     //   attended: userProfile.attended ? userProfile.attended.push({ id: selectedGig.id, img: selectedGig.img, name: selectedGig.name }) : [ { id: selectedGig.id, img: selectedGig.img, name: selectedGig.name } ],
@@ -192,7 +192,8 @@ function GigPage({
     const allGigs = await firebase.gigs();
     console.log('AT | refetched allGigs', allGigs);
     updateStateReceivedGigs(allGigs);
-    updateStateSelectedGig(JSON.parse(id));
+    console.log('AT | refetchThisGig ID :', id);
+    updateStateSelectedGig(id);
   }
 
   if (!selectedGig) {
@@ -384,7 +385,8 @@ function GigPage({
       <Comments
         firebase={firebase}
         comments={selectedGig && selectedGig.comments || []}
-        refetchGig={refetchThisGig}
+        refetchData={refetchThisGig}
+        id={selectedGig && selectedGig.id}
         />
 
 

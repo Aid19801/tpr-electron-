@@ -11,4 +11,5 @@ export const HOME = '/home';
 export const NEWS_STORY = '/news/:id';
 export const ACCOUNT = '/account';
 export const ADMIN = '/admin';
+export const CMS = '/cms';
 export const PASSWORD_FORGET = '/pw-forget';

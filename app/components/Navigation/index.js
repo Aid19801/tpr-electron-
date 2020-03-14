@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
@@ -17,14 +17,27 @@ const Navigation = (props) => {
   return (
     <div className={classes.navContainer}>
       <AuthUserContext.Consumer>
-        {authUser => (authUser ? <NavigationAuth /> : <NavigationNonAuth />)}
+        {authUser => (authUser ? <NavigationAuth {...authUser} /> : <NavigationNonAuth />)}
       </AuthUserContext.Consumer>
     </div>
   );
 }
 
-const NavigationAuth = () => {
+const NavigationAuth = (props) => {
+
+  const [ popout, togglePopout ] = useState(false);
+
   const classes = useStyles();
+
+  const isSuperUser = (
+    props.uid === process.env.REACT_APP_SUPERUSER_ID &&
+    props.email === process.env.REACT_APP_SUPERUSER_EMAIL
+  );
+
+  const handlePopOut = () => {
+    togglePopout(!popout);
+  }
+
   return (
     <div className={classes.navFlexRow}>
       <ul className={classes.ulContainer}>
@@ -41,8 +54,26 @@ const NavigationAuth = () => {
           <Link className={classes.navOption} to={ROUTES.ACTS}>Acts</Link>
         </li>
         <li className={classes.li}>
-          <Link className={classes.navOption} to={ROUTES.ACCOUNT}>Account</Link>
+          <div>
+
+            <p onClick={handlePopOut} className={classes.navOption} style={{ paddingBottom: 30 }}>Me</p>
+
+            {
+              popout && (
+                <div className="me__pop-out__container flex-col">
+                  <Link className={classes.navOption} to={`/act/${props.uid}`}>My Profile</Link>
+                  <Link className={classes.navOption} to={ROUTES.ACCOUNT}>My Account</Link>
+                </div>
+              )
+            }
+          </div>
         </li>
+        { isSuperUser && (
+            <li className={classes.li}>
+            <Link className={classes.navOption} to={ROUTES.ADMIN}>Admin✅</Link>
+          </li>
+          )
+      }
       </ul>
       <SignOutButton />
     </div>

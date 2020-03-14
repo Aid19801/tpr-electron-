@@ -37,7 +37,7 @@ const PopOut = ({
             alt="selected gig"
           />
         </div>
-        <p className="popout__body">{trimStringSpecifically(selectedGig.blurb, 300)}</p>
+        <p className="popout__body">{trimStringSpecifically(selectedGig.blurb, 200)}</p>
 
         <div className="popout__actions">
 

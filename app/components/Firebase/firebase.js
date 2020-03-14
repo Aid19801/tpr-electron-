@@ -65,9 +65,14 @@ class Firebase {
     .then((querySnapshot) => {
       let arr = [];
       querySnapshot.forEach((doc) => {
-        let eachGig = doc.data();
+        const docId = doc.id;
+        let eachGig = {
+          ...doc.data(),
+          id: docId,
+        }
         arr.push(eachGig);
       });
+
       return arr;
     })
     .catch(function (error) {
@@ -77,6 +82,7 @@ class Firebase {
   gig = (id) => this.dbTwo.collection("gigs")
     .get()
     .then((querySnapshot) => {
+      console.log('AT | trying to find :', id);
       const arr = querySnapshot.docs.filter(each => each.id === id)[0]
       const obj = arr.data();
       return obj;
@@ -90,7 +96,11 @@ class Firebase {
     .then((querySnapshot) => {
       let arr = [];
       querySnapshot.forEach((doc) => {
-        let eachGig = doc.data();
+        const docId = doc.id;
+        let eachGig = {
+          ...doc.data(),
+          id: docId,
+        }
         arr.push(eachGig);
       });
       return arr;
@@ -99,19 +109,78 @@ class Firebase {
       console.log("Error getting documents: ", error);
     });
 
+
   editGig = (id, key, value) => {
     const ref = this.dbTwo.collection("gigs")
       .doc(id);
     ref.update({
       [key]: value,
     })
-      .then(function () {
+      .then(() => {
         console.log("Document successfully updated!");
       })
-      .catch(function (error) {
+      .catch(error => {
         console.error("Error updating document: ", error);
       });
   }
+
+  patchGig = (id, obj) => {
+    const { territory } = obj;
+    debugger;
+    const ref = this.dbTwo.collection(territory)
+      .doc(id);
+      ref.update({
+        ...obj,
+      })
+      .then(() => {
+        console.log("Document successfully updated!");
+      })
+      .catch((error) => {
+        console.error("Error updating document: ", error);
+      })
+  }
+
+  addGig = (obj) => {
+    this.dbTwo.collection('gigs')
+      .add(obj)
+      .then((res) => {
+
+        console.log(`Document ${obj.name} added successfully | ref: ${res.id}`);
+
+        const ref = this.dbTwo.collection('gigs')
+          .doc(res.id);
+
+        ref.update({
+          ...obj,
+          id: res.id,
+        })
+        .then((res) => {
+          console.log("Document successfully updated | ", res);
+        })
+        .catch((error) => {
+          console.error("Error updating ID in document: ", error);
+        })
+
+      })
+      .catch((error) => {
+        console.error("Error updating document: ", error);
+      })
+  }
+
+   // firestore db
+   replaceGigs = (json) => this.dbTwo.collection("gigs")
+   .get()
+   .then((querySnapshot) => {
+     let arr = [];
+     querySnapshot.forEach((doc) => {
+       let eachGig = doc.data();
+       arr.push(eachGig);
+     });
+     return arr;
+   })
+   .catch(function (error) {
+     console.log("Error getting documents: ", error);
+   });
 }
 
 export default Firebase;

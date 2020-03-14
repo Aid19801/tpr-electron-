@@ -205,7 +205,7 @@ class SignUpFormBase extends Component {
             type="password"
             placeholder="Confirm Password"
           />
-          <Button text="next =>" disabled={isInvalid} type="text" onClick={this.moveForward} />
+          <Button text="next" disabled={isInvalid} type="text" onClick={this.moveForward} />
           {error && <p>{error.message}</p>}
         </React.Fragment>
       )}
@@ -263,7 +263,7 @@ class SignUpFormBase extends Component {
             descr="Favourite Open Mic"
             icon="mic"
           />
-          <Button text="next =>" disabled={profilePicture === '' || faveGig === ''} type="text" onClick={this.moveForward} />
+          <Button text="next" disabled={profilePicture === '' || faveGig === ''} type="text" onClick={this.moveForward} />
           {error && <p>{error.message}</p>}
         </React.Fragment>
       )}
@@ -361,7 +361,7 @@ class SignUpFormBase extends Component {
             descr="Your own website"
             icon="website"
           />
-          <Button text="Submit!" type="submit" disabled={error !== null} />
+          <Button text="Submit" type="submit" disabled={error !== null} />
         </React.Fragment>
       )}
 

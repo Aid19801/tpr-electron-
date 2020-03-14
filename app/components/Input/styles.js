@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     transform: 'skewY(-1deg)',
-    width: '65%',
+    width: '85%',
   },
   inputAndIconRow: {
     display: 'flex',
@@ -33,7 +33,7 @@ const useStyles = createUseStyles({
     border: '0',
     borderRadius: 12,
     fontFamily: 'Arial',
-    fontSize: 50,
+    fontSize: 40,
     margin: 2,
     width: '100%',
   }

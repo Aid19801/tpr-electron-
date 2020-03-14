@@ -11,6 +11,7 @@ import Facebook from './facebook';
 import Gigs from './gigs';
 import HowToBook from './howtobook';
 import List from './list';
+import Map from './map';
 import Masks from './masks';
 import MoreInfo from './more-info';
 import Mic from './microphone';
@@ -39,6 +40,7 @@ function Icon({ icon }) {
         { icon === 'facebook' && <Facebook /> }
         { icon === 'gigs' && <Gigs /> }
         { icon === 'list' && <List /> }
+        { icon === 'map' && <Map /> }
         { icon === 'masks' && <Masks /> }
         { icon === 'more_info' && <MoreInfo /> }
         { icon === 'mic' && <Mic /> }

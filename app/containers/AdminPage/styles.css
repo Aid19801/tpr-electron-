@@ -1,0 +1,229 @@
+.admin__gigs-list__each-gig {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  padding: 5px;
+}
+
+.admin__gigs-list__container {
+  width: 90%;
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+}
+
+.admin__gigs-list__container ul {
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.admin__gigs-list__each-gig .admin__gigs-list__gig {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  width: 100%;
+}
+
+.admin__gigs-list__each-gig .admin__gigs-list__gig:hover {
+  color: orange;
+}
+
+.admin__modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  align-content: center;
+  position: fixed;
+  border-radius: 17px;
+  top: 100px;
+  left: 15%;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  height: auto;
+  width: 70vw;
+  border: 1px solid white;
+  background: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  -webkit-animation: fadein 0.4s ease-in-out; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.4s ease-in-out; /* Firefox < 16 */
+   -ms-animation: fadein 0.4s ease-in-out; /* Internet Explorer */
+    -o-animation: fadein 0.4s ease-in-out; /* Opera < 12.1 */
+       animation: fadein 0.4s ease-in-out;
+}
+
+/* .admin__modal > div {
+  justify-content: space-between;
+  height: 115px;
+} */
+
+.admin__socials {
+  margin-top: 20px;
+  height: 65px;
+  width: auto;
+}
+
+.admin__modal .admin__image-row__container {
+  display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.admin__image-row__container > div {
+  margin-left: 20px;
+}
+.admin__modal > .circ-img__container__small {
+  margin-top: 20px;
+}
+.admin__modal p {
+  color: white;
+}
+
+.admin__modal .venue {
+  font-size: 25px;
+  background: grey;
+  /* border: 2px solid red; */
+}
+
+.admin__modal .buttonContainer > .button {
+  border: 1px solid red !important;
+}
+.admin__modal__close {
+  /* border: 1px solid red; */
+}
+.admin__modal .icon {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.admin__modal h1 {
+  margin-bottom: 0;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  /* margin-top: 30px; */
+  /* border: 1px solid white; */
+  background: grey;
+  font-weight: 300;
+  color: orange !important;
+  transform: skewY(0deg);
+
+}
+
+.admin__modal .buttonContainer {
+  width: 100%;
+  max-height: 46px;
+  margin: 0;
+  padding-top: 0;
+}
+
+.admin__modal .bringer-and-tubes-etc__container {
+  height: 50px;
+  width: 50px;
+}
+
+.admin__modal .flex-center .bringer-and-tubes-etc__container > p {
+  color: white !important;
+  font-size: 8px !important;
+}
+
+.admin__modal .flex-center .bringer-and-tubes-etc__container > .iconContainer {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.admin__blurb__container {
+  height: auto;
+  width: 95%;
+  margin-top: 10px;
+}
+.admin__modal .admin__blurb {
+  color: white;
+  font-family: 'Raleway';
+}
+.admin__modal .mapboxgl-map {
+  border: 3px solid orange;
+  height: auto;
+}
+
+.inputContainer {
+  margin: 10px;
+  background: orange;
+  border: 0px;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: skewY(-1deg);
+  width: 85%;
+}
+
+.inputAndIconRow {
+  display: flex;
+  flex-direction: row;
+}
+.inputTitle {
+  color: white;
+  margin: 2px;
+  text-align: end;
+  font-family: monospace;
+  font-size: 20px;
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+
+.input {
+  color: white;
+  background: grey;
+  border: 0px;
+  border-radius: 12px;
+  font-family: Raleway;
+  font-size: 40px;
+  margin: 2px;
+  width: 100%;
+}
+
+.admin__edit__container textarea {
+  font-size: 14px;
+}
+
+.admin__add_new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: orange !important;
+  width: 100% !important;
+}
+
+.admin__add_new:hover {
+  color: grey !important;
+}
+
+.admin__canx-btn {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+
+.admin__canx-btn .buttonContainer {
+  width: 130px;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

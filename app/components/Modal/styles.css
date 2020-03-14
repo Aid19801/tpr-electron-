@@ -14,23 +14,6 @@
     width: 100%;
   };
 
-  .modalContainer .modal__foo {
-    border: 1px solid red !important;
-  }
-
-/* .modalContainer div {
-  border: 1px solid white;
-  background: black;
-  height: 500px;
-  width: 65%;
-  height: auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-} */
-
 .modalHeading {
   font-family: Arial;
   font-weight: 700;
@@ -41,9 +24,9 @@
   font-family: Arial;
   font-weight: 300;
   color: white;
-  border: 1px solid white;
   background: black;
-  width: 100%;
+  transform: skewY(-2deg);
+  width: 90%;
   height: auto;
   padding: 20px;
   display: flex;

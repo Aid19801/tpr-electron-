@@ -1,7 +1,7 @@
 {
   "name": "tpr-electron",
   "productName": "The Panda Riot",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "App level pkgs for tpr electron",
   "main": "./main.prod.js",
   "author": {

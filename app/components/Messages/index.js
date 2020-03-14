@@ -29,17 +29,18 @@ const withMessagesHOC = MyComponent => {
 
     getVersions = async () => {
       const dirtyRegex = /\d+/g;
-      const localVersion = parseInt(packageJson.version.match( dirtyRegex ).join(''));
+      const localVersion = parseInt(packageJson.version.match(dirtyRegex).join(''));
 
       try {
-        const res = await fetch(`https://api.github.com/gists/6a121ce3f2a7491ec00513136c102588`);
+        const res = await fetch(`https://api.github.com/gists/${process.env.REACT_APP_TPR_VERSIONS}`);
         const json = await res.json();
         const rawUrl = json.files["tpr-electron-version"].raw_url
 
         const req = await fetch(rawUrl);
         const reqJson = await req.json();
-        const gistVersion = parseInt(reqJson.tpr_version.match( dirtyRegex ).join(''));
-        this.setState({ localVersion, gistVersion });
+        console.log('AT | vreqJson:', reqJson);
+        const gistVersion = parseInt(reqJson.tpr_version.match(dirtyRegex).join(''));
+        this.setState({ localVersion, gistVersion, textForUser: reqJson.text });
       } catch (err) {
         console.log('Messages | try-catch error | I was trying to decide version numbers :', err);
       }
@@ -55,12 +56,23 @@ const withMessagesHOC = MyComponent => {
 
     render() {
 
-      const { endpoint, shouldUpdate } = this.state;
+      const { shouldUpdate, textForUser } = this.state;
 
       return (
         <React.Fragment>
-          { shouldUpdate && <a href={`https://www.thePandaRiot.com/downloads/${endpoint}`} className="messages__container">👨🏻‍💻New app version available now - Download? 👨🏻‍💻</a> }
-          <MyComponent />
+          {shouldUpdate && (
+            <div className="messages__container flex-col white">
+              <a href="https://www.thePandaRiot.com/downloads" className="white">
+                New version available - Download?
+              <div className="flex-row">
+                <p className="bold">What's New: &nbsp;</p>
+                <p>{textForUser}</p>
+              </div>
+
+              </a>
+            </div>
+          )}
+          <MyComponent {...this.props} />
         </React.Fragment>
       )
     }

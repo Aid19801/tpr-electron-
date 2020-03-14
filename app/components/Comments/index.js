@@ -6,7 +6,7 @@ import { saveToCache, getFromCache } from '../Cache';
 import Button from '../Button';
 import './styles.css';
 
-function Comments({ comments, firebase, location, match, refetchGig }) {
+function Comments({ comments, firebase, location, match, refetchData, id }) {
 
   const [uid, setUid] = useState(null); // useEffect | take from cache
   const [userProfile, setUserProfile] = useState(null); // useEffect | take from cache
@@ -79,13 +79,13 @@ function Comments({ comments, firebase, location, match, refetchGig }) {
 
       console.log('AT | allComments pushed to gig DB', allComments);
 
-      firebase.editGig(match.params.id, "comments", allComments);
+      firebase.editGig(id, "comments", allComments);
       // POST to gig fb firebase ^^
     }
     setStr(''); // nuke the content
     showAddComment(false); // kill the modal
     setTimeout(() => {
-      refetchGig(); // force a refetch
+      refetchData(); // force a refetch
     }, 2000);
   }
 

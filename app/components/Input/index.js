@@ -19,8 +19,6 @@ const Input = ({
 
   const classes = useStyles();
 
-  console.log('input has name ', name)
-
   return (
     <React.Fragment>
     <Fade left>

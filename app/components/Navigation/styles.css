@@ -1,3 +1,16 @@
-/* ul li {
-  border: 5px solid purple;
-} */
+.me__pop-out__container {
+  /* border: 1px solid blue; */
+    background: black;
+    position: absolute;
+    width: 133px;
+    top: 42px;
+}
+
+.me__pop-out__container > a {
+  /* border: 1px solid red; */
+  background: orange;
+  color: black;
+  font-family: 'Raleway';
+  display: flex;
+  align-items: center;
+}

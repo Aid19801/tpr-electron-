@@ -119,6 +119,7 @@ class MapBox extends Component {
   };
 
   handleSelectMarker = data => {
+    console.log('AT | data :', data);
     this.setState({ center: [data.lng, data.lat], toggle: true, zoom: [16] });
     this.props.updateStateSelectedGig(data.id);
   };

@@ -14,8 +14,8 @@ const Button = ({
   return (
     <div
       className={disabled ? "disabledContainer" : "buttonContainer" }
-      style={ color ? { padding: 0, border: `1px solid ${color}` } : null }
-      style={ medium ? { width: '184px', height: '65px' } : null }
+      style={ color ? { padding: 0, border: `1px solid ${color}`, borderRadius: 12 } : null }
+      style={ medium ? { width: '184px', height: '65px', borderRadius: 12 } : null }
       >
       <button
         type={type ? type : null}

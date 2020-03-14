@@ -14,9 +14,8 @@
   height: 62px;
   width: 185px;
   margin: 10px;
-  background: grey;
   border: 0;
-  border-radius: 12;
+  border-radius: 12px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -25,7 +24,20 @@
 
 
 .buttonContainer > .button {
-  background: green;
+  background: rgb(54, 214, 54);
+  border-radius: 12px;
+  color: white;
+  border: 0;
+  font-family: Arial;
+  font-size: 13px;
+  margin: 2px;
+  width: 100%;
+  border: 3px solid orange !important;
+}
+
+.disabledContainer > .disabledButton {
+  background: red;
+  border-radius: 12px;
   color: white;
   border: 0;
   font-family: Arial;
@@ -33,14 +45,4 @@
   margin: 2px;
   width: 100%;
   border: 1px solid orange !important;
-}
-
-.disabledContainer > .disabledButton {
-  color: grey;
-  background: #500505;
-  border: 0;
-  font-family: Arial;
-  font-size: 20px;
-  margin: 2;
-  width: 100%;
 }

@@ -613,7 +613,9 @@ ul li a {
   display: flex;
   flex-direction: column;
 }
-
+.bold {
+  font-weight: 700;
+}
 .start {
   text-align: start;
 }

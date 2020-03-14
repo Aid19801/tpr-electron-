@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import Fade from 'react-reveal/Fade';
 import Jump from 'react-reveal/Jump';
 import ReactPlayer from 'react-player';
-import { withPage, FunkyTitle, DynamicImage, Icon } from '../../components';
+import { withPage, FunkyTitle, DynamicImage, Icon, Comments } from '../../components';
 import { withFirebase } from '../../components/Firebase';
-import { requestGigs, selectedGig, cacheExpiredFetchingGigs, loadingCacheIntoStore, receivedGigs, filteredGigs } from '../../actions/gigs';
+import { requestGigs, selectedGig, receivedGigs } from '../../actions/gigs';
+import { selectedAct } from '../../actions/acts';
 import './styles.css';
 
 function ActPage({
@@ -26,10 +27,8 @@ function ActPage({
   const fetchUser = () => {
 
     setLoading(true);
-
     return firebase.user(id).on('value', snapshot => {
       let chosenUser = snapshot.val();
-      // console.log('AT | chosenUser back :', chosenUser);
       setUsersProfile(chosenUser);
       setLoading(false);
     });
@@ -112,24 +111,30 @@ function ActPage({
       <div className="col-sm-12 black flex-col flex-center">
         <Fade>
 
-        { usersProfile && usersProfile.username && usersProfile.attended && usersProfile.attended.length ? <h2 className="act__performed-at__name">{usersProfile.username} has performed at</h2> : <div /> }
+          {usersProfile && usersProfile.username && usersProfile.attended && usersProfile.attended.length ? <h2 className="act__performed-at__name">{usersProfile.username} has performed at</h2> : <div />}
 
-        <div className="flex-row flex-center">
+          <div className="flex-row flex-center">
 
-          {usersProfile && usersProfile.attended && usersProfile.attended.length && (
-            usersProfile.attended.map((each, i) => {
-              return (
-                <div key={i} onClick={() => handleSelectGig(each.id)}>
-                  <DynamicImage src={each.img} small />
-                </div>
-              )
-            })
-          )}
+            {usersProfile && usersProfile.attended && usersProfile.attended.length && (
+              usersProfile.attended.map((each, i) => {
+                return (
+                  <div key={i} onClick={() => handleSelectGig(each.id)}>
+                    <DynamicImage src={each.img} small />
+                  </div>
+                )
+              })
+            )}
 
-        </div>
+          </div>
 
         </Fade>
       </div>
+
+      <Comments
+        firebase={firebase}
+        comments={usersProfile && usersProfile.comments && usersProfile.comments.filter(each => each.pageId.includes('act')) || []}
+        refetchData={fetchUser}
+      />
 
     </div>
   );

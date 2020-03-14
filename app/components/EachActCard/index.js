@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Router } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import { Icon, DynamicImage } from '../../components';
 import { trimStringSpecifically } from '../../utils';
@@ -10,8 +10,13 @@ const downVoteSwitchedOn = false;
 function EachActCard({
   voteAct,
   each,
+  history,
 }) {
 
+  const handleClick = () => {
+    console.log('clicked more on: ', each);
+    history.push(`/act/${each.uid}`);
+  }
   return (
     <React.Fragment>
       <Fade>
@@ -39,8 +44,8 @@ function EachActCard({
               )}
             </div>
 
-            <div>
-              <Link to={`/act/${each.uid}`}>
+            <div className="flex-row" onClick={handleClick}>
+
                 <DynamicImage small src={each.profilePicture} fallbackSrc={require('../../media/panda_avatar.jpg')} />
 
                 <div className="each-act-name">
@@ -49,7 +54,7 @@ function EachActCard({
                 </div>
 
                 { each.youtube && each.youtube !== "" && each.youtube !== "unknown" && <p>Watch Video!</p> }
-              </Link>
+
             </div>
 
 
@@ -62,4 +67,6 @@ function EachActCard({
     </React.Fragment>
   );
 }
+
+
 export default EachActCard

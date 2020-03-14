@@ -14,7 +14,16 @@ const Modal = ({
     return (
       <div className="modalContainer">
 
-        <div className="modal__foo">
+        <div className="modalContent" style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          background: 'orange',
+          borderRadius: 12,
+          padding: 5,
+        }}
+        >
 
           <h1 className="modalHeading">{heading}</h1>
           <p className="modalBody">{body}</p>
