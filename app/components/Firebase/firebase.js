@@ -110,8 +110,10 @@ class Firebase {
     });
 
 
-  editGig = (id, key, value) => {
-    const ref = this.dbTwo.collection("gigs")
+  editGig = (id, key, value, city) => {
+    debugger;
+    let str = city === 'london' ? 'gigs' : city;
+    const ref = this.dbTwo.collection(str)
       .doc(id);
     ref.update({
       [key]: value,

@@ -6,7 +6,15 @@ import { saveToCache, getFromCache } from '../Cache';
 import Button from '../Button';
 import './styles.css';
 
-function Comments({ comments, firebase, location, match, refetchData, id }) {
+function Comments({
+  comments,
+  firebase,
+  location,
+  match,
+  city,
+  refetchData,
+  id,
+}) {
 
   const [uid, setUid] = useState(null); // useEffect | take from cache
   const [userProfile, setUserProfile] = useState(null); // useEffect | take from cache
@@ -35,6 +43,7 @@ function Comments({ comments, firebase, location, match, refetchData, id }) {
     }
 
     console.log('AT | comment object is :', commentObject);
+    console.log('AT | comments city is :', city);
     // 1. ADD TO USERS FIREBASE PROFILE
     // get users profile from FB
 
@@ -79,7 +88,7 @@ function Comments({ comments, firebase, location, match, refetchData, id }) {
 
       console.log('AT | allComments pushed to gig DB', allComments);
 
-      firebase.editGig(id, "comments", allComments);
+      firebase.editGig(id, "comments", allComments, city);
       // POST to gig fb firebase ^^
     }
     setStr(''); // nuke the content
@@ -95,8 +104,6 @@ function Comments({ comments, firebase, location, match, refetchData, id }) {
 
   const handleAddCommentClick = () => showAddComment(!addComment);
   const handleCancelComment = () => showAddComment(!addComment);
-
-  console.log('AT | comments :', comments);
 
   return (
     <div className="col-sm-12 comments__container flex-center flex-col black">

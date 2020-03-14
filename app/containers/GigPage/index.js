@@ -72,6 +72,7 @@ function GigPage({
   match,
   firebase,
   selectedGig,
+  city,
   updateStateFiltersChanged,
   updateStateSelectedGig,
   updateStateReceivedGigs,
@@ -94,6 +95,7 @@ function GigPage({
   }, []);
 
   const handleAttendClick = (att) => {
+    debugger;
     switch (att) {
       case 'Yes':
         addToAttendedOnGigsDB();
@@ -111,7 +113,7 @@ function GigPage({
 
   const killAttendedQuestion = () => {
     const updatedAttendedArray = selectedGig.attended.filter((each) => each.uid !== uid);
-    firebase.editGig(JSON.stringify(selectedGig.id), "attended", updatedAttendedArray);
+    firebase.editGig(selectedGig.id, "attended", updatedAttendedArray, city);
     setAttended(false);
   }
 
@@ -173,7 +175,7 @@ function GigPage({
       ];
     }
 
-    firebase.editGig(selectedGig.id, "attended", updatedAttendedArray);
+    firebase.editGig(selectedGig.id, "attended", updatedAttendedArray, city);
 
     // firebase.user(uid).update({
     //   attended: userProfile.attended ? userProfile.attended.push({ id: selectedGig.id, img: selectedGig.img, name: selectedGig.name }) : [ { id: selectedGig.id, img: selectedGig.img, name: selectedGig.name } ],
@@ -189,8 +191,10 @@ function GigPage({
   const refetchThisGig = async() => {
     console.log('AT | refetching gig...');
     const { params: { id }} = match;
-    const allGigs = await firebase.gigs();
-    console.log('AT | refetched allGigs', allGigs);
+    let allGigs = [];
+    allGigs = city === 'london' ? await firebase.gigs() : await firebase.differentCityGigs(city);
+    // const allGigs = await firebase.gigs();
+    console.log(`re-fetched all gigs for ${city} :`, allGigs);
     updateStateReceivedGigs(allGigs);
     console.log('AT | refetchThisGig ID :', id);
     updateStateSelectedGig(id);
@@ -201,6 +205,7 @@ function GigPage({
     return <div>no gig info</div>
   }
 
+  console.log('AT | city is :', city);
   return (
     <div className="gig__page row margin-bottom flex-center">
       <div className="margin-left margin-top">
@@ -387,8 +392,8 @@ function GigPage({
         comments={selectedGig && selectedGig.comments || []}
         refetchData={refetchThisGig}
         id={selectedGig && selectedGig.id}
+        city={city}
         />
-
 
     </div>
   )
@@ -396,6 +401,7 @@ function GigPage({
 
 const mapStateToProps = state => ({
   gigs: state.gigs.gigs,
+  city: state.gigs.city,
   selectedGig: state.gigs.selectedGig,
 })
 
