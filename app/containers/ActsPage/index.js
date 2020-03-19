@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Jump from 'react-reveal/Jump';
+import Fade from 'react-reveal/Fade';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import moment from 'moment';
 import { compose } from 'redux';
 import FunkyTitle from '../../components/FunkyTitle';
-import { withPage, withFooter, Modal, Button, EachActCard } from '../../components';
+import { withPage, withFooter, Modal, Button, EachActCard, DynamicImage } from '../../components';
 import { loadingCacheIntoStore, requestActs, receivedActs, cacheExpiredFetchingActs, } from '../../actions/acts';
 import { saveToCache } from '../../components/Cache';
 import { withAuthentication } from '../../components/Session';
@@ -26,8 +27,11 @@ function ActsPage({
   const [batchFour, setBatchFour] = useState(false);
 
   const [updating, setUpdating] = useState(false);
-  const [ daysUntil, setDaysUntil ] = useState('');
-  const [ colour, setColour ] = useState('');
+  const [daysUntil, setDaysUntil] = useState('');
+  const [colour, setColour] = useState('');
+  const [areZero, setAreZero] = useState(false);
+  // ^^ if everyone has been zero'd, areZero is true and diff layout renders
+
 
   useEffect(() => {
     fetchActs();
@@ -78,6 +82,15 @@ function ActsPage({
         .sort((a, b) => a.rating - b.rating)
         .reverse();
 
+      // debugger;
+      let ratedActs = sortedActs.filter(each => each.rating !== 0);
+      if (ratedActs === [] || !ratedActs || !ratedActs.length) {
+        setAreZero(true);
+        sortedActs = sortedActs.sort((a, b) => {
+          if (a.username < b.username) return -1
+          return a.username > b.username ? 1 : 0
+        })
+      }
       // saveToCache('acts', JSON.stringify(sortedActs));
       updateStateReceivedActs(sortedActs);
     });
@@ -148,6 +161,12 @@ function ActsPage({
     }
   };
 
+  // if everyone has been zero'd, then user votes, we kill areZero
+  // renders leaderboard normally.
+  const handleAreZeroVoteAct = async (str, obj) => {
+    voteAct(str, obj);
+    setAreZero(false);
+  }
   const showBatchTwo = () => {
     return setBatchTwo(true);
   }
@@ -176,19 +195,40 @@ function ActsPage({
       <div className={`daysUntil__container ${colour}`}><h4>Days until Winner Announced:</h4><p>{daysUntil}</p></div>
 
       {updating && <h1>Loading...</h1>}
-      {!updating &&
+
+      {!updating && !areZero && (
         <div className="col-sm-12 flex-center flex-col">
 
-          {acts && acts.slice(0, 12).map((each, i) => <EachActCard key={i} voteAct={voteAct} each={each} history={history}  />)}
-          {acts && !batchTwo && <Button text="Load more... (25)" onClick={showBatchTwo} medium  color="orange" />}
-          {acts && batchTwo && acts.slice(12, 37).map((each, i) => <EachActCard key={i} voteAct={voteAct} each={each} history={history}  />)}
-          {acts && !batchThree && batchTwo && <Button text="Load more...(35)" onClick={showBatchThree} medium color="orange"  />}
-          {acts && batchThree && batchTwo && acts.slice(37, 72).map((each, i) => <EachActCard key={i} each={each} history={history}  voteAct={voteAct} /> )}
-          {acts && !batchFour && batchThree && <Button text="Load more...(45)" onClick={showBatchFour} medium color="orange"  />}
-          {acts && batchThree && batchFour && acts.slice(72, 117).map((each, i) => <EachActCard key={i} each={each} history={history}  voteAct={voteAct} /> )}
+          {acts && acts.slice(0, 12).map((each, i) => <EachActCard key={i} voteAct={voteAct} each={each} history={history} />)}
+          {acts && !batchTwo && <Button text="Load more... (25)" onClick={showBatchTwo} medium color="orange" />}
+          {acts && batchTwo && acts.slice(12, 37).map((each, i) => <EachActCard key={i} voteAct={voteAct} each={each} history={history} />)}
+          {acts && !batchThree && batchTwo && <Button text="Load more...(35)" onClick={showBatchThree} medium color="orange" />}
+          {acts && batchThree && batchTwo && acts.slice(37, 72).map((each, i) => <EachActCard key={i} each={each} history={history} voteAct={voteAct} />)}
+          {acts && !batchFour && batchThree && <Button text="Load more...(45)" onClick={showBatchFour} medium color="orange" />}
+          {acts && batchThree && batchFour && acts.slice(72, 117).map((each, i) => <EachActCard key={i} each={each} history={history} voteAct={voteAct} />)}
 
         </div>
+      )
       }
+
+      {!updating && areZero && (
+        <div className="col-sm-12 flex-center flex-wrap">
+          {acts && acts.map((each, i) => {
+            return (
+              <React.Fragment key={i}>
+                <Fade>
+                  <div onClick={() => handleAreZeroVoteAct('up', each)} className="acts__areZero__container flex-col">
+                    <p className="acts__areZero__hover_p">Vote For Me!</p>
+                    <DynamicImage src={each.profilePicture} small />
+                    <p className="acts__areZero__p">{each.username}</p>
+                  </div>
+                </Fade>
+              </React.Fragment>
+            )
+          })
+          }
+        </div>
+      )}
 
       {modal && <Modal killModal={() => setModal(false)} heading="Oh no!" body="Sorry, but you cant vote more than once every hour!" />}
       <div className="col-sm-12" style={{ marginBottom: 65 }} />

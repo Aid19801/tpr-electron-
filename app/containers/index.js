@@ -3,6 +3,8 @@ import ActsPage from './ActsPage';
 import ActPage from './ActPage';
 import AdminDetailsPage from './AdminDetailsPage';
 import AdminPage from './AdminPage';
+import DiscussionsPage from './DiscussionsPage';
+import DiscussionPage from './DiscussionPage';
 import GigPage from './GigPage';
 import GigsPage from './GigsPage';
 import HomePage from './HomePage';
@@ -19,6 +21,8 @@ export {
     ActPage,
     AdminDetailsPage,
     AdminPage,
+    DiscussionPage,
+    DiscussionsPage,
     GigPage,
     GigsPage,
     HomePage,

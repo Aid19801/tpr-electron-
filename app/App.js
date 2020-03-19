@@ -5,6 +5,8 @@ import { Navigation } from './components';
 import AccountPage from './containers/AccountPage';
 import ActPage from './containers/ActPage';
 import ActsPage from './containers/ActsPage';
+import DiscussionsPage from './containers/DiscussionsPage';
+import DiscussionPage from './containers/DiscussionPage';
 import AdminPage from './containers/AdminPage';
 import GigPage from './containers/GigPage';
 import GigsPage from './containers/GigsPage';
@@ -35,6 +37,9 @@ const App = () => (
 
         <Route path={ROUTES.ACTS} component={ActsPage} />
         <Route path={ROUTES.ACT} component={ActPage} />
+
+        <Route path={ROUTES.DISCUSSIONS} component={DiscussionsPage} />
+        <Route path={ROUTES.DISCUSSION} component={DiscussionPage} />
 
         <Route path={ROUTES.ACCOUNT} component={AccountPage} />
         <Route path={ROUTES.ADMIN} component={AdminPage} />

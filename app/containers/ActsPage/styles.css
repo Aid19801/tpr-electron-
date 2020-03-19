@@ -26,11 +26,47 @@
   box-shadow: 5px 12px 17px 25px orange;
 }
 
-@keyframes fadeInDaysUntil {
-  from {
+.acts__areZero__container {
+  margin: 15px;
+  transform: skewY(-2deg);
+  border: 0;
+  transition: 0.3s;
+  position: inherit;
+  border: border 3px solid red;
+}
+
+.acts__areZero__container:hover {
+  background: orange;
+  border: border 1px solid red;
+}
+
+
+.acts__areZero__hover_p {
+  position: absolute;
+    color: white;
+    top: 10%;
+    z-index: 25;
+    width: 30px;
+    left: 34%;
     opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+}
+.acts__areZero__p {
+  position: relative;
+  font-size: 12px;
+  color: orange;
+  bottom: 1px;
+  height: 30px;
+  margin: 5px;
+  background: black;
+  font-family: Arial;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.acts__areZero__hover_p:hover {
+  background: black;
+  opacity: 1;
 }

@@ -64,7 +64,7 @@ const withMessagesHOC = MyComponent => {
             <div className="messages__container flex-col white">
               <a href="https://www.thePandaRiot.com/downloads" className="white">
                 New version available - Download?
-              <div className="flex-row">
+              <div className="flex-row black">
                 <p className="bold">What's New: &nbsp;</p>
                 <p>{textForUser}</p>
               </div>

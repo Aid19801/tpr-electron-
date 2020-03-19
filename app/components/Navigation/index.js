@@ -68,6 +68,11 @@ const NavigationAuth = (props) => {
             }
           </div>
         </li>
+
+        <li className={classes.li}>
+          <Link className={classes.navOption} to={ROUTES.DISCUSSIONS}>Discussions</Link>
+        </li>
+
         { isSuperUser && (
             <li className={classes.li}>
             <Link className={classes.navOption} to={ROUTES.ADMIN}>Admin✅</Link>

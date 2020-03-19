@@ -1,0 +1,154 @@
+.discussion__page h4 {
+  font-size: 15px;
+}
+.discussion__page .buttonContainer {
+  width: 96px;
+}
+.discussion__allcomments__container {
+  /* border: 1px solid white; */
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.discussion__row {
+  border-radius: 12px;
+  background: orange;
+}
+
+.discussion__allcomments__container .cell-small {
+  width: 129px;
+  min-width: 129px;
+  max-width: 129px;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: start;
+
+  font-family: 'Raleway';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.discussion__allcomments__container .cell-large {
+  width: 400px;
+  min-width: 400px;
+  max-width: 400px;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: start;
+
+  font-family: 'Raleway';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.discussion__allcomments__container .heading {
+  font-weight: bold;
+  text-align: center;
+}
+.discussion__allcomments__container h4 {
+  text-align: start !important;
+}
+
+.discussion__comment__container {
+  background: orange;
+  border-radius: 12px;
+  height: auto;
+  padding: 5px;
+  width: 787px;
+  min-width: 787px;
+  margin-bottom: 5px;
+}
+
+.discussion__comment__container .username {
+  font-family: 'Raleway';
+  padding: 4px;
+}
+.discussion__comment__container .comment {
+  font-family: 'Raleway';
+  font-size: 20px;
+  text-align: start;
+}
+
+.discussion__comment__container .timestamp {
+  font-family: 'Raleway';
+  transform: skewY(2deg);
+  color: grey;
+  font-weight: 700;
+  display: flex;
+  justify-content: center !important;
+  align-content: center;
+  align-items: center;
+}
+
+
+.discussion__page .discussion__allcomments__container .circ-img__container__small {
+  border: 5px solid black;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.discussion__modal__container {
+  position: fixed;
+  width: 55vw;
+  background: rgba(0, 0, 0, 1);
+  border: 5px solid grey;
+  border-radius: 17px;
+  padding: 20px;
+  top: 20%;
+}
+
+.discussion__modal__container > .flex-col > .flex-row {
+  /* border: 1px solid red; */
+  align-items: start;
+}
+
+.discussion__modal__container .circ-img__container__small {
+  width: 50px;
+  height: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.discussion__page textarea {
+  background: orange;
+  color: white;
+  width: 470px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: auto;
+  padding: 10px;
+  font-family: 'Raleway';
+  border-radius: 12px;
+  border: 0;
+}
+
+.speech__bubble {
+  position: fixed;
+  bottom: 46px;
+  right: -3px;
+}
+
+#my_own_comment {
+  border: 7px solid white;
+}

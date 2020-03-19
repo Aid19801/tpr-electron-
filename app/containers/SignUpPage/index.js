@@ -5,6 +5,7 @@ import { compose } from 'redux';
 import { withFirebase } from '../../components/Firebase';
 import { Input, FunkyTitle, Button, withPage, Modal, Icon } from '../../components';
 import * as ROUTES from '../../constants/routes';
+import { saveToCache } from '../../components/Cache';
 
 const SignUpPage = () => (
   <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
@@ -97,6 +98,28 @@ class SignUpFormBase extends Component {
           youtube,
           youtubeChannelURL,
         });
+
+
+        let fbuserProfile = {
+          username,
+          email,
+          tagline,
+          profilePicture,
+          includeInActRater,
+
+          faveGig,
+          genre,
+          facebook,
+          twitter,
+          website,
+          youtube,
+          youtubeChannelURL,
+        }
+
+
+
+        saveToCache('uid', res.user.uid);
+        saveToCache('user-profile', fbuserProfile)
 
         // console.log('created user in DB with ', this.state);
         this.props.history.push('/home');

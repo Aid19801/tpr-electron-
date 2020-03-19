@@ -1,0 +1,64 @@
+
+.discussions__alldiscussions__container {
+  /* border: 1px solid white; */
+  border-radius: 12px;
+  /* background: rgba(0, 0, 0, 0.7); */
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.discussions__row {
+  border-radius: 12px;
+  background: orange;
+  margin-bottom: 12px;
+  padding: 5px;
+  /* box-shadow: 5px 12px 17px 20px rgba(255, 198, 0, 0.53); */
+}
+
+.discussions__row .circ-img__container__small {
+  border: 5px solid grey;
+}
+
+.discussions__alldiscussions__container .cell-small {
+  width: 129px;
+  min-width: 129px;
+  max-width: 129px;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: start;
+
+  font-family: 'Raleway';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.discussions__alldiscussions__container .cell-large {
+  width: 400px;
+  min-width: 400px;
+  max-width: 400px;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  align-content: center;
+  text-align: start;
+
+  font-family: 'Raleway';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.discussions__alldiscussions__container .heading {
+  font-weight: bold;
+  text-align: center;
+}
+.discussions__alldiscussions__container h4 {
+  text-align: start !important;
+}
