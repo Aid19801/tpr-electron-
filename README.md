@@ -1,4 +1,4 @@
-electron version of tpr
+React, Redux, NodeJS, Firebase & Mapbox Desktop Application for London comedians. Find gigs, watch sets.
 
 
 upload json deets to firestore on firebase, from raw json.
